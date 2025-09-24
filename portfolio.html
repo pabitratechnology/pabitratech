@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- === SEO: Title & Description for Portfolio Page === -->
+    <title>Our Portfolio | Pabitra Technology - Proven Digital Success in Bhubaneswar</title>
+    <meta name="description" content="Explore Pabitra Technology's portfolio of successful website design, app development, SEO, PPC, and digital marketing projects for clients in Bhubaneswar, Odisha, and beyond.">
+
+    <!-- Bootstrap CSS, Fonts, Icons, Animate, AOS (Identical - keep these) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- === Custom CSS (Single file for all pages) === -->
+    <link rel="stylesheet" href="CSS/portfolio.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/pabitra1.png" type="image/png">
+
+</head>
+<body>
+
+    <!-- =======================
+    Header (Mark Portfolio Active) - KEPT AS IS
+    ======================== -->
+    <header class="header-sticky sticky-top shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-0">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand navbar-brand-custom" href="index.html">
+                    <img src="images/pabitra250.png" alt="Pabitra Technology Logo" class="logo-img">
+                </a>
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavPabitra" aria-controls="navbarNavPabitra" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                <!-- Navigation -->
+                <div class="collapse navbar-collapse" id="navbarNavPabitra">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="about.html">About</a></li>
+                        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle px-3" href="services.html" id="servicesMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a> <ul class="dropdown-menu dropdown-menu-services fade shadow-lg border-0" aria-labelledby="servicesMenu"> <li><h6 class="dropdown-header small text-uppercase text-primary">Digital Marketing</h6></li> <li><a class="dropdown-item" href="service-digital-marketing-360.html">360° Digital Marketing</a></li> <li><a class="dropdown-item" href="service-seo.html">SEO Services</a></li> <li><a class="dropdown-item" href="service-ppc.html">PPC Advertising</a></li> <li><a class="dropdown-item" href="service-smm.html">Social Media Marketing</a></li> <li><hr class="dropdown-divider"></li> <li><h6 class="dropdown-header small text-uppercase text-primary">Development & Design</h6></li> <li><a class="dropdown-item" href="service-web-dev.html">Website Development</a></li> <li><a class="dropdown-item" href="service-app-dev.html">Mobile App Development</a></li> <li><a class="dropdown-item" href="service-ecommerce.html">E-commerce Solutions</a></li> <li><a class="dropdown-item" href="service-graphics-uiux.html">Graphics & UI/UX Design</a></li> <li><hr class="dropdown-divider"></li> <li><h6 class="dropdown-header small text-uppercase text-primary">Technology Solutions</h6></li> <li><a class="dropdown-item" href="service-security.html">Security Services</a></li> <li><a class="dropdown-item" href="service-automation.html">Automation Services</a></li> <li><a class="dropdown-item" href="service-devops.html">DevOps Consulting</a></li> <li><a class="dropdown-item" href="service-cloud.html">Cloud Solutions</a></li> <li><hr class="dropdown-divider"></li> <li><a class="dropdown-item fw-bold view-all-services" href="services.html">Explore All Services <i class="fas fa-arrow-right small ms-1"></i></a></li> </ul> </li>
+                        <li class="nav-item"><a class="nav-link active px-3" aria-current="page" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="blog.html">Blog</a></li>
+                         <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
+                    </ul>
+                    <!-- Quote & Lang -->
+                    <div class="d-flex align-items-center ms-lg-4 mt-3 mt-lg-0" data-aos="fade-left">
+                         <a href="contact.html" class="btn btn-primary btn-sm rounded-pill px-3 shadow-sm">Get Quote</a>
+                         <!--<div class="nav-item dropdown ms-3 d-none d-md-block"> <a class="nav-link dropdown-toggle text-muted small" href="#" id="languageSelector" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Select Language"> <i class="fas fa-globe me-1"></i> EN </a> <ul class="dropdown-menu dropdown-menu-end fade shadow-lg border-0" aria-labelledby="languageSelector"> <li><a class="dropdown-item active" href="#!" data-lang="en"><i class="fas fa-check me-2 small opacity-75"></i>English</a></li> <li><a class="dropdown-item" href="#!" data-lang="or"><i class="fas fa-check me-2 small opacity-0"></i>Odia</a></li> <li><a class="dropdown-item" href="#!" data-lang="hi"><i class="fas fa-check me-2 small opacity-0"></i>Hindi</a></li> </ul> </div>-->
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- =======================
+    Header End
+    ======================== -->
+
+    <!-- =======================
+    Portfolio Page Hero Section - KEPT AS IS (good content)
+    ======================== -->
+    <!-- The portfolio-hero-section HTML remains exactly as you provided -->
+<section class="portfolio-hero-section position-relative d-flex align-items-center text-white text-center">
+    <!-- The bg-overlay div is no longer strictly necessary with the new CSS approach,
+         but keeping it won't harm. Its styles will be overridden by the main section. -->
+    <div class="bg-overlay bg-dark opacity-60"></div>
+    <div class="container position-relative" style="z-index: 2;" data-aos="fade-in">
+        <h1 class="display-4 fw-bold mb-3 animate__animated animate__fadeInDown">Our Work Speaks Volumes</h1>
+        <p class="lead mb-0 mx-auto animate__animated animate__fadeInUp animate__delay-05s" style="max-width: 750px;">
+            We're proud to showcase a portfolio of projects where strategic thinking and technical expertise delivered tangible results for businesses like yours in Bhubaneswar, Odisha, and beyond.
+        </p>
+    </div>
+</section>
+    <!-- =======================
+    Portfolio Hero End
+    ======================== -->
+
+
+    <!-- =======================
+    Main Content Start - ENTIRELY NEW CONTENT BELOW
+    ======================== -->
+    <main>
+
+        <!-- === NEW SECTION: Introduction to Our Portfolio === -->
+        <section id="portfolio-intro" class="py-5 py-lg-6 bg-white">
+            <div class="container text-center" data-aos="fade-up">
+                <span class="badge bg-primary-soft text-primary mb-2">Our Vision, Your Success</span>
+                <h2 class="display-6 fw-bold mb-3">Crafting Digital Excellence for Every Challenge</h2>
+                <p class="lead text-muted mx-auto" style="max-width: 800px;">
+                    At Pabitra Technology, we believe every project is an opportunity to innovate. Our portfolio reflects a diverse range of solutions, meticulously crafted to meet unique client needs and deliver measurable impact. From robust web platforms to intuitive mobile apps and powerful digital campaigns, discover how we transform ideas into successful realities.
+                </p>
+            </div>
+        </section>
+
+        <!-- === NEW SECTION: Core Services Showcase with Filter === -->
+        <section id="portfolio-categories" class="py-5 py-lg-6 bg-light-alt">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="badge bg-info-soft text-info mb-2">Explore Our Capabilities</span>
+                    <h2 class="display-6 fw-bold mb-3">Projects by Expertise</h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                        Filter through our successful ventures in various domains to see the breadth and depth of our technical and creative prowess.
+                    </p>
+                </div>
+
+                <!-- Portfolio Filter Buttons -->
+                <div class="portfolio-filter-buttons btn-group flex-wrap justify-content-center mb-5" role="group" aria-label="Portfolio Filter Buttons" data-aos="fade-up" data-aos-delay="100">
+                    <button type="button" class="btn btn-outline-primary btn-sm m-1 rounded-pill active" data-filter="*">All Projects</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm m-1 rounded-pill" data-filter=".web-dev">Web Development</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm m-1 rounded-pill" data-filter=".app-dev">Mobile App Dev</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm m-1 rounded-pill" data-filter=".digital-marketing">Digital Marketing</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm m-1 rounded-pill" data-filter=".ui-ux">UI/UX Design</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm m-1 rounded-pill" data-filter=".ecommerce">E-commerce</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm m-1 rounded-pill" data-filter=".custom-software">Custom Software</button>
+                </div>
+
+                <!-- Portfolio Grid (with NEW, original project examples) -->
+                <div class="row g-4 portfolio-container">
+
+                    <!-- NEW Project 1: Smart City Traffic Management Web Portal -->
+                    <div class="col-md-6 col-lg-4 portfolio-item web-dev custom-software" data-aos="fade-up" data-aos-delay="0">
+                        <div class="portfolio-item-card h-100 shadow-sm border-0 rounded-3 overflow-hidden">
+                            <a href="portfolio.html" class="portfolio-link" aria-label="View Project: Smart City Traffic Management System">
+                                <div class="portfolio-img-wrapper">
+                                    <img src="images/trafic.png" class="portfolio-item-img img-fluid" alt="Smart City Traffic Management Web Portal">
+                                    <div class="portfolio-overlay"><i class="fas fa-search-plus fa-2x"></i></div>
+                                </div>
+                                <div class="p-3 p-md-4">
+                                    <span class="badge bg-success-soft text-success mb-2 small text-uppercase">Web Dev / Custom Software</span>
+                                    <h5 class="fw-bold mb-2 text-dark">Smart City Traffic Management Portal</h5>
+                                    <p class="text-muted small mb-0">Developed a real-time web portal for municipal authorities to monitor and manage urban traffic flow, integrating sensor data and predictive analytics for congestion reduction.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- NEW Project 2: Local Artisan E-Marketplace -->
+                    <div class="col-md-6 col-lg-4 portfolio-item ecommerce web-dev ui-ux" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portfolio-item-card h-100 shadow-sm border-0 rounded-3 overflow-hidden">
+                            <a href="portfolio.html" class="portfolio-link" aria-label="View Project: Local Artisan E-Marketplace">
+                                <div class="portfolio-img-wrapper">
+                                    <img src="images/artist.png" class="portfolio-item-img img-fluid" alt="Local Artisan E-Marketplace">
+                                    <div class="portfolio-overlay"><i class="fas fa-search-plus fa-2x"></i></div>
+                                </div>
+                                <div class="p-3 p-md-4">
+                                    <span class="badge bg-warning-soft text-warning mb-2 small text-uppercase">E-commerce / UI/UX</span>
+                                    <h5 class="fw-bold mb-2 text-dark">Odisha Artisan Collective Marketplace</h5>
+                                    <p class="text-muted small mb-0">Created an intuitive e-commerce platform connecting local artisans with global buyers, featuring multilingual support, custom product listings, and secure payment integrations.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- NEW Project 3: Fitness & Wellness Mobile App -->
+                    <div class="col-md-6 col-lg-4 portfolio-item app-dev ui-ux" data-aos="fade-up" data-aos-delay="200">
+                        <div class="portfolio-item-card h-100 shadow-sm border-0 rounded-3 overflow-hidden">
+                            <a href="portfolio.html" class="portfolio-link" aria-label="View Project: Fitness & Wellness Mobile App">
+                                <div class="portfolio-img-wrapper">
+                                    <img src="images/welness.png" class="portfolio-item-img img-fluid" alt="Fitness & Wellness Mobile App">
+                                    <div class="portfolio-overlay"><i class="fas fa-search-plus fa-2x"></i></div>
+                                </div>
+                                <div class="p-3 p-md-4">
+                                    <span class="badge bg-primary-soft text-primary mb-2 small text-uppercase">Mobile App / UI/UX</span>
+                                    <h5 class="fw-bold mb-2 text-dark">Holistic Wellness Tracker App</h5>
+                                    <p class="text-muted small mb-0">Designed and developed a cross-platform mobile application for personalized fitness tracking, nutrition planning, and guided meditation, boosting user engagement by 40%.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- NEW Project 4: Local Restaurant Digital Marketing Campaign -->
+                    <div class="col-md-6 col-lg-4 portfolio-item digital-marketing" data-aos="fade-up" data-aos-delay="0">
+                        <div class="portfolio-item-card h-100 shadow-sm border-0 rounded-3 overflow-hidden">
+                            <a href="portfolio.html" class="portfolio-link" aria-label="View Project: Local Restaurant Digital Marketing Campaign">
+                                <div class="portfolio-img-wrapper">
+                                    <img src="images/sppon.png" class="portfolio-item-img img-fluid" alt="Local Restaurant Digital Marketing Campaign">
+                                    <div class="portfolio-overlay"><i class="fas fa-search-plus fa-2x"></i></div>
+                                </div>
+                                <div class="p-3 p-md-4">
+                                    <span class="badge bg-danger-soft text-danger mb-2 small text-uppercase">Digital Marketing</span>
+                                    <h5 class="fw-bold mb-2 text-dark">Bhubaneswar Eatery Launch Campaign</h5>
+                                    <p class="text-muted small mb-0">Executed a targeted digital marketing strategy for a new restaurant, combining local SEO, social media engagement, and PPC ads to achieve full bookings within 3 months.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- NEW Project 5: Enterprise CRM Integration & Customization -->
+                    <div class="col-md-6 col-lg-4 portfolio-item custom-software web-dev" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portfolio-item-card h-100 shadow-sm border-0 rounded-3 overflow-hidden">
+                            <a href="portfolio.html" class="portfolio-link" aria-label="View Project: Enterprise CRM Integration">
+                                <div class="portfolio-img-wrapper">
+                                    <img src="images/hr.png" class="portfolio-item-img img-fluid" alt="Enterprise CRM Integration & Customization">
+                                    <div class="portfolio-overlay"><i class="fas fa-search-plus fa-2x"></i></div>
+                                </div>
+                                <div class="p-3 p-md-4">
+                                    <span class="badge bg-purple-soft text-purple mb-2 small text-uppercase">Custom Software / Web Dev</span>
+                                    <h5 class="fw-bold mb-2 text-dark">Tailored CRM for Logistics Firm</h5>
+                                    <p class="text-muted small mb-0">Customized and integrated an enterprise CRM solution for a logistics company, streamlining client management, order tracking, and reporting workflows, reducing manual effort by 30%.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- NEW Project 6: Educational E-Learning Platform -->
+                    <div class="col-md-6 col-lg-4 portfolio-item web-dev ui-ux ecommerce" data-aos="fade-up" data-aos-delay="200">
+                        <div class="portfolio-item-card h-100 shadow-sm border-0 rounded-3 overflow-hidden">
+                            <a href="portfolio.html" class="portfolio-link" aria-label="View Project: Educational E-Learning Platform">
+                                <div class="portfolio-img-wrapper">
+                                    <img src="images/learn.png" class="portfolio-item-img img-fluid" alt="Educational E-Learning Platform">
+                                    <div class="portfolio-overlay"><i class="fas fa-search-plus fa-2x"></i></div>
+                                </div>
+                                <div class="p-3 p-md-4">
+                                    <span class="badge bg-teal-soft text-teal mb-2 small text-uppercase">Web Dev / E-Learning</span>
+                                    <h5 class="fw-bold mb-2 text-dark">Interactive E-Learning Hub for K-12</h5>
+                                    <p class="text-muted small mb-0">Built a comprehensive e-learning platform with interactive courses, student progress tracking, virtual classrooms, and secure payment processing for premium content.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- NEW Project 7: Healthcare Patient Portal (Web & App) -->
+                    <div class="col-md-6 col-lg-4 portfolio-item web-dev app-dev custom-software" data-aos="fade-up" data-aos-delay="0">
+                        <div class="portfolio-item-card h-100 shadow-sm border-0 rounded-3 overflow-hidden">
+                            <a href="portfolio.html" class="portfolio-link" aria-label="View Project: Healthcare Patient Portal">
+                                <div class="portfolio-img-wrapper">
+                                    <img src="images/health.png" class="portfolio-item-img img-fluid" alt="Healthcare Patient Portal">
+                                    <div class="portfolio-overlay"><i class="fas fa-search-plus fa-2x"></i></div>
+                                </div>
+                                <div class="p-3 p-md-4">
+                                    <span class="badge bg-indigo-soft text-indigo mb-2 small text-uppercase">Web & App Dev / Custom</span>
+                                    <h5 class="fw-bold mb-2 text-dark">Secure Healthcare Patient Portal</h5>
+                                    <p class="text-muted small mb-0">Developed a HIPAA-compliant patient portal (web & mobile) for appointment scheduling, medical record access, and secure communication, improving patient experience and administrative efficiency.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- NEW Project 8: B2B Lead Generation Website -->
+                    <div class="col-md-6 col-lg-4 portfolio-item web-dev digital-marketing" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portfolio-item-card h-100 shadow-sm border-0 rounded-3 overflow-hidden">
+                            <a href="portfolio.html" class="portfolio-link" aria-label="View Project: B2B Lead Generation Website">
+                                <div class="portfolio-img-wrapper">
+                                    <img src="images/b2b.png" class="portfolio-item-img img-fluid" alt="B2B Lead Generation Website">
+                                    <div class="portfolio-overlay"><i class="fas fa-search-plus fa-2x"></i></div>
+                                </div>
+                                <div class="p-3 p-md-4">
+                                    <span class="badge bg-info-soft text-info mb-2 small text-uppercase">Web Dev / Digital Marketing</span>
+                                    <h5 class="fw-bold mb-2 text-dark">Industrial Supplier B2B Website</h5>
+                                    <p class="text-muted small mb-0">Crafted a high-converting B2B website for an industrial supplier, optimizing for lead capture through clear CTAs, robust content marketing, and integrated analytics, increasing qualified leads by 60%.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- NEW Project 9: AI-Powered Chatbot for Customer Support -->
+                    <div class="col-md-6 col-lg-4 portfolio-item custom-software web-dev" data-aos="fade-up" data-aos-delay="200">
+                        <div class="portfolio-item-card h-100 shadow-sm border-0 rounded-3 overflow-hidden">
+                            <a href="portfolio.html" class="portfolio-link" aria-label="View Project: AI-Powered Chatbot">
+                                <div class="portfolio-img-wrapper">
+                                    <img src="images/chatbot.png" class="portfolio-item-img img-fluid" alt="AI-Powered Chatbot for Customer Support">
+                                    <div class="portfolio-overlay"><i class="fas fa-search-plus fa-2x"></i></div>
+                                </div>
+                                <div class="p-3 p-md-4">
+                                    <span class="badge bg-warning-soft text-warning mb-2 small text-uppercase">Custom Software / AI</span>
+                                    <h5 class="fw-bold mb-2 text-dark">AI-Driven Customer Support Chatbot</h5>
+                                    <p class="text-muted small mb-0">Developed and integrated an AI-powered chatbot for a service provider's website, automating common inquiries and significantly reducing customer service response times.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                     <!-- Add more projects as needed, keeping the same structure and adding relevant `data-aos-delay` -->
+                </div> <!-- End row .portfolio-container -->
+            </div>
+        </section>
+
+        <!-- === NEW SECTION: Our Impact & Client-Centric Approach === -->
+        <section id="our-impact" class="py-5 py-lg-6 bg-white">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+                        <img src="images/port.png" class="img-fluid rounded-3 shadow-lg" alt="Our Impact Illustration">
+                    </div>
+                    <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+                        <span class="badge bg-success-soft text-success mb-2">Results That Matter</span>
+                        <h2 class="display-6 fw-bold mb-3">Delivering Tangible Value, Driving Real Growth</h2>
+                        <p class="lead text-muted">
+                            Our portfolio isn't just a collection of projects; it's a testament to the measurable impact we've created for businesses. We focus on outcomes that translate to your success.
+                        </p>
+                        <ul class="list-unstyled text-dark lh-lg">
+                            <li class="mb-2"><i class="fas fa-chart-line text-success me-2"></i> **Increased Revenue:** Developing platforms that boost sales and conversions.</li>
+                            <li class="mb-2"><i class="fas fa-users-cog text-success me-2"></i> **Enhanced Efficiency:** Streamlining operations through custom software and automation.</li>
+                            <li class="mb-2"><i class="fas fa-star text-success me-2"></i> **Superior User Experience:** Crafting intuitive designs that captivate and retain users.</li>
+                            <li class="mb-2"><i class="fas fa-bullhorn text-success me-2"></i> **Expanded Market Reach:** Implementing digital strategies that connect you with your audience globally.</li>
+                            <li class="mb-2"><i class="fas fa-lightbulb text-success me-2"></i> **Innovative Solutions:** Solving complex problems with creative and cutting-edge technology.</li>
+                        </ul>
+                         <a href="about.html" class="btn btn-outline-primary rounded-pill px-4 mt-3">Learn More About Our Values <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- === NEW SECTION: Technologies We Use (Detailed Categories) === -->
+        <section id="tech-stack-detailed" class="py-5 py-lg-6 bg-light-alt">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="badge bg-purple-soft text-purple mb-2">Our Foundation</span>
+                    <h2 class="display-6 fw-bold">Our Evolving Technology Stack</h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                        We leverage a diverse and modern tech stack to build robust, scalable, and future-proof solutions. Our expertise spans across:
+                    </p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <!-- Category: Frontend -->
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                        <div class="tech-category card h-100 shadow-sm border-0 p-4 text-center">
+                            <div class="icon-wrapper mb-3 text-primary"><i class="fas fa-desktop fa-3x"></i></div>
+                            <h5 class="fw-bold mb-2">Frontend Development</h5>
+                            <p class="small text-muted">Crafting engaging and responsive user interfaces with modern frameworks.</p>
+                            <ul class="list-unstyled small tech-list mt-3">
+                                <li><i class="fab fa-react me-2"></i> React.js</li>
+                                <li><i class="fab fa-vuejs me-2"></i> Vue.js</li>
+                                <li><i class="fab fa-angular me-2"></i> Angular</li>
+                                <li><i class="fab fa-js-square me-2"></i> HTML5, CSS3, JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Category: Backend -->
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="tech-category card h-100 shadow-sm border-0 p-4 text-center">
+                            <div class="icon-wrapper mb-3 text-success"><i class="fas fa-server fa-3x"></i></div>
+                            <h5 class="fw-bold mb-2">Backend & APIs</h5>
+                            <p class="small text-muted">Building secure, scalable, and high-performance server-side applications.</p>
+                            <ul class="list-unstyled small tech-list mt-3">
+                                <li><i class="fab fa-node-js me-2"></i> Node.js (Express, NestJS)</li>
+                                <li><i class="fab fa-python me-2"></i> Python (Django, Flask)</li>
+                                <li><i class="fab fa-php me-2"></i> PHP (Laravel)</li>
+                                <li><i class="fas fa-database me-2"></i> PostgreSQL, MySQL, MongoDB</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Category: Mobile -->
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="tech-category card h-100 shadow-sm border-0 p-4 text-center">
+                            <div class="icon-wrapper mb-3 text-warning"><i class="fas fa-mobile-alt fa-3x"></i></div>
+                            <h5 class="fw-bold mb-2">Mobile Development</h5>
+                            <p class="small text-muted">Developing native and cross-platform mobile experiences for iOS and Android.</p>
+                            <ul class="list-unstyled small tech-list mt-3">
+                                <li><i class="fab fa-android me-2"></i> Native Android (Kotlin/Java)</li>
+                                <li><i class="fab fa-apple me-2"></i> Native iOS (Swift/Objective-C)</li>
+                                <li><i class="fas fa-code me-2"></i> React Native, Flutter</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- Category: Cloud & DevOps -->
+                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                        <div class="tech-category card h-100 shadow-sm border-0 p-4 text-center">
+                            <div class="icon-wrapper mb-3 text-info"><i class="fas fa-cloud fa-3x"></i></div>
+                            <h5 class="fw-bold mb-2">Cloud & DevOps</h5>
+                            <p class="small text-muted">Ensuring scalable, secure, and efficient deployment and infrastructure management.</p>
+                            <ul class="list-unstyled small tech-list mt-3">
+                                <li><i class="fab fa-aws me-2"></i> AWS</li>
+                                <li><i class="fab fa-google me-2"></i> Google Cloud Platform (GCP)</li>
+                                <li><i class="fab fa-docker me-2"></i> Docker, Kubernetes</li>
+                                <li><i class="fas fa-server me-2"></i> CI/CD Pipelines</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- Category: Design & UX -->
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="tech-category card h-100 shadow-sm border-0 p-4 text-center">
+                            <div class="icon-wrapper mb-3 text-danger"><i class="fas fa-palette fa-3x"></i></div>
+                            <h5 class="fw-bold mb-2">Design & UI/UX</h5>
+                            <p class="small text-muted">Creating intuitive, beautiful, and user-centric digital experiences.</p>
+                            <ul class="list-unstyled small tech-list mt-3">
+                                <li><i class="fab fa-figma me-2"></i> Figma</li>
+                                <li><i class="fab fa-adobe me-2"></i> Adobe XD, Photoshop, Illustrator</li>
+                                <li><i class="fas fa-ruler-combined me-2"></i> Wireframing & Prototyping</li>
+                                <li><i class="fas fa-user-friends me-2"></i> User Research</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- Category: Digital Marketing -->
+                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="tech-category card h-100 shadow-sm border-0 p-4 text-center">
+                            <div class="icon-wrapper mb-3 text-secondary"><i class="fas fa-bullhorn fa-3x"></i></div>
+                            <h5 class="fw-bold mb-2">Digital Marketing Tools</h5>
+                            <p class="small text-muted">Driving online visibility and engagement with powerful marketing platforms.</p>
+                            <ul class="list-unstyled small tech-list mt-3">
+                                <li><i class="fas fa-chart-line me-2"></i> Google Analytics</li>
+                                <li><i class="fab fa-google me-2"></i> Google Ads</li>
+                                <li><i class="fab fa-facebook-f me-2"></i> Facebook Ads Manager</li>
+                                <li><i class="fas fa-search me-2"></i> SEO Tools (e.g., SEMrush, Ahrefs)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- === Testimonials Section - REVISED CONTENT === -->
+        <section id="testimonials" class="py-5 py-lg-6 bg-white">
+             <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="badge bg-warning-soft text-warning mb-2">Client Voices</span>
+                    <h2 class="display-6 fw-bold">What Our Partners Say About Us</h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 600px;">Hear directly from businesses who experienced growth and transformation with Pabitra Technology.</p>
+                </div>
+                <div class="row justify-content-center g-4">
+                    <!-- Testimonial 1 -->
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                        <div class="card testimonial-card h-100 shadow-sm border-0">
+                            <div class="card-body p-4">
+                                <i class="fas fa-quote-left fa-2x text-primary opacity-25 mb-3"></i>
+                                <p class="text-secondary mb-4 fst-italic">"Pabitra Technology exceeded our expectations with their web development expertise. Our new portal is not only visually stunning but also incredibly functional, streamlining our internal processes significantly."</p>
+                                <div class="d-flex align-items-center">
+                                    <!-- <img src="images/client-avatar-1.jpg" class="rounded-circle me-3" alt="Client Avatar" width="50" height="50"> -->
+                                    <div>
+                                        <h6 class="mb-0 fw-semibold">Rohan Sharma</h6>
+                                        <small class="text-muted">Operations Head, Tech Innovations Pvt. Ltd.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card testimonial-card h-100 shadow-sm border-0">
+                             <div class="card-body p-4">
+                                <i class="fas fa-quote-left fa-2x text-primary opacity-25 mb-3"></i>
+                                <p class="text-secondary mb-4 fst-italic">"Their digital marketing team brought our new product launch to life! The targeted campaigns and strategic SEO truly amplified our reach, leading to impressive engagement and sales figures."</p>
+                                <div class="d-flex align-items-center">
+                                    <!-- <img src="images/client-avatar-2.jpg" class="rounded-circle me-3" alt="Client Avatar" width="50" height="50"> -->
+                                    <div>
+                                        <h6 class="mb-0 fw-semibold">Alisha Devi</h6>
+                                        <small class="text-muted">Marketing Director, Global Brands Inc.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Testimonial 3 (Optional) -->
+                    <div class="col-md-6 col-lg-4 d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
+                         <div class="card testimonial-card h-100 shadow-sm border-0">
+                             <div class="card-body p-4">
+                                <i class="fas fa-quote-left fa-2x text-primary opacity-25 mb-3"></i>
+                                <p class="text-secondary mb-4 fst-italic">"We needed a complex custom software solution, and Pabitra Technology delivered flawlessly. Their clear communication, technical prowess, and dedication made the entire process smooth and successful."</p>
+                                <div class="d-flex align-items-center">
+                                    <!-- <img src="images/client-avatar-3.jpg" class="rounded-circle me-3" alt="Client Avatar" width="50" height="50"> -->
+                                    <div>
+                                        <h6 class="mb-0 fw-semibold">Vikram Singh</h6>
+                                        <small class="text-muted">CEO, Innovate Solutions Group</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Call to Action Section - KEPT AS IS (good content) -->
+        <section class="py-5 py-lg-6 bg-primary text-white text-center cta-section-new position-relative overflow-hidden">
+             <div class="cta-bg-elements"> <span class="bg-circle circle-1"></span> <span class="bg-circle circle-2"></span> <span class="bg-icon icon-1"><i class="fas fa-project-diagram"></i></span> <span class="bg-icon icon-2"><i class="fas fa-lightbulb"></i></span> </div>
+            <div class="container position-relative" data-aos="zoom-in">
+                <h2 class="display-5 fw-bold mb-3">Ready to Start Your Next Project?</h2>
+                <p class="lead mb-4 mx-auto text-white-75" style="max-width: 700px;">
+                   Let's discuss how Pabitra Technology can elevate your brand and achieve your digital goals in Bhubaneswar and beyond. Reach out for a free consultation!
+                </p>
+                <a href="contact.html" class="btn btn-warning btn-lg me-md-2 shadow mb-2 mb-md-0">Get Free Consultation <i class="fas fa-comments ms-2"></i></a>
+                <a href="tel:+919876543210" class="btn btn-outline-light btn-lg">Call Us: +91-9876543210 <i class="fas fa-phone ms-2"></i></a> <!-- REPLACE PHONE -->
+            </div>
+        </section>
+
+    </main>
+    <!-- =======================
+    Main Content End
+    ======================== -->
+
+
+    <!-- =======================
+    Footer - KEPT AS IS
+    ======================== -->
+    <footer class="footer-section bg-dark text-white pt-5 pb-4">
+         <div class="container">
+            <div class="row gy-4">
+                <!-- Widget 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="index.html" class="d-inline-block mb-3 footer-logo-link"> <img src="images/pabitra25.png" alt="Pabitra Technology Logo - White" class="footer-logo-img"> </a>
+                    <p class="small mb-4"> Your dedicated partner in Bhubaneswar, Odisha for innovative digital marketing, web/app development, and technology solutions. Crafting digital futures, together.</p>
+                     <div class="social-icons mt-4">
+                         <a href="" target="_blank" class="social-icon me-2" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                         <a href="" target="_blank" class="social-icon me-2" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+                         <a href="https://www.facebook.com/pabitra.technology.2025" target="_blank" class="social-icon me-2" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                         <a href="https://www.instagram.com/pabitratechnology/" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                     </div>
+                </div>
+                <!-- Widget 2 -->
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <h5 class="text-uppercase fw-semibold mb-4 footer-heading">Services</h5>
+                    <ul class="list-unstyled footer-links mb-0">
+                        <li class="mb-2"><a href="service-digital-marketing-360.html">Digital Marketing</a></li>
+                        <li class="mb-2"><a href="service-web-dev.html">Web Development</a></li>
+                        <li class="mb-2"><a href="service-app-dev.html">App Development</a></li>
+                        <li class="mb-2"><a href="service-seo.html">SEO Services</a></li>
+                        <li class="mb-2"><a href="service-cloud.html">Cloud Solutions</a></li>
+                        <li class="mb-2"><a href="services.html" class="fw-medium text-warning">View All...</a></li>
+                    </ul>
+                </div>
+                <!-- Widget 3 -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <h5 class="text-uppercase fw-semibold mb-4 footer-heading">Company</h5>
+                     <ul class="list-unstyled footer-links mb-0">
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="portfolio.html">Our Work</a></li>
+                        <li class="mb-2"><a href="blog.html">Blog</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact Us</a></li>
+                        <li class="mb-2"><a href="careers.html">Careers</a></li>
+                        <li class="mb-2"><a href="privacy.html">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <!-- Widget 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase fw-semibold mb-4 footer-heading">Get In Touch</h5>
+                     <ul class="list-unstyled footer-contact-info mb-0">
+                         <li class="d-flex mb-3"> <i class="fas fa-map-marker-alt text-primary mt-1 me-3 flex-shrink-0"></i> <span class="small">Bhubaneswar, Odisha, India</span> </li>
+                          <li class="d-flex mb-3"> <i class="fas fa-phone text-primary mt-1 me-3 flex-shrink-0"></i> <a href="tel:+916370584682" class="small footer-link-contact">+91 6370584682, +91 9861117158</a> </li>
+                          <li class="d-flex mb-3"> <i class="fas fa-envelope text-primary mt-1 me-3 flex-shrink-0"></i> <a href="mailto:info@pabitratechnology.com" class="small footer-link-contact">info@pabitratechnology.com</a> </li>
+                          <li class="d-flex"> <i class="fas fa-clock text-primary mt-1 me-3 flex-shrink-0"></i> <span class="small">Mon - Sat: 10:00 AM - 6:00 PM</span> </li>
+                     </ul>
+                </div>
+            </div>
+             <!-- Copyright -->
+            <hr class="my-4 border-secondary border-opacity-25">
+            <div class="text-center"> <small class="text-white-50">© <script>document.write(new Date().getFullYear());</script> Pabitra Technology. All Rights Reserved. Designed with <i class="fas fa-heart text-danger"></i> by Pabitra Technology.</small> </div>
+        </div>
+    </footer>
+    <!-- =======================
+    Footer End
+    ======================== -->
+
+    <!-- Scroll Progress & WhatsApp -->
+    <div id="scroll-tracker"><div id="scroll-dot"></div></div>
+     <!-- *** REPLACE WHATSAPP NUMBER *** -->
+    <a href="https://wa.me/919876543210?text=Hello%20Pabitra%20Technology,%20I'm%20interested%20in%20discussing%20my%20project%20(from%20Portfolio%20Page)." class="whatsapp-float" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- === Isotope JS === -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script> <!-- Recommended for images -->
+
+
+    <!-- Custom JS -->
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({ duration: 800, once: true, offset: 50, delay: 50 });
+
+            // Language Selector Logic (same as before)
+            const langSelectors = document.querySelectorAll('#languageSelector + .dropdown-menu .dropdown-item'), langToggle = document.getElementById('languageSelector'); if (langToggle) { langSelectors.forEach(item => { item.addEventListener('click', function(event) { event.preventDefault(); langSelectors.forEach(i => { i.classList.remove('active'); i.querySelector('.fa-check').classList.add('opacity-0'); i.querySelector('.fa-check').classList.remove('opacity-75'); }); this.classList.add('active'); this.querySelector('.fa-check').classList.remove('opacity-0'); this.querySelector('.fa-check').classList.add('opacity-75'); const selectedLang = this.getAttribute('data-lang').toUpperCase(); langToggle.innerHTML = `<i class="fas fa-globe me-1"></i> ${selectedLang}`; console.log(`UI Language selected: ${selectedLang}. Implement translation logic if required.`); }); }); }
+
+            // Scroll Tracker Logic (same as before)
+            const scrollTracker = document.getElementById('scroll-tracker'), scrollDot = document.getElementById('scroll-dot'), body = document.body, html = document.documentElement; function updateScrollProgress() { if (!scrollTracker || !scrollDot) return; const scrollPos = window.pageYOffset || html.scrollTop || body.scrollTop || 0, totalScrollHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight ) - html.clientHeight; if (totalScrollHeight <= 0) { scrollDot.style.transform = `translateY(0px)`; body.classList.remove('scrolled'); scrollTracker.style.opacity = '0'; return; } const scrollPercentage = (scrollPos / totalScrollHeight), trackerHeight = scrollTracker.offsetHeight, dotHeight = scrollDot.offsetHeight, maxDotTranslate = trackerHeight - dotHeight, dotPosition = Math.max(0, Math.min(maxDotTranslate, scrollPercentage * maxDotTranslate)); scrollDot.style.transform = `translateY(${dotPosition}px)`; if (scrollPos > 100) { if (!body.classList.contains('scrolled')) { body.classList.add('scrolled'); scrollTracker.style.opacity = '1'; } } else { if (body.classList.contains('scrolled')) { body.classList.remove('scrolled'); scrollTracker.style.opacity = '0'; } } }
+            let ticking = false; function scrollHandler() { if (!ticking) { window.requestAnimationFrame(() => { updateScrollProgress(); ticking = false; }); ticking = true; } } if (scrollTracker && scrollDot) { window.addEventListener('scroll', scrollHandler, { passive: true }); updateScrollProgress(); }
+
+            // Count Up Logic (same as before - if needed on this page, removed from this version)
+            // Removed to simplify, if you had this elsewhere, you might re-add it if needed on this page.
+
+            // Smooth Scroll Logic (same as before)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { const targetId = this.getAttribute('href'); if (targetId.startsWith('#') && (this.pathname === window.location.pathname || this.pathname === '')) { e.preventDefault(); const targetElement = document.querySelector(targetId); if (targetElement) { let headerOffset = 70; const mainHeader = document.querySelector('.header-sticky.sticky-top'), subNavDesktop = document.querySelector('.about-subnav.sticky-top'); if (mainHeader) headerOffset = mainHeader.offsetHeight; if(subNavDesktop && window.getComputedStyle(subNavDesktop).display !== 'none') { headerOffset += subNavDesktop.offsetHeight; } const elementPosition = targetElement.getBoundingClientRect().top, offsetPosition = elementPosition + window.pageYOffset - headerOffset - 20; window.scrollTo({ top: offsetPosition, behavior: "smooth" }); if (this.closest('.about-subnav-mobile')) { const mobileDropdownToggle = document.getElementById('aboutSubNavMobile'); var bsDropdown = bootstrap.Dropdown.getInstance(mobileDropdownToggle); if(bsDropdown) { bsDropdown.hide(); } } } } }); });
+
+            // --- Initialize Isotope for Portfolio Filtering ---
+            const portfolioContainer = document.querySelector('.portfolio-container');
+            if (portfolioContainer) {
+                // Use imagesLoaded to ensure images are loaded before initializing Isotope
+                imagesLoaded(portfolioContainer, function() {
+                    const iso = new Isotope(portfolioContainer, {
+                        itemSelector: '.portfolio-item',
+                        layoutMode: 'masonry', // or 'fitRows'
+                        percentPosition: true, // Needed for responsive masonry
+                        masonry: {
+                            columnWidth: '.portfolio-item'
+                        }
+                    });
+
+                    const filterButtons = document.querySelectorAll('.portfolio-filter-buttons button');
+                    filterButtons.forEach(button => {
+                        button.addEventListener('click', () => {
+                            // Update active button state
+                            filterButtons.forEach(btn => btn.classList.remove('active'));
+                            button.classList.add('active');
+
+                            const filterValue = button.getAttribute('data-filter');
+                            iso.arrange({ filter: filterValue });
+
+                            // Optional: Re-run AOS animations on filtered items if needed
+                            // AOS.refresh();
+                        });
+                    });
+                });
+            }
+
+        });
+    </script>
+
+</body>
+</html>

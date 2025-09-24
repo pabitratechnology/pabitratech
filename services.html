@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- === SEO: Title & Description for Services Landing Page === -->
+    <title>Our Services | Pabitra Technology - Digital Solutions in Bhubaneswar</title>
+    <meta name="description" content="Explore comprehensive digital marketing, web development, design, and technology services offered by Pabitra Technology to boost your business growth.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Animate.css -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS (Single file for all pages) -->
+    <link rel="stylesheet" href="CSS/services1.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/pabitra1.png" type="image/png">
+
+</head>
+<body>
+
+    <!-- =======================
+    Header
+    ======================== -->
+    <header class="header-sticky sticky-top shadow-sm">
+         <nav class="navbar navbar-expand-lg navbar-dark py-0"> <!-- Changed navbar-light to navbar-dark -->
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand navbar-brand-custom" href="index.html">
+                    <img src="images/pabitra250.png" alt="Pabitra Technology Logo" class="logo-img">
+                </a>
+                <!-- Toggler -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavPabitra" aria-controls="navbarNavPabitra" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navigation -->
+                <div class="collapse navbar-collapse" id="navbarNavPabitra">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="about.html">About</a></li>
+                        <li class="nav-item dropdown">
+                            <!-- Added active class to the toggle link -->
+                            <a class="nav-link dropdown-toggle px-3 active" aria-current="page" href="services.html" id="servicesMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu dropdown-menu-services fade shadow-lg border-0" aria-labelledby="servicesMenu">
+                                <!-- Links point to specific detail pages -->
+                                <li><h6 class="dropdown-header small text-uppercase text-primary">Digital Marketing</h6></li>
+                                <li><a class="dropdown-item" href="service-digital-marketing-360.html">360° Digital Marketing</a></li>
+                                <li><a class="dropdown-item" href="service-seo.html">SEO Services</a></li>
+                                <li><a class="dropdown-item" href="service-ppc.html">PPC Advertising</a></li>
+                                <li><a class="dropdown-item" href="service-smm.html">Social Media Marketing</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><h6 class="dropdown-header small text-uppercase text-primary">Development & Design</h6></li>
+                                <li><a class="dropdown-item" href="service-web-dev.html">Website Development</a></li>
+                                <li><a class="dropdown-item" href="service-app-dev.html">Mobile App Development</a></li>
+                                <li><a class="dropdown-item" href="service-ecommerce.html">E-commerce Solutions</a></li>
+                                <li><a class="dropdown-item" href="service-graphics-uiux.html">Graphics & UI/UX Design</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                 <li><h6 class="dropdown-header small text-uppercase text-primary">Technology Solutions</h6></li>
+                                <li><a class="dropdown-item" href="service-security.html">Security Services</a></li>
+                                <li><a class="dropdown-item" href="service-automation.html">Automation Services</a></li>
+                                <li><a class="dropdown-item" href="service-devops.html">DevOps Consulting</a></li>
+                                <li><a class="dropdown-item" href="service-cloud.html">Cloud Solutions</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item fw-bold view-all-services" href="services.html">View All Services <i class="fas fa-arrow-right small ms-1"></i></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link px-3" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="blog.html">Blog</a></li>
+                         <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
+                    </ul>
+                    <!-- Quote & Lang -->
+                    <div class="d-flex align-items-center ms-lg-4 mt-3 mt-lg-0" data-aos="fade-left">
+                         <a href="contact.html" class="btn btn-primary btn-sm rounded-pill px-3 shadow-sm">Get Quote</a>
+                         <!-- Language selector removed for consistency across pages as per previous requests -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- =======================
+    Header End
+    ======================== -->
+
+    <!-- =======================
+    Services Page Hero Section
+    ======================== -->
+    <section class="service-hero-section d-flex align-items-center text-white text-center">
+        <div class="container position-relative" style="z-index: 2;" data-aos="fade-in">
+            <h1 class="display-3 fw-bold mb-2 animate__animated animate__fadeInDown">Our Digital Expertise</h1>
+            <p class="lead mb-0 opacity-75 animate__animated animate__fadeInUp animate__delay-1s" style="max-width: 750px; margin: 0 auto;">
+                Explore our wide range of services designed to elevate your brand and accelerate your business growth.
+            </p>
+        </div>
+    </section>
+    <!-- =======================
+    Services Hero End
+    ======================== -->
+
+
+    <!-- =======================
+    Main Content Start (Services Overview)
+    ======================== -->
+    <main>
+
+        <!-- Service Category: Digital Marketing -->
+        <section class="py-5 py-lg-6 bg-light">
+            <div class="container" data-aos="fade-up">
+                <div class="row mb-5 align-items-center service-category-header"> <!-- Added service-category-header class -->
+                    <div class="col-lg-6">
+                        <span class="badge bg-primary-soft text-primary mb-2">Visibility & Growth</span>
+                        <h2 class="display-6 fw-bold">Digital Marketing</h2>
+                        <p class="lead text-muted">Amplify your online presence and connect with your target audience effectively.</p>
+                    </div>
+                    <div class="col-lg-6 text-lg-end">
+                         <!-- Optional: Add an illustration/icon for the category -->
+                          <i class="fas fa-chart-pie fa-4x text-primary opacity-25"></i>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Service Link Card -->
+                    <div class="col-md-6 col-lg-3">
+                        <a href="service-digital-marketing-360.html" class="service-overview-card">
+                             <div class="icon text-primary"><i class="fas fa-bullhorn"></i></div>
+                            <h6>360° Digital Marketing</h6>
+                            <p class="small text-muted">Holistic strategies for maximum impact.</p>
+                            <span class="stretched-link-view">View Details <i class="fas fa-arrow-right small"></i></span>
+                        </a>
+                    </div>
+                    <!-- Service Link Card -->
+                    <div class="col-md-6 col-lg-3">
+                         <a href="service-seo.html" class="service-overview-card">
+                             <div class="icon text-success"><i class="fas fa-search"></i></div>
+                             <h6>SEO Services</h6>
+                             <p class="small text-muted">Boost organic visibility & traffic.</p>
+                             <span class="stretched-link-view">View Details <i class="fas fa-arrow-right small"></i></span>
+                        </a>
+                    </div>
+                    <!-- Service Link Card -->
+                    <div class="col-md-6 col-lg-3">
+                         <a href="service-ppc.html" class="service-overview-card">
+                            <div class="icon text-warning"><i class="fas fa-mouse-pointer"></i></div>
+                            <h6>PPC Advertising</h6>
+                            <p class="small text-muted">Targeted ads for immediate results.</p>
+                            <span class="stretched-link-view">View Details <i class="fas fa-arrow-right small"></i></span>
+                        </a>
+                    </div>
+                     <!-- Service Link Card -->
+                    <div class="col-md-6 col-lg-3">
+                        <a href="service-smm.html" class="service-overview-card">
+                            <div class="icon text-info"><i class="fas fa-share-alt"></i></div>
+                            <h6>Social Media Marketing</h6>
+                            <p class="small text-muted">Engage audiences & build brand loyalty.</p>
+                             <span class="stretched-link-view">View Details <i class="fas fa-arrow-right small"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Category: Development & Design -->
+        <section class="py-5 py-lg-6 bg-white">
+            <div class="container" data-aos="fade-up">
+                <div class="row mb-5 align-items-center flex-row-reverse service-category-header"> <!-- Added service-category-header class -->
+                    <div class="col-lg-6 text-lg-start">
+                        <span class="badge bg-primary-soft text-primary mb-2">Build & Engage</span>
+                        <h2 class="display-6 fw-bold">Development & Design</h2>
+                        <p class="lead text-muted">Creating seamless, high-performance digital platforms and captivating visuals.</p>
+                    </div>
+                     <div class="col-lg-6 text-lg-end mb-4 mb-lg-0">
+                         <i class="fas fa-laptop-code fa-4x text-primary opacity-25"></i>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                     <!-- Service Link Card -->
+                    <div class="col-md-6 col-lg-3">
+                        <a href="service-web-dev.html" class="service-overview-card">
+                            <div class="icon text-primary"><i class="fas fa-desktop"></i></div>
+                            <h6>Website Development</h6>
+                            <p class="small text-muted">Custom, responsive & SEO-ready sites.</p>
+                             <span class="stretched-link-view">View Details <i class="fas fa-arrow-right small"></i></span>
+                        </a>
+                    </div>
+                     <!-- Service Link Card -->
+                    <div class="col-md-6 col-lg-3">
+                        <a href="service-app-dev.html" class="service-overview-card">
+                             <div class="icon text-success"><i class="fas fa-mobile-alt"></i></div>
+                            <h6>Mobile App Development</h6>
+                            <p class="small text-muted">Native & cross-platform app solutions.</p>
+                             <span class="stretched-link-view">View Details <i class="fas fa-arrow-right small"></i></span>
+                        </a>
+                    </div>
+                     <!-- Service Link Card -->
+                     <div class="col-md-6 col-lg-3">
+                        <a href="service-ecommerce.html" class="service-overview-card">
+                             <div class="icon text-warning"><i class="fas fa-shopping-cart"></i></div>
+                            <h6>E-commerce Solutions</h6>
+                            <p class="small text-muted">Scalable online stores that convert.</p>
+                             <span class="stretched-link-view">View Details <i class="fas fa-arrow-right small"></i></span>
+                        </a>
+                    </div>
+                     <!-- Service Link Card -->
+                     <div class="col-md-6 col-lg-3">
+                        <a href="service-graphics-uiux.html" class="service-overview-card">
+                            <div class="icon text-info"><i class="fas fa-palette"></i></div>
+                            <h6>Graphics & UI/UX Design</h6>
+                            <p class="small text-muted">Intuitive design & compelling visuals.</p>
+                             <span class="stretched-link-view">View Details <i class="fas fa-arrow-right small"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Category: Technology Solutions -->
+        <section class="py-5 py-lg-6 bg-light">
+            <div class="container" data-aos="fade-up">
+                <div class="row mb-5 align-items-center service-category-header"> <!-- Added service-category-header class -->
+                    <div class="col-lg-6">
+                        <span class="badge bg-primary-soft text-primary mb-2">Secure & Optimize</span>
+                        <h2 class="display-6 fw-bold">Technology Solutions</h2>
+                        <p class="lead text-muted">Robust infrastructure, security, and automation for operational excellence.</p>
+                    </div>
+                    <div class="col-lg-6 text-lg-end">
+                         <i class="fas fa-cogs fa-4x text-primary opacity-25"></i>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Service Link Card -->
+                    <div class="col-md-6 col-lg-3">
+                        <a href="service-security.html" class="service-overview-card">
+                             <div class="icon text-danger"><i class="fas fa-shield-alt"></i></div>
+                            <h6>Security Services</h6>
+                            <p class="small text-muted">Protect your digital assets & data.</p>
+                             <span class="stretched-link-view">View Details <i class="fas fa-arrow-right small"></i></span>
+                        </a>
+                    </div>
+                    <!-- Service Link Card -->
+                    <div class="col-md-6 col-lg-3">
+                         <a href="service-automation.html" class="service-overview-card">
+                             <div class="icon text-purple"><i class="fas fa-robot"></i></div>
+                             <h6>Automation Services</h6>
+                             <p class="small text-muted">Streamline workflows & boost efficiency.</p>
+                             <span class="stretched-link-view">View Details <i class="fas fa-arrow-right small"></i></span>
+                        </a>
+                    </div>
+                    <!-- Service Link Card -->
+                    <div class="col-md-6 col-lg-3">
+                         <a href="service-devops.html" class="service-overview-card">
+                            <div class="icon text-success"><i class="fas fa-infinity"></i></div>
+                            <h6>DevOps Consulting</h6>
+                            <p class="small text-muted">Accelerate development & deployment.</p>
+                             <span class="stretched-link-view">View Details <i class="fas fa-arrow-right small"></i></span>
+                        </a>
+                    </div>
+                     <!-- Service Link Card -->
+                    <div class="col-md-6 col-lg-3">
+                        <a href="service-cloud.html" class="service-overview-card">
+                            <div class="icon text-info"><i class="fas fa-cloud"></i></div>
+                            <h6>Cloud Solutions</h6>
+                            <p class="small text-muted">Scalable infrastructure & management.</p>
+                            <span class="stretched-link-view">View Details <i class="fas fa-arrow-right small"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- How We Work / Process Snippet (Optional Re-use) -->
+        <section id="process-snippet" class="py-5 py-lg-6 bg-white">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="badge bg-primary-soft text-primary mb-2">Our Method</span>
+                    <h2 class="display-6 fw-bold">Our Approach to Services</h2>
+                    <p class="lead text-muted mx-auto" style="max-width: 600px;">A streamlined process ensures quality and efficiency for every project.</p>
+                </div>
+                <div class="row g-4 text-center">
+                    <!-- Step 1 -->
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+                        <div class="process-step-card h-100">
+                            <div class="process-icon text-primary"><i class="fas fa-search"></i></div>
+                            <h5 class="fw-bold mb-2">1. Discover</h5>
+                            <p class="small text-muted">Understanding your unique goals & requirements.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="process-step-card h-100">
+                            <div class="process-icon text-success"><i class="fas fa-pencil-ruler"></i></div>
+                            <h5 class="fw-bold mb-2">2. Strategize</h5>
+                            <p class="small text-muted">Crafting a data-driven plan for success.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="process-step-card h-100">
+                            <div class="process-icon text-info"><i class="fas fa-cogs"></i></div>
+                            <h5 class="fw-bold mb-2">3. Execute</h5>
+                            <p class="small text-muted">Implementing the solution with expert precision.</p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="process-step-card h-100">
+                             <div class="process-icon text-warning"><i class="fas fa-chart-bar"></i></div>
+                            <h5 class="fw-bold mb-2">4. Analyze & Grow</h5>
+                            <p class="small text-muted">Measuring results and optimizing for growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Call to Action Section -->
+        <section class="py-5 py-lg-6 bg-primary text-white text-center cta-section-new position-relative overflow-hidden">
+             <div class="cta-bg-elements"> <span class="bg-circle circle-1"></span> <span class="bg-circle circle-2"></span> <span class="bg-icon icon-1"><i class="fas fa-headset"></i></span> <span class="bg-icon icon-2"><i class="fas fa-drafting-compass"></i></span> </div>
+            <div class="container position-relative" data-aos="zoom-in">
+                <h2 class="display-5 fw-bold mb-3">Ready to Discuss Your Needs?</h2>
+                <p class="lead mb-4 mx-auto text-white-75" style="max-width: 700px;">
+                    Find out how our tailored services can help your business succeed. Get a free quote or consultation today.
+                </p>
+                <!-- *** REPLACE Phone *** -->
+                <a href="contact.html" class="btn btn-warning btn-lg me-md-2 shadow mb-2 mb-md-0">Request a Free Quote <i class="fas fa-paper-plane ms-2"></i></a>
+                <a href="tel:+911234567890" class="btn btn-outline-light btn-lg">Call Us Directly <i class="fas fa-phone ms-2"></i></a>
+            </div>
+        </section>
+
+    </main>
+    <!-- =======================
+    Main Content End
+    ======================== -->
+
+
+    <!-- =======================
+    Footer
+    ======================== -->
+    <footer class="footer-section bg-dark text-white pt-5 pb-4">
+        <!-- ... Footer code identical to about.html ... -->
+         <div class="container">
+            <div class="row gy-4">
+                <!-- Widget 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="index.html" class="d-inline-block mb-3 footer-logo-link"> <img src="images/pabitra25.png" alt="Pabitra Technology Logo - White" class="footer-logo-img"> </a>
+                    <p class="small mb-4"> Your dedicated partner in Bhubaneswar, Odisha for innovative digital marketing, web/app development, and technology solutions. Crafting digital futures, together.</p>
+                     <div class="social-icons mt-4">
+                         <a href="https://linkedin.com/company/pabitra-technology" target="_blank" class="social-icon me-2" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                         <a href="https://twitter.com/pabitratech" target="_blank" class="social-icon me-2" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+                         <a href="https://facebook.com/pabitratechnology" target="_blank" class="social-icon me-2" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                         <a href="https://instagram.com/pabitratech" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                     </div>
+                </div>
+                <!-- Widget 2 -->
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <h5 class="text-uppercase fw-semibold mb-4 footer-heading">Services</h5>
+                    <ul class="list-unstyled footer-links mb-0">
+                        <li class="mb-2"><a href="service-digital-marketing-360.html">Digital Marketing</a></li>
+                        <li class="mb-2"><a href="service-web-dev.html">Web Development</a></li>
+                        <li class="mb-2"><a href="service-app-dev.html">App Development</a></li>
+                        <li class="mb-2"><a href="service-seo.html">SEO Services</a></li>
+                        <li class="mb-2"><a href="service-cloud.html">Cloud Solutions</a></li>
+                        <li class="mb-2"><a href="services.html" class="fw-medium text-warning">View All...</a></li>
+                    </ul>
+                </div>
+                <!-- Widget 3 -->
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <h5 class="text-uppercase fw-semibold mb-4 footer-heading">Company</h5>
+                     <ul class="list-unstyled footer-links mb-0">
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="portfolio.html">Our Work</a></li>
+                        <li class="mb-2"><a href="blog.html">Blog</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact Us</a></li>
+                        <li class="mb-2"><a href="careers.html">Careers</a></li>
+                        <li class="mb-2"><a href="privacy.html">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <!-- Widget 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase fw-semibold mb-4 footer-heading">Get In Touch</h5>
+                     <ul class="list-unstyled footer-contact-info mb-0">
+                         <li class="d-flex mb-3"> <i class="fas fa-map-marker-alt text-primary mt-1 me-3 flex-shrink-0"></i> <span class="small">Jagannath Vihar, Fire Station, Baramunda, Pin-751003</span> </li>
+                          <li class="d-flex mb-3"> <i class="fas fa-phone text-primary mt-1 me-3 flex-shrink-0"></i> <a href="tel:+916370584682" class="small footer-link-contact">+91 6370584682, +91 9861117158</a> </li>
+                          <li class="d-flex mb-3"> <i class="fas fa-envelope text-primary mt-1 me-3 flex-shrink-0"></i> <a href="mailto:info@pabitratechnology.com" class="small footer-link-contact">info@pabitratechnology.com</a> </li>
+                          <li class="d-flex"> <i class="fas fa-clock text-primary mt-1 me-3 flex-shrink-0"></i> <span class="small">Mon - Sat: 10:00 AM - 6:00 PM</span> </li>
+                     </ul>
+                </div>
+            </div>
+             <!-- Copyright -->
+            <hr class="my-4 border-secondary border-opacity-25">
+            <div class="text-center"> <small class="text-white-50">© <script>document.write(new Date().getFullYear());</script> Pabitra Technology. All Rights Reserved. Designed with <i class="fas fa-heart text-danger"></i> by Pabitra Technology.</small> </div>
+        </div>
+    </footer>
+    <!-- =======================
+    Footer End
+    ======================== -->
+
+    <!-- Scroll Progress & WhatsApp -->
+    <div id="scroll-tracker"><div id="scroll-dot"></div></div>
+    <!-- *** REPLACE WhatsApp number *** -->
+    <a href="https://wa.me/919876543210?text=Hello%20Pabitra%20Technology,%20I'm%20interested%20in%20your%20services." class="whatsapp-float" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS (Use the same JS block as about.html/index.html) -->
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 50, // Trigger slightly earlier
+                delay: 50,
+            });
+
+            // Language Selector UI Logic (if used)
+            const langSelectors = document.querySelectorAll('#languageSelector + .dropdown-menu .dropdown-item');
+            const langToggle = document.getElementById('languageSelector');
+            if (langToggle) {
+                 langSelectors.forEach(item => {
+                    item.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        langSelectors.forEach(i => {
+                            i.classList.remove('active');
+                            i.querySelector('.fa-check').classList.add('opacity-0');
+                            i.querySelector('.fa-check').classList.remove('opacity-75');
+                        });
+                        this.classList.add('active');
+                        this.querySelector('.fa-check').classList.remove('opacity-0');
+                        this.querySelector('.fa-check').classList.add('opacity-75');
+                        const selectedLang = this.getAttribute('data-lang').toUpperCase();
+                        langToggle.innerHTML = `<i class="fas fa-globe me-1"></i> ${selectedLang}`;
+                        console.log(`UI Language selected: ${selectedLang}. Implement translation logic if required.`);
+                    });
+                });
+            }
+
+
+            // Scroll Progress Indicator Logic
+            const scrollTracker = document.getElementById('scroll-tracker');
+            const scrollDot = document.getElementById('scroll-dot');
+            const body = document.body;
+            const html = document.documentElement;
+
+            function updateScrollProgress() {
+                if (!scrollTracker || !scrollDot) return;
+                const scrollPos = window.pageYOffset || html.scrollTop || body.scrollTop || 0;
+                const totalScrollHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight ) - html.clientHeight;
+                if (totalScrollHeight <= 0) {
+                    scrollDot.style.transform = `translateY(0px)`;
+                    body.classList.remove('scrolled');
+                    scrollTracker.style.opacity = '0';
+                    return;
+                }
+                const scrollPercentage = (scrollPos / totalScrollHeight);
+                const trackerHeight = scrollTracker.offsetHeight;
+                const dotHeight = scrollDot.offsetHeight;
+                const maxDotTranslate = trackerHeight - dotHeight;
+                const dotPosition = Math.max(0, Math.min(maxDotTranslate, scrollPercentage * maxDotTranslate));
+                scrollDot.style.transform = `translateY(${dotPosition}px)`;
+                if (scrollPos > 100) { // Show tracker after scrolling down a bit
+                    if (!body.classList.contains('scrolled')) {
+                        body.classList.add('scrolled');
+                         scrollTracker.style.opacity = '1';
+                    }
+                } else {
+                    if (body.classList.contains('scrolled')) {
+                        body.classList.remove('scrolled');
+                         scrollTracker.style.opacity = '0';
+                    }
+                }
+            }
+
+            let ticking = false;
+            function scrollHandler() {
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        updateScrollProgress();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+
+            if (scrollTracker && scrollDot) {
+                window.addEventListener('scroll', scrollHandler, { passive: true });
+                updateScrollProgress(); // Initial check
+            }
+
+            // Simple Count Up for Stats Section (if you add them to this page)
+            const countUpElements = document.querySelectorAll('.count-up');
+            if (countUpElements.length > 0) {
+                 const countUpObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const el = entry.target;
+                            const targetValue = parseInt(el.textContent.replace(/,/g, ''), 10) || 0;
+                            el.textContent = '0'; // Start from 0
+                            const duration = 1500; // Animation duration
+                            const frameDuration = 1000 / 60; // ~60fps
+                            const totalFrames = Math.round(duration / frameDuration);
+                            const increment = targetValue / totalFrames;
+                            let currentFrame = 0;
+                            let currentValue = 0;
+
+                            function updateCount() {
+                                currentValue += increment;
+                                currentFrame++;
+                                if (currentFrame < totalFrames) {
+                                    el.textContent = Math.ceil(currentValue).toLocaleString(); // Format number
+                                    requestAnimationFrame(updateCount);
+                                } else {
+                                    el.textContent = targetValue.toLocaleString(); // Ensure final value is exact
+                                }
+                            }
+                            requestAnimationFrame(updateCount);
+                            observer.unobserve(el); // Animate only once
+                        }
+                    });
+                }, { threshold: 0.6 }); // Trigger when 60% visible
+
+                countUpElements.forEach(el => countUpObserver.observe(el));
+             }
+
+             // Smooth scroll logic (kept general, will work for any # links)
+             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    // Ensure it's a hash link for the *current* page only if path matches or is empty
+                    if (targetId.startsWith('#') && (this.pathname === window.location.pathname || this.pathname === '')) {
+                         e.preventDefault();
+                         const targetElement = document.querySelector(targetId);
+                         if (targetElement) {
+                            let headerOffset = 70; // Default offset
+                            const mainHeader = document.querySelector('.header-sticky.sticky-top');
+                            const subNavDesktop = document.querySelector('.about-subnav.sticky-top');
+
+                            if (mainHeader) headerOffset = mainHeader.offsetHeight;
+                             // Add subnav height IF it exists and is visible on desktop
+                            if(subNavDesktop && window.getComputedStyle(subNavDesktop).display !== 'none') {
+                                headerOffset += subNavDesktop.offsetHeight;
+                            }
+
+                             const elementPosition = targetElement.getBoundingClientRect().top;
+                             const offsetPosition = elementPosition + window.pageYOffset - headerOffset - 20; // Extra padding
+
+                             window.scrollTo({
+                                 top: offsetPosition,
+                                 behavior: "smooth"
+                             });
+
+                             // Close mobile dropdown if open
+                             if (this.closest('.about-subnav-mobile')) { // Check if click came from mobile dropdown
+                                const mobileDropdownToggle = document.getElementById('aboutSubNavMobile');
+                                var bsDropdown = bootstrap.Dropdown.getInstance(mobileDropdownToggle);
+                                if(bsDropdown) {
+                                    bsDropdown.hide();
+                                }
+                             }
+                         }
+                    }
+                    // Allow default behavior for links to other pages or external links
+                });
+            });
+
+
+        }); // End DOMContentLoaded
+    </script>
+
+</body>
+</html>

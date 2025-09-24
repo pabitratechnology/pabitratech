@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holistic Wellness Tracker</title>
+    <!-- Use Tailwind CSS for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* A calming, light background */
+        }
+        .container {
+            max-width: 420px;
+            margin: auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-[#f0f4f8]">
+    <div id="app" class="container rounded-2xl overflow-hidden p-6">
+        <!-- App Header -->
+        <header class="text-center mb-6">
+            <h1 class="text-3xl font-bold text-slate-800">Wellness Tracker</h1>
+            <p class="text-sm text-slate-500">Your path to a balanced life</p>
+        </header>
+
+        <!-- User Info and Status -->
+        <div id="status-message" class="bg-gray-100 text-center py-2 px-4 mb-4 rounded-lg text-sm text-gray-600">
+            Connecting to a database...
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="flex-grow">
+            <!-- Dashboard Section -->
+            <section id="dashboard-section" class="mb-6">
+                <h2 class="text-2xl font-semibold mb-4 text-slate-700">Dashboard</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Stat Card -->
+                    <div class="bg-indigo-100 p-4 rounded-xl shadow-sm">
+                        <p class="text-sm text-indigo-700">Total Workouts</p>
+                        <h3 id="workout-count" class="text-2xl font-bold text-indigo-900 mt-1">0</h3>
+                    </div>
+                    <!-- Stat Card -->
+                    <div class="bg-teal-100 p-4 rounded-xl shadow-sm">
+                        <p class="text-sm text-teal-700">Meditation Time</p>
+                        <h3 class="text-2xl font-bold text-teal-900 mt-1">0 min</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Workout Logger Section -->
+            <section id="log-workout-section" class="mb-6">
+                <h2 class="text-2xl font-semibold mb-4 text-slate-700">Log a Workout</h2>
+                <div class="bg-gray-50 p-6 rounded-2xl shadow-md">
+                    <form id="workout-form">
+                        <div class="mb-4">
+                            <label for="workout-type" class="block text-sm font-medium text-gray-700 mb-1">Workout Type</label>
+                            <input type="text" id="workout-type" name="workout-type" placeholder="e.g., Running, Yoga" required class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="workout-duration" class="block text-sm font-medium text-gray-700 mb-1">Duration (min)</label>
+                            <input type="number" id="workout-duration" name="workout-duration" placeholder="e.g., 30" required class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-600 text-white font-semibold py-3 rounded-xl hover:bg-indigo-700 transition-colors">Log Workout</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Logged Workouts Section -->
+            <section id="workouts-list-section" class="mb-6">
+                <h2 class="text-2xl font-semibold mb-4 text-slate-700">Your Activity</h2>
+                <div id="workouts-list" class="space-y-4">
+                    <p class="text-gray-500 text-center">No workouts logged yet.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInWithCustomToken, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, onSnapshot, query } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Global variables provided by the environment
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        // --- Firebase Initialization and Auth ---
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+        let userId;
+
+        const statusMessageEl = document.getElementById('status-message');
+        const workoutsListEl = document.getElementById('workouts-list');
+        const workoutCountEl = document.getElementById('workout-count');
+
+        // Function to update the UI with a message
+        function updateStatus(message) {
+            statusMessageEl.textContent = message;
+        }
+
+        // --- Authentication ---
+        async function authenticateUser() {
+            try {
+                if (initialAuthToken) {
+                    await signInWithCustomToken(auth, initialAuthToken);
+                } else {
+                    await signInAnonymously(auth);
+                }
+                userId = auth.currentUser.uid;
+                updateStatus(`Logged in as user ID: ${userId}`);
+                // Once authenticated, start listening to the database
+                listenForWorkouts();
+            } catch (error) {
+                console.error("Firebase authentication failed:", error);
+                updateStatus("Authentication failed. Check console for details.");
+            }
+        }
+
+        // --- Firestore Data Operations ---
+        function getWorkoutsCollection() {
+            // Firestore security rules require a specific path for public/private data
+            return collection(db, `artifacts/${appId}/users/${userId}/workouts`);
+        }
+
+        // Listen for real-time updates to the workouts collection
+        function listenForWorkouts() {
+            if (!userId) {
+                console.log("User not authenticated, cannot listen for workouts.");
+                return;
+            }
+            
+            const workoutsQuery = query(getWorkoutsCollection());
+            onSnapshot(workoutsQuery, (querySnapshot) => {
+                const workouts = [];
+                querySnapshot.forEach((doc) => {
+                    workouts.push({ id: doc.id, ...doc.data() });
+                });
+                renderWorkouts(workouts);
+            }, (error) => {
+                console.error("Error listening to workouts:", error);
+                updateStatus("Error fetching workouts. See console.");
+            });
+        }
+
+        // --- UI Rendering ---
+        function renderWorkouts(workouts) {
+            workoutsListEl.innerHTML = ''; // Clear previous list
+            workoutCountEl.textContent = workouts.length;
+
+            if (workouts.length === 0) {
+                workoutsListEl.innerHTML = '<p class="text-gray-500 text-center">No workouts logged yet.</p>';
+                return;
+            }
+
+            workouts.sort((a, b) => b.createdAt.toDate() - a.createdAt.toDate()); // Sort by newest first
+
+            workouts.forEach(workout => {
+                const workoutEl = document.createElement('div');
+                workoutEl.className = 'bg-white p-4 rounded-xl shadow-sm flex justify-between items-center';
+                const date = workout.createdAt.toDate().toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric'
+                });
+
+                workoutEl.innerHTML = `
+                    <div>
+                        <p class="text-lg font-semibold text-slate-800">${workout.type}</p>
+                        <p class="text-sm text-gray-500">${workout.duration} min</p>
+                    </div>
+                    <span class="text-xs text-gray-400">${date}</span>
+                `;
+                workoutsListEl.appendChild(workoutEl);
+            });
+        }
+
+        // --- Form Submission Handler ---
+        document.getElementById('workout-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const workoutType = document.getElementById('workout-type').value;
+            const workoutDuration = document.getElementById('workout-duration').value;
+
+            if (!workoutType || !workoutDuration) return;
+
+            try {
+                // Add a new document to the collection
+                await addDoc(getWorkoutsCollection(), {
+                    type: workoutType,
+                    duration: Number(workoutDuration),
+                    createdAt: new Date()
+                });
+
+                // Clear the form
+                document.getElementById('workout-form').reset();
+            } catch (error) {
+                console.error("Error adding document: ", error);
+                updateStatus("Failed to log workout. See console.");
+            }
+        });
+
+        // Start the app by authenticating the user
+        authenticateUser();
+    </script>
+</body>
+</html>
