@@ -1,0 +1,573 @@
+@import "globals.css";
+
+/* ==========================================================================
+   SERVICES PAGE — COMPLETE STYLESHEET
+   Dark Space Glassmorphic Architecture
+   ========================================================================== */
+
+/* =============================
+   1. HERO SECTION
+   ============================= */
+.service-hero-section {
+    background: linear-gradient(135deg, #060f1e 0%, #0A192F 50%, #0d2040 100%);
+    background-size: cover;
+    background-position: center;
+    min-height: 88vh;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 196, 255, 0.12);
+}
+
+/* Animated cyan grid overlay */
+.service-hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0,196,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,196,255,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: gridScroll 25s linear infinite;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes gridScroll {
+    0%   { background-position: 0 0; }
+    100% { background-position: 60px 60px; }
+}
+
+/* Glowing orb backdrops */
+.hero-backdrop-glow { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.glow-orb { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.18; }
+.glow-orb.glow-1 {
+    width: 500px; height: 500px;
+    top: -15%; left: -10%;
+    background: radial-gradient(circle, #00C4FF 0%, transparent 70%);
+}
+.glow-orb.glow-2 {
+    width: 450px; height: 450px;
+    bottom: -20%; right: -10%;
+    background: radial-gradient(circle, #00ffd5 0%, transparent 70%);
+}
+.glow-orb.glow-3 {
+    width: 300px; height: 300px;
+    top: 40%; left: 45%;
+    background: radial-gradient(circle, #FFD700 0%, transparent 70%);
+    opacity: 0.07;
+}
+
+/* Pulsing live indicator dot */
+.pulse-dot {
+    display: inline-block;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: #00C4FF;
+    box-shadow: 0 0 8px #00C4FF;
+    animation: pulseGlow 1.6s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+    from { transform: scale(0.8); opacity: 0.6; }
+    to   { transform: scale(1.3); opacity: 1; }
+}
+
+/* Gradient text for hero heading */
+.text-primary-gradient {
+    background: linear-gradient(120deg, #00C4FF 0%, #00ffd5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Hero heading */
+.service-hero-section h1 {
+    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+/* Hero interactive dashboard glass card */
+.hero-interactive-dashboard {
+    background: rgba(17, 34, 64, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 196, 255, 0.15) !important;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4), 0 0 40px rgba(0,196,255,0.05);
+}
+
+/* Individual metric stat cards inside dashboard */
+.metric-card {
+    background: rgba(6, 15, 30, 0.6) !important;
+    border: 1px solid rgba(255,255,255,0.06) !important;
+    border-radius: 12px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.metric-card:hover {
+    border-color: rgba(0, 196, 255, 0.35) !important;
+    transform: translateY(-3px);
+}
+
+/* Glow on primary CTA button */
+.shadow-glow {
+    box-shadow: 0 0 22px rgba(0, 196, 255, 0.35);
+    transition: box-shadow 0.3s ease;
+}
+.shadow-glow:hover { box-shadow: 0 0 40px rgba(0, 196, 255, 0.6); }
+
+/* =============================
+   2. SECTION BACKGROUND HELPERS
+   ============================= */
+main section.bg-light  { background-color: var(--bg-dark-secondary) !important; }
+main section.bg-white  { background-color: var(--bg-dark-primary)   !important; }
+main section.bg-light-alt { background-color: var(--bg-dark-secondary) !important; }
+
+/* =============================
+   3. SERVICE CATEGORY HEADERS
+   ============================= */
+.service-category-header { margin-bottom: 3.5rem; }
+.service-category-header h2 {
+    font-size: clamp(1.9rem, 3.8vw, 3rem);
+    margin-top: 0.5rem;
+    color: var(--text-light);
+}
+.service-category-header p.lead {
+    color: var(--text-muted-light);
+    max-width: 580px;
+}
+
+/* =============================
+   4. SERVICE OVERVIEW CARDS
+   ============================= */
+.service-overview-card {
+    background: var(--bg-dark-card);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 18px;
+    padding: 2.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.35s cubic-bezier(.25,.8,.25,1),
+                border-color 0.35s ease,
+                box-shadow 0.35s ease,
+                background 0.35s ease;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+}
+.service-overview-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(0,196,255,0.6), transparent);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+.service-overview-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: var(--bg-dark-card-hover);
+    border-color: rgba(0, 196, 255, 0.4);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(0,196,255,0.08);
+}
+.service-overview-card:hover::before { opacity: 1; }
+
+.service-overview-card h6 {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+}
+.service-overview-card p.small {
+    color: var(--text-muted-light);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+.service-overview-card .stretched-link-view {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+    transition: gap 0.25s ease, color 0.25s ease;
+}
+.service-overview-card:hover .stretched-link-view { gap: 10px; }
+
+/* =============================
+   5. SVG ICON WRAPPERS
+   ============================= */
+.svg-icon-wrap {
+    width: 68px; height: 68px;
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+/* Colour variants */
+.svg-icon-wrap.bg-blue-soft    { background: rgba(0,196,255,0.08); }
+.svg-icon-wrap.bg-success-soft { background: rgba(52,211,153,0.08); }
+.svg-icon-wrap.bg-warning-soft { background: rgba(255,215,0,0.08);  }
+.svg-icon-wrap.bg-info-soft    { background: rgba(99,179,237,0.08); }
+.svg-icon-wrap.bg-danger-soft  { background: rgba(248,113,113,0.08);}
+.svg-icon-wrap.bg-purple-soft  { background: rgba(167,139,250,0.08);}
+
+.service-overview-card:hover .svg-icon-wrap {
+    transform: rotate(6deg) scale(1.1);
+    box-shadow: 0 0 24px rgba(0,196,255,0.15);
+}
+
+/* =============================
+   6. HOW WE WORK / PROCESS STEPS
+   ============================= */
+#process-snippet { background-color: var(--bg-dark-primary) !important; }
+.process-step-card {
+    background: var(--bg-dark-card);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.3);
+}
+.process-step-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 196, 255, 0.35);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.4);
+}
+.process-step-card .process-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1.4rem;
+    transition: transform 0.3s ease;
+}
+.process-step-card:hover .process-icon { transform: scale(1.12) rotate(-5deg); }
+.process-step-card h5 { color: var(--text-light); font-size: 1.25rem; margin-bottom: 0.6rem; }
+.process-step-card p.small { color: var(--text-muted-light); font-size: 0.92rem; line-height: 1.6; }
+
+/* =============================
+   7. WHY PARTNER WITH US CARDS
+   ============================= */
+.why-us-card-advanced {
+    background: var(--bg-dark-card);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 18px;
+    padding: 2.2rem 2rem;
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+}
+.why-us-card-advanced::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00C4FF, #00ffd5);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+.why-us-card-advanced:hover {
+    transform: translateY(-9px);
+    border-color: rgba(0,196,255,0.3);
+    box-shadow: 0 22px 50px rgba(0,0,0,0.4), 0 0 25px rgba(0,196,255,0.07);
+}
+.why-us-card-advanced:hover::after { transform: scaleX(1); }
+.why-us-card-advanced h5 { color: var(--text-light); font-size: 1.15rem; margin-bottom: 0.5rem; }
+.why-us-card-advanced p.small { color: var(--text-muted-light); font-size: 0.92rem; line-height: 1.65; }
+
+.why-icon-wrap {
+    width: 58px; height: 58px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    margin-bottom: 1.4rem;
+    transition: transform 0.3s ease;
+}
+.why-us-card-advanced:hover .why-icon-wrap { transform: scale(1.1) rotate(5deg); }
+
+/* =============================
+   8. TECH STACK GRID
+   ============================= */
+.tech-stack-panel-card {
+    background: var(--bg-dark-card);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 18px;
+    padding: 2rem 1.8rem;
+    height: 100%;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.tech-stack-panel-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255,255,255,0.14);
+}
+.tech-stack-panel-card h6 {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+.tech-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: var(--text-muted-light);
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 0.32rem 0.75rem;
+    border-radius: 8px;
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    cursor: default;
+}
+.tech-badge:hover {
+    background: rgba(0,196,255,0.12);
+    border-color: rgba(0,196,255,0.4);
+    color: var(--color-primary);
+}
+
+/* =============================
+   9. PRICING CARDS
+   ============================= */
+.pricing-card-advanced {
+    background: var(--bg-dark-card);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 22px;
+    padding: 2.8rem 2.2rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 12px 38px rgba(0,0,0,0.35);
+    transition: transform 0.4s cubic-bezier(.25,.8,.25,1), box-shadow 0.4s ease;
+}
+.pricing-card-advanced:hover {
+    transform: translateY(-14px);
+    box-shadow: 0 28px 60px rgba(0,0,0,0.5);
+}
+.pricing-card-advanced.popular {
+    border: 2px solid var(--color-accent);
+    background: linear-gradient(170deg, #1e3050 0%, var(--bg-dark-card) 60%);
+}
+.pricing-card-advanced.popular:hover { box-shadow: 0 28px 60px rgba(0,0,0,0.5), 0 0 30px rgba(255,215,0,0.12); }
+
+/* "Most Popular" ribbon */
+.popular-ribbon {
+    position: absolute;
+    top: 18px; right: -38px;
+    background: var(--color-accent);
+    color: #0A192F;
+    font-weight: 800;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 3.5rem;
+    transform: rotate(45deg);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.4);
+}
+
+.pricing-features-list {
+    list-style: none;
+    padding: 0; margin: 0;
+}
+.pricing-features-list li {
+    font-size: 0.93rem;
+    color: var(--text-muted-light);
+    margin-bottom: 0.9rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.5;
+}
+.pricing-features-list li i { margin-top: 2px; flex-shrink: 0; }
+
+/* =============================
+   10. FAQ ACCORDION
+   ============================= */
+.faq-accordion-wrap .accordion-item {
+    background: var(--bg-dark-card) !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    border-radius: 14px !important;
+    margin-bottom: 1rem !important;
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.faq-accordion-wrap .accordion-item:hover {
+    border-color: rgba(0,196,255,0.3) !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+.faq-accordion-wrap .accordion-button {
+    background: transparent !important;
+    color: var(--text-light) !important;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 1.5rem 1.6rem;
+    box-shadow: none !important;
+    border: none !important;
+    transition: color 0.3s ease;
+}
+.faq-accordion-wrap .accordion-button:not(.collapsed) {
+    color: var(--color-primary) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+}
+.faq-accordion-wrap .accordion-button::after {
+    filter: invert(1) brightness(1.5);
+}
+.faq-accordion-wrap .accordion-body {
+    background: rgba(6,15,30,0.4);
+    color: var(--text-muted-light);
+    font-size: 0.97rem;
+    line-height: 1.75;
+    padding: 1.4rem 1.6rem 1.6rem;
+}
+
+/* =============================
+   11. CALL TO ACTION SECTION
+   ============================= */
+.cta-section-new {
+    background: linear-gradient(135deg, #06111f 0%, #0A192F 50%, #0d2040 100%);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.cta-section-new::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0,196,255,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,196,255,0.06) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: 0;
+}
+.cta-bg-elements {
+    position: absolute; inset: 0;
+    pointer-events: none; overflow: hidden;
+    z-index: 0;
+}
+.cta-bg-elements .bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
+    filter: blur(70px);
+    opacity: 0.15;
+    animation: ctaFloat 18s ease-in-out infinite alternate;
+}
+.cta-bg-elements .circle-1 { width: 180px; height: 180px; top: 10%; left: 12%; }
+.cta-bg-elements .circle-2 { width: 220px; height: 220px; bottom: 10%; right: 8%; animation-delay: 3s; }
+.cta-bg-elements .bg-icon {
+    position: absolute;
+    font-size: 9rem;
+    color: rgba(0,196,255,0.07);
+    animation: ctaSpin 30s linear infinite;
+}
+.cta-bg-elements .icon-1 { top: 15%; left: 3%; }
+.cta-bg-elements .icon-2 { bottom: 8%; right: 5%; animation-delay: 8s; }
+
+@keyframes ctaFloat {
+    0%   { transform: translate(0,0) scale(1); }
+    100% { transform: translate(20px,25px) scale(1.08); }
+}
+@keyframes ctaSpin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+.cta-section-new h2 {
+    font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+    line-height: 1.25;
+    color: var(--text-light);
+}
+.cta-section-new p.lead {
+    color: rgba(200,215,238,0.85);
+    max-width: 700px;
+    margin-inline: auto;
+}
+
+/* =============================
+   12. GLOBAL BADGE COLOUR MAP
+   ============================= */
+.bg-primary-soft  { background: rgba(0,196,255,0.1);    }
+.bg-success-soft  { background: rgba(52,211,153,0.1);   }
+.bg-warning-soft  { background: rgba(255,215,0,0.1);    }
+.bg-blue-soft     { background: rgba(0,196,255,0.1);    }
+.bg-info-soft     { background: rgba(99,179,237,0.1);   }
+.bg-danger-soft   { background: rgba(248,113,113,0.1);  }
+.bg-purple-soft   { background: rgba(167,139,250,0.1);  }
+
+.text-muted-light { color: var(--text-muted-light) !important; }
+.text-accent      { color: var(--color-accent)      !important; }
+.text-success     { color: #34d399                  !important; }
+.text-info        { color: #63b3ed                  !important; }
+.text-warning     { color: var(--color-accent)      !important; }
+.text-danger      { color: #f87171                  !important; }
+.text-purple      { color: #a78bfa                  !important; }
+
+/* =============================
+   13. RESPONSIVE TWEAKS
+   ============================= */
+@media (max-width: 991.98px) {
+    .service-hero-section { min-height: auto; padding-top: 6rem; }
+    .hero-interactive-dashboard { margin-top: 2.5rem; }
+    .service-overview-card { padding: 1.8rem; }
+    .pricing-card-advanced { padding: 2.2rem 1.8rem; }
+}
+
+@media (max-width: 575.98px) {
+    .service-hero-section h1 { font-size: 2.1rem; }
+    .tech-stack-panel-card { padding: 1.6rem; }
+    .faq-accordion-wrap .accordion-button { font-size: 0.97rem; padding: 1.2rem 1.3rem; }
+}
+
+/* === MOBILE RESPONSIVE HERO === */
+@media (max-width: 991.98px) {
+  .service-detail-hero {
+    min-height: auto !important;
+    padding-top: 5.5rem !important;
+    padding-bottom: 3rem !important;
+    background-attachment: scroll !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .service-detail-hero {
+    padding-top: 5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+  .service-detail-hero h1, .service-detail-hero .display-4, .service-detail-hero .display-3 {
+    font-size: clamp(1.7rem, 6.5vw, 2.5rem) !important;
+    letter-spacing: -0.5px !important;
+    line-height: 1.2 !important;
+  }
+  .service-detail-hero p.lead, .service-detail-hero .lead {
+    font-size: 0.97rem !important;
+  }
+}
+@media (max-width: 480px) {
+  .service-detail-hero {
+    padding-top: 4.5rem !important;
+    padding-bottom: 2rem !important;
+  }
+}

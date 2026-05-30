@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- === ADVANCED SEO METADATA === -->
+    <title>Latest Tech & Marketing Insights | Pabitra Technology Blog</title>
+    <meta name="description" content="Explore expert articles, tips, and trends in digital marketing, SEO, web design, cloud migration, and custom software from the engineering team at Pabitra Technology.">
+    <meta name="keywords" content="Pabitra Technology blog, tech trends, digital marketing insights, web development tips, SEO strategies 2026, software engineering blog">
+    <link rel="canonical" href="https://pabitratechnology.com/blog.html">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- === SEO: Title & Description for Blog Page === -->
+    
+    
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Google Fonts (Consistent with index.html and about.html) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/CSS/blog.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/pabitra1.png" type="image/png">
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P236FM72');</script>
+    <link rel="stylesheet" href="/CSS/components.css">
+    </head>
+<body>
+<!-- START_HEADER_COMPONENT -->
+<!-- ============================================================
+     PABITRA TECHNOLOGY â€” ADVANCED HEADER COMPONENT v2
+     - Top bar: contact, social, country selector, audit CTA
+     - Mega menu: 4 service columns + 20+ IT services
+     - Extra nav pages: Solutions, Case Studies, Careers, More
+     - Free Website Audit modal form
+     - Fully mobile responsive
+     ============================================================ -->
+
+<!-- ====== FREE WEBSITE AUDIT MODAL ====== -->
+<div class="audit-modal-overlay" id="auditModalOverlay">
+    <div class="audit-modal-box">
+        <button class="audit-modal-close" id="auditModalClose" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="audit-modal-header">
+            <div class="audit-icon-ring"><i class="fas fa-chart-line"></i></div>
+            <h4>Free Website Audit Report</h4>
+            <p>Get a comprehensive SEO &amp; performance audit â€” 100% Free, delivered in 24 hours.</p>
+        </div>
+        <form class="audit-form" id="auditForm" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Access Key (Dynamic Direct Email Delivery) -->
+            <input type="hidden" name="access_key" value="bb4d1b82-4df3-40e9-a681-79b88b488737">
+            <input type="hidden" name="subject" value="New Free Website Audit Request - Pabitra Technology">
+            <input type="hidden" name="from_name" value="Pabitra Audit Portal">
+            <div class="audit-form-group">
+                <label><i class="fas fa-globe me-2"></i>Your Website URL</label>
+                <input type="url" name="website_url" placeholder="https://yourwebsite.com" required>
+            </div>
+            <div class="audit-form-group">
+                <label><i class="fas fa-envelope me-2"></i>Email Address</label>
+                <input type="email" name="email" placeholder="you@company.com" required>
+            </div>
+            <div class="audit-form-group">
+                <label><i class="fas fa-phone me-2"></i>Phone Number</label>
+                <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required>
+            </div>
+            <div class="audit-form-group">
+                <label><i class="fas fa-tasks me-2"></i>What do you need?</label>
+                <select name="audit_type">
+                    <option value="seo">SEO Audit</option>
+                    <option value="performance">Performance Audit</option>
+                    <option value="security">Security Audit</option>
+                    <option value="full">Full Website Audit</option>
+                    <option value="competitor">Competitor Analysis</option>
+                </select>
+            </div>
+            <button type="submit" class="audit-submit-btn">
+                <i class="fas fa-rocket me-2"></i>Get My Free Audit Report
+            </button>
+            <p class="audit-disclaimer"><i class="fas fa-lock me-1"></i>100% Free. No credit card. Results in 24 hrs.</p>
+        </form>
+    </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+
+    <!-- ====== ULTRA TOP BAR ====== -->
+    <div class="ultra-top-bar" id="ultraTopBar">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center justify-content-between top-bar-inner">
+
+                <!-- LEFT: Contact details -->
+                <div class="top-bar-left d-flex align-items-center gap-3">
+                    <a href="tel:+916370584682" class="tbl-item dynamic-phone-link">
+                        <i class="fas fa-phone-alt"></i>
+                        <span class="dynamic-phone-text">+91 6370584682</span>
+                    </a>
+                    <span class="tbl-sep d-none d-md-inline">|</span>
+                    <a href="mailto:infopabitratechnology@gmail.com" class="tbl-item d-none d-md-flex">
+                        <i class="fas fa-envelope"></i>
+                        <span>infopabitratechnology@gmail.com</span>
+                    </a>
+                    <span class="tbl-sep d-none d-lg-inline">|</span>
+                    <span class="tbl-item d-none d-lg-flex">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Bhubaneswar, Odisha, India</span>
+                    </span>
+
+                </div>
+
+                <!-- RIGHT: Social + Country + Audit CTA -->
+                <div class="top-bar-right d-flex align-items-center gap-2">
+
+                    <!-- Social Icons -->
+                    <div class="tb-socials d-none d-sm-flex align-items-center gap-1">
+                        <a href="https://www.facebook.com/pabitra.technology.2025" class="tb-social facebook" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/pabitratechnology/" class="tb-social instagram" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/pabitra-technology/" class="tb-social linkedin" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/PabitraTech2025" class="tb-social twitter" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/916370584682" class="tb-social tb-wa" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+
+                    <span class="tbl-sep d-none d-sm-inline">|</span>
+
+                    <!-- Country Selector -->
+                    <div class="country-selector" id="countrySel">
+                        <button class="country-btn" id="countryBtn" type="button">
+                            <span class="flag-icon">ðŸ‡®ðŸ‡³</span>
+                            <span class="country-code d-none d-md-inline">IN</span>
+                            <i class="fas fa-chevron-down caret ms-1"></i>
+                        </button>
+                        <div class="country-dropdown" id="countryDropdown">
+                            <a href="#" class="country-opt active" data-flag="ðŸ‡®ðŸ‡³" data-code="IN" data-phone="+91" data-fullphone="+91 6370584682">ðŸ‡®ðŸ‡³ India (+91)</a>
+                            <a href="#" class="country-opt" data-flag="ðŸ‡ºðŸ‡¸" data-code="US" data-phone="+1" data-fullphone="+1 (650) 489-6370">ðŸ‡ºðŸ‡¸ United States (+1)</a>
+                            <a href="#" class="country-opt" data-flag="ðŸ‡¬ðŸ‡§" data-code="GB" data-phone="+44" data-fullphone="+44 20 7946 0192">ðŸ‡¬ðŸ‡§ United Kingdom (+44)</a>
+                            <a href="#" class="country-opt" data-flag="ðŸ‡¦ðŸ‡ª" data-code="AE" data-phone="+971" data-fullphone="+971 4 312 9000">ðŸ‡¦ðŸ‡ª UAE (+971)</a>
+                            <a href="#" class="country-opt" data-flag="ðŸ‡¦ðŸ‡º" data-code="AU" data-phone="+61" data-fullphone="+61 2 9382 1111">ðŸ‡¦ðŸ‡º Australia (+61)</a>
+                            <a href="#" class="country-opt" data-flag="ðŸ‡¸ðŸ‡¬" data-code="SG" data-phone="+65" data-fullphone="+65 6789 0123">ðŸ‡¸ðŸ‡¬ Singapore (+65)</a>
+                            <a href="#" class="country-opt" data-flag="ðŸ‡¨ðŸ‡¦" data-code="CA" data-phone="+1" data-fullphone="+1 (416) 555-0199">ðŸ‡¨ðŸ‡¦ Canada (+1)</a>
+                            <a href="#" class="country-opt" data-flag="ðŸ‡©ðŸ‡ª" data-code="DE" data-phone="+49" data-fullphone="+49 30 8973 8921">ðŸ‡©ðŸ‡ª Germany (+49)</a>
+                            <a href="#" class="country-opt" data-flag="ðŸ‡¸ðŸ‡¦" data-code="SA" data-phone="+966" data-fullphone="+966 11 405 8920">ðŸ‡¸ðŸ‡¦ Saudi Arabia (+966)</a>
+                        </div>
+                    </div>
+
+                    <!-- Free Audit CTA -->
+                    <button class="tb-audit-btn" id="openAuditModal" type="button">
+                        <i class="fas fa-search-plus me-1"></i>
+                        <span class="d-none d-lg-inline">Free Website Audit</span>
+                        <span class="d-inline d-lg-none">Audit</span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== MAIN NAVBAR ====== -->
+    <nav class="main-navbar navbar navbar-expand-xl" id="mainNavbar">
+        <div class="container-xl">
+
+            <!-- Brand Logo -->
+            <a class="navbar-brand brand-logo" href="/">
+                <img src="/images/pabitra250.png" alt="Pabitra Technology" class="logo-img">
+            </a>
+
+            <!-- Mobile: Audit + Hamburger -->
+            <div class="d-flex d-xl-none align-items-center gap-2 ms-auto">
+                <button class="tb-audit-btn mobile-audit" id="openAuditModalMobile" type="button">
+                    <i class="fas fa-chart-bar"></i>
+                </button>
+                <button class="hamburger-btn" type="button" id="hamburgerBtn"
+                        data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                        aria-controls="navbarMain" aria-expanded="false" aria-label="Menu">
+                    <span class="ham-bar bar-top"></span>
+                    <span class="ham-bar bar-mid"></span>
+                    <span class="ham-bar bar-bot"></span>
+                </button>
+            </div>
+
+            <!-- Nav Links -->
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto align-items-xl-center">
+
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link-custom" href="/">Home</a>
+                    </li>
+
+                    <!-- About Dropdown -->
+                    <li class="nav-item dropdown simple-dropdown" id="aboutDropdown">
+                        <a class="nav-link-custom" href="/about/story/" id="aboutBtn">
+                            About <i class="fas fa-chevron-down chevron-icon ms-1"></i>
+                        </a>
+                        <div class="simple-menu">
+                            <a href="/about/story/" class="simple-item">
+                                <i class="fas fa-building"></i>
+                                <span><strong>About Us</strong><small>Our story & vision</small></span>
+                            </a>
+                            <a href="/about/team/" class="simple-item">
+                                <i class="fas fa-users"></i>
+                                <span><strong>Our Team</strong><small>Meet the experts</small></span>
+                            </a>
+                            <a href="/about/awards/" class="simple-item">
+                                <i class="fas fa-trophy"></i>
+                                <span><strong>Awards & Recognition</strong><small>Our achievements</small></span>
+                            </a>
+                            <a href="/about/values/" class="simple-item">
+                                <i class="fas fa-bullseye"></i>
+                                <span><strong>Mission & Values</strong><small>What drives us</small></span>
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- SERVICES MEGA MENU -->
+                    <li class="nav-item mega-dropdown" id="servicesDropdown">
+                        <a class="nav-link-custom" href="/services/" id="servicesMenuBtn">
+                            Services <i class="fas fa-chevron-down chevron-icon ms-1"></i>
+                        </a>
+
+                        <div class="mega-menu-panel" id="megaMenuPanel">
+                            <div class="container-xl">
+                                <div class="mega-inner row g-0">
+
+                                    <!-- Col 1: Digital Marketing -->
+                                    <div class="col-xl-3 mega-col mega-col-border">
+                                        <div class="mega-col-header">
+                                            <div class="mega-col-icon bg-blue-glow"><i class="fas fa-chart-line"></i></div>
+                                            <div>
+                                                <h6 class="mega-col-title">Digital Marketing</h6>
+                                                <p class="mega-col-sub">Grow your online presence</p>
+                                            </div>
+                                        </div>
+                                        <ul class="mega-link-list">
+                                            <li><a href="/services/digital-marketing-360/" class="mega-link"><i class="fas fa-bullseye"></i><span><strong>360Â° Digital Marketing</strong><small>Full-funnel campaigns</small></span></a></li>
+                                            <li><a href="/services/seo/" class="mega-link"><i class="fas fa-search"></i><span><strong>SEO Services</strong><small>Rank #1 on Google</small></span></a></li>
+                                            <li><a href="/services/ppc/" class="mega-link"><i class="fas fa-ad"></i><span><strong>PPC & Google Ads</strong><small>Instant qualified traffic</small></span></a></li>
+                                            <li><a href="/services/smm/" class="mega-link"><i class="fab fa-instagram"></i><span><strong>Social Media Marketing</strong><small>Build brand community</small></span></a></li>
+                                            <li><a href="/services/email/" class="mega-link"><i class="fas fa-envelope-open-text"></i><span><strong>Email Marketing</strong><small>High ROI campaigns</small></span></a></li>
+                                            <li><a href="/services/content-marketing/" class="mega-link"><i class="fas fa-pen-nib"></i><span><strong>Content Marketing</strong><small>Engage &amp; convert</small></span></a></li>
+                                            <li><a href="/services/orm/" class="mega-link"><i class="fas fa-star"></i><span><strong>ORM &amp; Reputation</strong><small>Protect your brand</small></span></a></li>
+                                            <li><a href="/services/influencer-marketing/" class="mega-link"><i class="fas fa-users"></i><span><strong>Influencer Marketing</strong><small>Reach new audiences</small></span></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Col 2: Web & App Development -->
+                                    <div class="col-xl-3 mega-col mega-col-border">
+                                        <div class="mega-col-header">
+                                            <div class="mega-col-icon bg-accent-glow"><i class="fas fa-laptop-code"></i></div>
+                                            <div>
+                                                <h6 class="mega-col-title">Web & App Dev</h6>
+                                                <p class="mega-col-sub">Build powerful products</p>
+                                            </div>
+                                        </div>
+                                        <ul class="mega-link-list">
+                                            <li><a href="/services/web-dev/" class="mega-link"><i class="fas fa-code"></i><span><strong>Website Development</strong><small>Fast, modern websites</small></span></a></li>
+                                            <li><a href="/services/app-dev/" class="mega-link"><i class="fas fa-mobile-alt"></i><span><strong>Mobile App Development</strong><small>iOS &amp; Android apps</small></span></a></li>
+                                            <li><a href="/services/ecommerce/" class="mega-link"><i class="fas fa-shopping-cart"></i><span><strong>E-commerce Development</strong><small>Sell online seamlessly</small></span></a></li>
+                                            <li><a href="/services/graphics-uiux/" class="mega-link"><i class="fas fa-paint-brush"></i><span><strong>UI/UX &amp; Graphic Design</strong><small>Stunning interfaces</small></span></a></li>
+                                            <li><a href="/services/api-cms/" class="mega-link"><i class="fas fa-plug"></i><span><strong>API &amp; CMS Integration</strong><small>Connect your systems</small></span></a></li>
+                                            <li><a href="/services/custom-software/" class="mega-link"><i class="fas fa-cogs"></i><span><strong>Custom Software Dev</strong><small>Tailored business tools</small></span></a></li>
+                                            <li><a href="/services/pwa/" class="mega-link"><i class="fas fa-window-restore"></i><span><strong>PWA Development</strong><small>App-like web experience</small></span></a></li>
+                                            <li><a href="/services/saas/" class="mega-link"><i class="fas fa-cube"></i><span><strong>SaaS Development</strong><small>Scalable cloud products</small></span></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Col 3: IT & Technology Solutions -->
+                                    <div class="col-xl-3 mega-col mega-col-border">
+                                        <div class="mega-col-header">
+                                            <div class="mega-col-icon bg-green-glow"><i class="fas fa-server"></i></div>
+                                            <div>
+                                                <h6 class="mega-col-title">IT & Technology</h6>
+                                                <p class="mega-col-sub">Scale with confidence</p>
+                                            </div>
+                                        </div>
+                                        <ul class="mega-link-list">
+                                            <li><a href="/services/cloud/" class="mega-link"><i class="fas fa-cloud"></i><span><strong>Cloud Solutions</strong><small>AWS, Azure &amp; GCP</small></span></a></li>
+                                            <li><a href="/services/devops/" class="mega-link"><i class="fas fa-infinity"></i><span><strong>DevOps &amp; CI/CD</strong><small>Automate deployments</small></span></a></li>
+                                            <li><a href="/services/security/" class="mega-link"><i class="fas fa-shield-alt"></i><span><strong>Cyber Security</strong><small>Protect your assets</small></span></a></li>
+                                            <li><a href="/services/automation/" class="mega-link"><i class="fas fa-robot"></i><span><strong>AI &amp; Automation</strong><small>Intelligent workflows</small></span></a></li>
+                                            <li><a href="/services/data-analytics/" class="mega-link"><i class="fas fa-chart-bar"></i><span><strong>Data Analytics &amp; BI</strong><small>Insights that matter</small></span></a></li>
+                                            <li><a href="/services/machine-learning/" class="mega-link"><i class="fas fa-brain"></i><span><strong>Machine Learning / AI</strong><small>Next-gen intelligence</small></span></a></li>
+                                            <li><a href="/services/iot/" class="mega-link"><i class="fas fa-network-wired"></i><span><strong>IoT Solutions</strong><small>Connect smart devices</small></span></a></li>
+                                            <li><a href="/services/blockchain/" class="mega-link"><i class="fas fa-link"></i><span><strong>Blockchain Development</strong><small>Decentralized systems</small></span></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Col 4: CTA Panel -->
+                                    <div class="col-xl-3 mega-col mega-cta-col">
+                                        <div class="mega-cta-card">
+                                            <div class="mega-cta-icon"><i class="fas fa-chart-pie"></i></div>
+                                            <h5 class="mega-cta-title">Free Website Audit</h5>
+                                            <p class="mega-cta-text">Get a free SEO &amp; performance audit of your website â€” delivered in 24 hours.</p>
+                                            <button type="button" class="mega-cta-btn" id="megaAuditBtn">
+                                                <i class="fas fa-search-plus me-2"></i>Get Free Audit
+                                            </button>
+                                            <div class="mega-cta-stats">
+                                                <div class="cta-stat"><strong>50+</strong><small>Projects</small></div>
+                                                <div class="cta-stat"><strong>98%</strong><small>Satisfied</small></div>
+                                                <div class="cta-stat"><strong>24/7</strong><small>Support</small></div>
+                                            </div>
+                                        </div>
+                                        <a href="/services/" class="view-all-link">
+                                            View All 30+ Services <i class="fas fa-arrow-right ms-1"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Solutions Dropdown -->
+                    <li class="nav-item dropdown simple-dropdown" id="solutionsDropdown">
+                        <a class="nav-link-custom" href="#" id="solutionsBtn">
+                            Solutions <i class="fas fa-chevron-down chevron-icon ms-1"></i>
+                        </a>
+                        <div class="simple-menu wide-menu">
+                            <div class="simple-menu-grid">
+                                <a href="/solutions/startups/" class="simple-item">
+                                    <i class="fas fa-rocket"></i>
+                                    <span><strong>For Startups</strong><small>Launch fast &amp; smart</small></span>
+                                </a>
+                                <a href="/solutions/sme/" class="simple-item">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span><strong>For SMEs</strong><small>Grow your business</small></span>
+                                </a>
+                                <a href="/solutions/enterprise/" class="simple-item">
+                                    <i class="fas fa-industry"></i>
+                                    <span><strong>Enterprise Solutions</strong><small>Scale at any size</small></span>
+                                </a>
+                                <a href="/solutions/education/" class="simple-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span><strong>Education / EdTech</strong><small>Interactive LMS portals</small></span>
+                                </a>
+                                <a href="/solutions/healthcare/" class="simple-item">
+                                    <i class="fas fa-heartbeat"></i>
+                                    <span><strong>Healthcare Systems</strong><small>Secure patient charts</small></span>
+                                </a>
+                                <a href="/solutions/ecommerce/" class="simple-item">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <span><strong>Retail &amp; E-commerce</strong><small>Increase online sales</small></span>
+                                </a>
+                                <a href="/solutions/hospitality/" class="simple-item">
+                                    <i class="fas fa-hotel"></i>
+                                    <span><strong>Hospitality &amp; Travel</strong><small>Smart booking systems</small></span>
+                                </a>
+                                <a href="/solutions/finance/" class="simple-item">
+                                    <i class="fas fa-wallet"></i>
+                                    <span><strong>Financial Services</strong><small>High security FinTech</small></span>
+                                </a>
+                                <a href="/solutions/manufacturing/" class="simple-item">
+                                    <i class="fas fa-cogs"></i>
+                                    <span><strong>Manufacturing ERP</strong><small>Automate plant operations</small></span>
+                                </a>
+                                <a href="/solutions/realestate/" class="simple-item">
+                                    <i class="fas fa-home"></i>
+                                    <span><strong>Real Estate Portals</strong><small>Interactive property listings</small></span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Portfolio -->
+                    <li class="nav-item">
+                        <a class="nav-link-custom" href="/portfolio/">Portfolio</a>
+                    </li>
+
+                    <!-- Blog -->
+                    <li class="nav-item">
+                        <a class="nav-link-custom" href="/blog/">Blog</a>
+                    </li>
+
+                    <!-- Careers -->
+                    <li class="nav-item">
+                        <a class="nav-link-custom" href="/careers/">
+                            Careers <span class="hiring-badge">Hiring</span>
+                        </a>
+                    </li>
+
+                    <!-- More Pages -->
+                    <li class="nav-item dropdown simple-dropdown" id="moreDropdown">
+                        <a class="nav-link-custom" href="#" id="moreBtn">
+                            More <i class="fas fa-chevron-down chevron-icon ms-1"></i>
+                        </a>
+                        <div class="simple-menu">
+                            <a href="/case-studies/" class="simple-item">
+                                <i class="fas fa-file-alt"></i>
+                                <span><strong>Case Studies</strong><small>Our success stories</small></span>
+                            </a>
+                            <a href="/partners/" class="simple-item">
+                                <i class="fas fa-handshake"></i>
+                                <span><strong>Partners &amp; Clients</strong><small>Who we work with</small></span>
+                            </a>
+                            <a href="/faqs/" class="simple-item">
+                                <i class="fas fa-question-circle"></i>
+                                <span><strong>FAQs</strong><small>Common questions</small></span>
+                            </a>
+                            <a href="/privacy/" class="simple-item">
+                                <i class="fas fa-user-shield"></i>
+                                <span><strong>Privacy Policy</strong><small>How we use data</small></span>
+                            </a>
+                            <a href="/terms/" class="simple-item">
+                                <i class="fas fa-file-contract"></i>
+                                <span><strong>Terms of Service</strong><small>Our usage terms</small></span>
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <!-- Navbar CTA -->
+                <div class="navbar-cta ms-xl-3">
+                    
+                    <!-- Mobile Country Selector (visible only on mobile/tablet) -->
+                    <div class="mobile-country-selector d-xl-none mb-3">
+                        <label class="mobile-country-label"><i class="fas fa-globe me-2"></i>Select Region</label>
+                        <div class="mobile-country-wrapper">
+                            <button class="mobile-country-btn" id="mobileCountryBtn" type="button">
+                                <span class="flag-icon">ðŸ‡®ðŸ‡³</span>
+                                <span class="country-name-selected">India (+91)</span>
+                                <i class="fas fa-chevron-down caret ms-auto"></i>
+                            </button>
+                            <div class="mobile-country-dropdown" id="mobileCountryDropdown">
+                                <a href="#" class="country-opt active" data-flag="ðŸ‡®ðŸ‡³" data-code="IN" data-phone="+91" data-fullphone="+91 6370584682">ðŸ‡®ðŸ‡³ India (+91)</a>
+                                <a href="#" class="country-opt" data-flag="ðŸ‡ºðŸ‡¸" data-code="US" data-phone="+1" data-fullphone="+1 (650) 489-6370">ðŸ‡ºðŸ‡¸ United States (+1)</a>
+                                <a href="#" class="country-opt" data-flag="ðŸ‡¬ðŸ‡§" data-code="GB" data-phone="+44" data-fullphone="+44 20 7946 0192">ðŸ‡¬ðŸ‡§ United Kingdom (+44)</a>
+                                <a href="#" class="country-opt" data-flag="ðŸ‡¦ðŸ‡ª" data-code="AE" data-phone="+971" data-fullphone="+971 4 312 9000">ðŸ‡¦ðŸ‡ª UAE (+971)</a>
+                                <a href="#" class="country-opt" data-flag="ðŸ‡¦ðŸ‡º" data-code="AU" data-phone="+61" data-fullphone="+61 2 9382 1111">ðŸ‡¦ðŸ‡º Australia (+61)</a>
+                                <a href="#" class="country-opt" data-flag="ðŸ‡¸ðŸ‡¬" data-code="SG" data-phone="+65" data-fullphone="+65 6789 0123">ðŸ‡¸ðŸ‡¬ Singapore (+65)</a>
+                                <a href="#" class="country-opt" data-flag="ðŸ‡¨ðŸ‡¦" data-code="CA" data-phone="+1" data-fullphone="+1 (416) 555-0199">ðŸ‡¨ðŸ‡¦ Canada (+1)</a>
+                                <a href="#" class="country-opt" data-flag="ðŸ‡©ðŸ‡ª" data-code="DE" data-phone="+49" data-fullphone="+49 30 8973 8921">ðŸ‡©ðŸ‡ª Germany (+49)</a>
+                                <a href="#" class="country-opt" data-flag="ðŸ‡¸ðŸ‡¦" data-code="SA" data-phone="+966" data-fullphone="+966 11 405 8920">ðŸ‡¸ðŸ‡¦ Saudi Arabia (+966)</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navbar-cta-buttons d-flex align-items-center gap-2">
+                        <!-- Desktop Dynamic Call Button -->
+                        <a href="tel:+916370584682" class="btn-call dynamic-phone-link d-none d-xl-inline-flex" title="Call us">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+
+                        <!-- Mobile Dynamic Call Button (Full width, visible on mobile) -->
+                        <a href="tel:+916370584682" class="btn-call-mobile dynamic-phone-link d-xl-none" title="Call Us Now">
+                            <i class="fas fa-phone-alt me-2"></i>
+                            <span>Call Us: </span>
+                            <span class="dynamic-phone-text ms-1">+91 6370584682</span>
+                        </a>
+
+                        <button type="button" class="btn-get-quote" id="navAuditBtn">
+                            <i class="fas fa-search-plus me-1"></i>Free Audit
+                        </button>
+                        
+                        <a href="/contact/" class="btn-contact">
+                            Contact Us <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<!-- END_HEADER_COMPONENT -->
+
+    <!-- Particles for Hero Section -->
+    <div class="hero-particles">
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    </div>
+
+    <!-- =======================
+    Header - Unified Styling
+    ======================== -->
+    
+    <!-- =======================
+    Header End
+    ======================== -->
+
+    <!-- =======================
+    Blog Page Hero Section - Advanced
+    ======================== -->
+    <section class="blog-hero-section text-white d-flex align-items-center text-center position-relative">
+        <div class="container position-relative" style="z-index: 2;" data-aos="fade-in">
+            
+            <!-- Breadcrumb Navigation -->
+            <nav aria-label="breadcrumb" class="page-breadcrumb-nav" data-aos="fade-down">
+                <ol class="page-breadcrumb">
+                        <li><a href="/"><i class="fas fa-home me-1" style="font-size:0.7rem;"></i>Home</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                        <li class="active" aria-current="page">Blog & Insights</li>
+                </ol>
+            </nav>
+<h1 class="display-3 fw-bold mb-2 animate__animated animate__fadeInDown">Pabitra Technology Insights</h1>
+            <p class="lead mb-0 text-muted-light mx-auto animate__animated animate__fadeInUp animate__delay-1s" style="max-width: 750px;">
+                Stay updated with the latest news, trends, and expert advice in digital marketing, web development, and technology.
+            </p>
+        </div>
+        <!-- Wave Divider -->
+        <div class="hero-shape">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="var(--bg-dark-primary)" fill-opacity="1" d="M0,192L60,176C120,160,240,128,360,133.3C480,139,600,181,720,186.7C840,192,960,160,1080,149.3C1200,139,1320,149,1380,154.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- =======================
+    Main Content Start
+    ======================== -->
+    <main>
+        <section class="py-5 py-lg-6 bg-light-alt" style="background: linear-gradient(180deg, #0A192F 0%, #060E1A 100%);">
+            <div class="container">
+                <div class="row g-5">
+
+                    <!-- Blog Posts Column -->
+                    <div class="col-lg-8">
+                        <div class="row g-4" id="blog-posts-container">
+                            <!-- Dynamically loaded by the blog engine -->
+                        </div><!-- End row -->
+
+                        <!-- Pagination -->
+                        <nav aria-label="Blog Pagination" class="mt-5 pt-4 d-flex justify-content-center" data-aos="fade-up">
+                            <ul class="pagination custom-pagination" id="blog-pagination">
+                                <!-- Dynamically loaded by the blog engine -->
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- End Blog Posts Column -->
+
+                    <!-- Sidebar Column -->
+                    <div class="col-lg-4">
+                        <div class="blog-sidebar position-sticky" style="top: 110px;">
+                            <!-- Search Widget -->
+                            <div class="sidebar-widget card shadow-sm mb-4" data-aos="fade-left" data-aos-delay="100">
+                                <div class="card-body p-4">
+                                    <h5 class="widget-title fw-bold mb-3 text-light">Search Insights</h5>
+                                    <div class="d-flex position-relative">
+                                        <input class="form-control me-2 form-control-sm" type="text" id="blog-search-input" placeholder="Type keyword (e.g. AI, SEO)..." aria-label="Search">
+                                        <button class="btn btn-primary btn-sm px-3" id="blog-search-clear" style="display:none; position:absolute; right:60px; top:50%; transform:translateY(-50%); background:none; border:none; color:var(--text-muted-light);"><i class="fas fa-times"></i></button>
+                                        <button class="btn btn-primary btn-sm px-3" type="button" id="blog-search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Categories Widget -->
+                            <div class="sidebar-widget card shadow-sm mb-4" data-aos="fade-left" data-aos-delay="200">
+                               <div class="card-body p-4">
+                                     <h5 class="widget-title fw-bold mb-3 text-light">Categories</h5>
+                                    <ul class="list-group list-group-flush category-list" id="category-filter-list">
+                                        <!-- Dynamically loaded with counts -->
+                                    </ul>
+                               </div>
+                            </div>
+                             <!-- Highlighted/Recent Posts Widget -->
+                             <div class="sidebar-widget card shadow-sm mb-4" data-aos="fade-left" data-aos-delay="300">
+                                <div class="card-body p-4">
+                                    <h5 class="widget-title fw-bold mb-3 text-light">Featured Highlights</h5>
+                                    <ul class="list-unstyled recent-posts-list" id="recent-posts-widget-container">
+                                        <!-- Loaded dynamically -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Tags Widget -->
+                            <div class="sidebar-widget card shadow-sm mb-4" data-aos="fade-left" data-aos-delay="400">
+                                 <div class="card-body p-4">
+                                     <h5 class="widget-title fw-bold mb-3 text-light">Popular Tags</h5>
+                                     <div class="tag-cloud" id="tags-cloud-container">
+                                         <!-- Loaded dynamically -->
+                                     </div>
+                                 </div>
+                             </div>
+                        </div><!-- End Sidebar -->
+                    </div>
+                    <!-- End Sidebar Column -->
+                </div><!-- End row -->
+            </div><!-- End container -->
+        </section>
+
+        <!-- Dynamic Blog Engine Script -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // 30+ Advanced Topics with High-Resolution Unsplash IDs, inbound/outbound links, and tags
+                const blogs = [
+                    {
+                        id: 1,
+                        title: "Native vs Cross-Platform App Development: Which is Right for Your Business?",
+                        excerpt: "Building a mobile app is a critical step for many businesses. But before you write a single line of code, you face a foundational decision: Native or Cross-Platform?",
+                        category: "app-dev",
+                        badgeText: "App Development",
+                        date: "May 18, 2026",
+                        img: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "blog-post-native-vs-cross-platform.html",
+                        outboundUrl: "https://developer.android.com/",
+                        tags: ["#NativeApp", "#CrossPlatform", "#Flutter", "#SwiftUI"]
+                    },
+                    {
+                        id: 2,
+                        title: "Why Mobile-First Web Design is Non-Negotiable in 2026",
+                        excerpt: "In a world where mobile accounts for over half of all web traffic, building your site for smartphones first is no longer optional. Here is the modern approach.",
+                        category: "web-design",
+                        badgeText: "Mobile-First",
+                        date: "May 15, 2026",
+                        img: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "blog-post-mobile-first.html",
+                        outboundUrl: "https://www.statista.com/statistics/277125/share-of-website-traffic-coming-from-mobile-devices/",
+                        tags: ["#MobileFirst", "#ResponsiveDesign", "#UXDesign", "#WebPerformance"]
+                    },
+                    {
+                        id: 3,
+                        title: "Maximizing ROI with Google Ads Performance Max Campaigns",
+                        excerpt: "A complete guide to Google Ads Performance Max campaigns. Learn the potential, pitfalls, and best practices to maximize your ROI and avoid common mistakes.",
+                        category: "ppc",
+                        badgeText: "PMax Ads",
+                        date: "May 12, 2026",
+                        img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "blog-post-pmax.html",
+                        outboundUrl: "https://support.google.com/google-ads",
+                        tags: ["#PMax", "#GoogleAds", "#PPC", "#ROIHacks"]
+                    },
+                    {
+                        id: 4,
+                        title: "Top 5 Local SEO Strategies for Bhubaneswar Businesses",
+                        excerpt: "Hyperlocal SEO signals, schema architecture, and region-targeted reviews designed specifically to capture high-intent local markets in Odisha.",
+                        category: "seo",
+                        badgeText: "Local SEO",
+                        date: "May 08, 2026",
+                        img: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "blog-post-local-seo.html",
+                        outboundUrl: "https://searchengineland.com/",
+                        tags: ["#LocalSEO", "#Bhubaneswar", "#Odisha", "#GoogleBusiness"]
+                    },
+                    {
+                        id: 5,
+                        title: "Cloud Migration Checklist for Odisha Businesses",
+                        excerpt: "An essential cloud migration checklist for businesses in Odisha. Learn key considerations for a smooth, secure, and cost-effective transition to the cloud.",
+                        category: "technology",
+                        badgeText: "Cloud Migration",
+                        date: "May 02, 2026",
+                        img: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "blog-post-cloud-migration.html",
+                        outboundUrl: "https://aws.amazon.com/cloud-migration/",
+                        tags: ["#CloudMigration", "#AWS", "#Azure", "#OdishaBusiness"]
+                    },
+                    {
+                        id: 6,
+                        title: "Common Website Security Vulnerabilities & How to Prevent Them",
+                        excerpt: "Protect your website and user data by understanding key security risks like XSS, SQL Injection, and outdated plugins, and learn how to proactively address them.",
+                        category: "security",
+                        badgeText: "Cyber Security",
+                        date: "Apr 28, 2026",
+                        img: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "blog-post-detail-6.html",
+                        outboundUrl: "https://www.cisa.gov/",
+                        tags: ["#ZeroTrust", "#CyberSecurity", "#SaaS", "#DataShield"]
+                    },
+                    {
+                        id: 7,
+                        title: "AI-Powered E-Commerce: How Generative AI is Transforming Online Shopping in 2026",
+                        excerpt: "Generative AI is rewriting the rules of e-commerce â€” from hyper-personalised storefronts and conversational search to virtual try-ons, dynamic pricing, and autonomous customer support.",
+                        category: "technology",
+                        badgeText: "AI & E-Commerce",
+                        date: "May 25, 2026",
+                        img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "blog-post-ai-ecommerce.html",
+                        outboundUrl: "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-state-of-ai-in-marketing",
+                        tags: ["#GenerativeAI", "#Ecommerce", "#AIMarketing", "#IndiaRetail"]
+                    },
+                    {
+                        id: 8,
+                        title: "Edge Computing in 2026: Why Businesses Are Moving Beyond the Cloud",
+                        excerpt: "Edge computing brings intelligence directly to where data is generated â€” slashing latency, enabling real-time AI decisions, and unlocking new possibilities for manufacturing, healthcare, and retail.",
+                        category: "technology",
+                        badgeText: "Edge Computing",
+                        date: "May 22, 2026",
+                        img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "blog-post-edge-computing.html",
+                        outboundUrl: "https://www.gartner.com/en/information-technology/glossary/edge-computing",
+                        tags: ["#EdgeComputing", "#IoT", "#5G", "#SmartInfrastructure"]
+                    },
+                    {
+                        id: 9,
+                        title: "WhatsApp Marketing for Indian Businesses: The Complete 2026 Strategy Guide",
+                        excerpt: "India has 500M+ WhatsApp users. Discover how to use the WhatsApp Business API, broadcast campaigns, AI chatbots, and Click-to-WhatsApp ads to build a direct, high-converting marketing channel.",
+                        category: "seo",
+                        badgeText: "WhatsApp Marketing",
+                        date: "May 20, 2026",
+                        img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "blog-post-whatsapp-marketing.html",
+                        outboundUrl: "https://business.whatsapp.com/",
+                        tags: ["#WhatsAppMarketing", "#IndiaDigital", "#BusinessAPI", "#ConversationalCommerce"]
+                    },
+                    {
+                        id: 10,
+                        title: "Video-First Marketing in 2026: YouTube Shorts, Reels & ROI-Driven Strategy",
+                        excerpt: "Short-form video now dominates 82% of internet traffic. Learn how to build a platform-specific video marketing strategy that turns Shorts, Reels, and LinkedIn video into measurable business growth.",
+                        category: "ppc",
+                        badgeText: "Video Marketing",
+                        date: "May 15, 2026",
+                        img: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "blog-post-video-marketing.html",
+                        outboundUrl: "https://blog.youtube/news-and-events/youtube-shorts/",
+                        tags: ["#VideoMarketing", "#YouTubeShorts", "#Reels", "#ShortFormContent"]
+                    },
+                    {
+                        id: 11,
+                        title: "Web3 & Blockchain for Indian Businesses: Opportunities, Risks & How to Get Started",
+                        excerpt: "Beyond the hype, blockchain technology is delivering real value in supply chain transparency, smart contract payments, and asset tokenisation. Here's the practical guide for Indian businesses in 2026.",
+                        category: "technology",
+                        badgeText: "Blockchain",
+                        date: "May 10, 2026",
+                        img: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "blog-post-web3-india.html",
+                        outboundUrl: "https://www.niti.aayog.gov.in/",
+                        tags: ["#Web3", "#Blockchain", "#SmartContracts", "#IndiaTech"]
+                    },
+                    {
+                        id: 12,
+                        title: "Google Core Updates: Proven Recovery Strategies for Indian Brands",
+                        excerpt: "Google's search algorithm core updates can cause abrupt traffic fluctuations. Learn the exact E-E-A-T audit steps and content optimization recovery roadmap.",
+                        category: "seo",
+                        badgeText: "Core Update",
+                        date: "May 08, 2026",
+                        img: "https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "blog-post-google-core-update.html",
+                        outboundUrl: "https://searchengineland.com/",
+                        tags: ["#GoogleCoreUpdate", "#HelpfulContent", "#SEOAudit", "#EEAT"]
+                    },
+                    {
+                        id: 13,
+                        title: "Website Speed Optimization: Complete Guide to 100/100 PageSpeed",
+                        excerpt: "A comprehensive, highly technical guide to website speed optimization, addressing Core Web Vitals (LCP, CLS, INP) and practical strategies for a flawless 100/100 PageSpeed score.",
+                        category: "technology",
+                        badgeText: "PageSpeed",
+                        date: "May 05, 2026",
+                        img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "blog-post-pagespeed-optimization.html",
+                        outboundUrl: "https://web.dev/",
+                        tags: ["#PageSpeed", "#CoreWebVitals", "#WebPerf", "#LCP"]
+                    },
+                    {
+                        id: 14,
+                        title: "Social Commerce India: Ultimate Guide to Selling on Instagram & WhatsApp",
+                        excerpt: "An actionable and highly practical guide to launching and scaling social commerce storefronts on Instagram, WhatsApp, and Facebook in India in 2026.",
+                        category: "seo",
+                        badgeText: "Social Commerce",
+                        date: "May 02, 2026",
+                        img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "blog-post-social-commerce-india.html",
+                        outboundUrl: "https://business.whatsapp.com/",
+                        tags: ["#SocialCommerce", "#InstagramShopping", "#WhatsAppCatalog", "#IndiaRetail"]
+                    },
+                    {
+                        id: 15,
+                        title: "AI Content Strategy: Using ChatGPT & Gemini for SEO Without Penalties",
+                        excerpt: "An expert guide on how to integrate generative AI models like ChatGPT and Google Gemini into your content strategy without getting penalized by search algorithms.",
+                        category: "seo",
+                        badgeText: "AI & SEO",
+                        date: "Apr 28, 2026",
+                        img: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "blog-post-ai-content-strategy.html",
+                        outboundUrl: "https://developers.google.com/search/blog/2023/02/google-search-and-ai-content",
+                        tags: ["#AIContent", "#GenerativeAI", "#ChatGPT", "#HelpfulContent"]
+                    },
+                    {
+                        id: 16,
+                        title: "Digital Marketing Audit: The Step-by-Step Guide to Maximizing ROI",
+                        excerpt: "A comprehensive and highly practical guide to performing a full digital marketing audit for your business to identify waste, improve conversions, and boost ROI.",
+                        category: "seo",
+                        badgeText: "Marketing Audit",
+                        date: "Apr 25, 2026",
+                        img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "blog-post-digital-marketing-audit.html",
+                        outboundUrl: "https://www.wordstream.com/",
+                        tags: ["#MarketingAudit", "#ROI", "#PPC", "#SEOAudit"]
+                    },
+                    {
+                        id: 17,
+                        title: "Quantum-Resistant Cryptography: Preparing Corporate Datastores for Q-Day",
+                        excerpt: "How forward-thinking CTOs are integrating lattice-based crypto models to defend long-tail secure data against future quantum decryption.",
+                        category: "technology",
+                        badgeText: "Quantum Tech",
+                        date: "Apr 22, 2026",
+                        img: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-blockchain.html",
+                        outboundUrl: "https://www.nist.gov/quantum-computing",
+                        tags: ["#QuantumSafe", "#Cryptography", "#CyberSec", "#FutureIsNow"]
+                    },
+                    {
+                        id: 18,
+                        title: "Decentralized Finance (DeFi) in India: The Convergence of Web3 & Banking",
+                        excerpt: "Smart contracts and tokenized assets are transforming liquidity pools and trade finance, paving the way for regulatory-compliant DeFi.",
+                        category: "technology",
+                        badgeText: "Blockchain",
+                        date: "Apr 18, 2026",
+                        img: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-blockchain.html",
+                        outboundUrl: "https://ethereum.org/en/defi/",
+                        tags: ["#DeFi", "#Web3", "#SmartContracts", "#Fintech"]
+                    },
+                    {
+                        id: 19,
+                        title: "Next.js 16 Server Actions & Edge Rendering: The Ultimate Setup",
+                        excerpt: "Achieve sub-100ms load times globally. Standardizing database middleware directly on distributed CDN edge configurations.",
+                        category: "app-dev",
+                        badgeText: "App Dev",
+                        date: "Apr 12, 2026",
+                        img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-web-dev.html",
+                        outboundUrl: "https://vercel.com/blog",
+                        tags: ["#NextJS", "#EdgeComputing", "#Serverless", "#Performance"]
+                    },
+                    {
+                        id: 20,
+                        title: "Neuromorphic Computing: Building Brain-Like Silicon Architectures",
+                        excerpt: "Traditional silicon runs into thermal barriers. Neuromorphic spikes are providing unmatched compute capability for edge intelligence.",
+                        category: "technology",
+                        badgeText: "Computing",
+                        date: "Apr 05, 2026",
+                        img: "https://images.unsplash.com/photo-1617791160505-6f006e121980?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-machine-learning.html",
+                        outboundUrl: "https://www.intel.com/content/www/us/en/research/neuromorphic-computing.html",
+                        tags: ["#Neuromorphic", "#AIChips", "#Silicon", "#NextGenHardware"]
+                    },
+                    {
+                        id: 21,
+                        title: "Spatial Computing Development: Designing for VisionOS and AR Glasses",
+                        excerpt: "A deep dive into 3D environmental anchoring, spatial gestures, and fluid real-world glassmorphic interfaces for spatial headsets.",
+                        category: "web-design",
+                        badgeText: "Spatial UI",
+                        date: "Mar 29, 2026",
+                        img: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-graphics-uiux.html",
+                        outboundUrl: "https://developer.apple.com/visionos/",
+                        tags: ["#SpatialComputing", "#AR", "#VisionOS", "#3DDesign"]
+                    },
+                    {
+                        id: 22,
+                        title: "Green Hosting & Eco-Friendly Web Development: Reducing Carbon Load",
+                        excerpt: "Optimizing DOM structures, compressing payload transfers, and leveraging zero-carbon CDN datastores for sustainable modern engineering.",
+                        category: "web-design",
+                        badgeText: "Sustainability",
+                        date: "Mar 22, 2026",
+                        img: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-web-dev.html",
+                        outboundUrl: "https://www.w3.org/community/sustyweb/",
+                        tags: ["#GreenWeb", "#EcoCode", "#Performance", "#SustainableTech"]
+                    },
+                    {
+                        id: 23,
+                        title: "Graph Neural Networks (GNNs): Revolutionizing Enterprise Fraud Detection",
+                        excerpt: "Moving beyond sequential vectors. Analyze spatial relationships between thousands of accounts to stop identity spoofing in real-time.",
+                        category: "security",
+                        badgeText: "Machine Learning",
+                        date: "Mar 15, 2026",
+                        img: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-machine-learning.html",
+                        outboundUrl: "https://pytorch-geometric.readthedocs.io/",
+                        tags: ["#GNNs", "#FraudDetection", "#GraphAI", "#Security"]
+                    },
+                    {
+                        id: 24,
+                        title: "Advanced JSON-LD Schema Markup: Dominating Google Rich snippets",
+                        excerpt: "Detailed programmatic implementation of complex product variants, localized business hubs, and interactive FAQ schemas.",
+                        category: "seo",
+                        badgeText: "SEO",
+                        date: "Mar 08, 2026",
+                        img: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-seo.html",
+                        outboundUrl: "https://schema.org/",
+                        tags: ["#JSONLD", "#SchemaMarkup", "#GoogleSEO", "#RichSnippets"]
+                    },
+                    {
+                        id: 25,
+                        title: "API-First Architectures: Transitioning Systems to OpenAPI 4.0 Standard",
+                        excerpt: "Eliminate system communication logic. Enforcing automated contract-testing, mocking layers, and clean backend schemas.",
+                        category: "app-dev",
+                        badgeText: "APIs",
+                        date: "Mar 01, 2026",
+                        img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-api-cms.html",
+                        outboundUrl: "https://www.openapis.org/",
+                        tags: ["#APIFirst", "#OpenAPI", "#Microservices", "#SoftwareArch"]
+                    },
+                    {
+                        id: 26,
+                        title: "Data Mesh Architectures: Decentralizing the Enterprise Big Data Lakehouse",
+                        excerpt: "Empowering individual product domains to manage their own analytics lifecycles, eliminating centralized database bottlenecks.",
+                        category: "technology",
+                        badgeText: "Big Data",
+                        date: "Feb 23, 2026",
+                        img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-data-analytics.html",
+                        outboundUrl: "https://martinfowler.com/articles/data-mesh-principles.html",
+                        tags: ["#DataMesh", "#BigData", "#Lakehouse", "#DataStrategy"]
+                    },
+                    {
+                        id: 27,
+                        title: "The Future of IoT: 6G Infrastructures & Real-Time Distributed Nodes",
+                        excerpt: "Sub-millisecond latency triggers. Harnessing extreme bandwidth to run distributed AI inference directly inside local sensory hubs.",
+                        category: "technology",
+                        badgeText: "IoT",
+                        date: "Feb 17, 2026",
+                        img: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-iot.html",
+                        outboundUrl: "https://www.ieee.org/",
+                        tags: ["#IoT", "#6G", "#EdgeAI", "#SmartSystems"]
+                    },
+                    {
+                        id: 28,
+                        title: "Serverless Databases: Scaling High-Transaction Apps dynamically",
+                        excerpt: "How database platforms are achieving native horizontal sharding and scaling to zero to optimize active server utility bills.",
+                        category: "app-dev",
+                        badgeText: "Databases",
+                        date: "Feb 10, 2026",
+                        img: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-cloud.html",
+                        outboundUrl: "https://neon.tech/blog",
+                        tags: ["#ServerlessDB", "#ScaleToZero", "#CloudArchitecture", "#SQL"]
+                    },
+                    {
+                        id: 29,
+                        title: "Cognitive AI & Emotion Analysis: Designing Empathetic User Interfaces",
+                        excerpt: "Using real-time interaction speed, click intensities, and opt-in micro-gestures to deliver empathetic, responsive app flows.",
+                        category: "web-design",
+                        badgeText: "UX Research",
+                        date: "Feb 03, 2026",
+                        img: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-graphics-uiux.html",
+                        outboundUrl: "https://uxdesign.cc/",
+                        tags: ["#CognitiveUI", "#UXDesign", "#AffectiveComputing", "#Psychology"]
+                    },
+                    {
+                        id: 30,
+                        title: "Low-Code Ecosystems in the Enterprise: Empoyee-Driven Integrations",
+                        excerpt: "The democratization of software. Creating internal corporate tools without massive developer overhead using modern low-code stacks.",
+                        category: "app-dev",
+                        badgeText: "Enterprise Tech",
+                        date: "Jan 28, 2026",
+                        img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-custom-software.html",
+                        outboundUrl: "https://www.gartner.com/en/information-technology",
+                        tags: ["#LowCode", "#EnterpriseSaaS", "#InternalTools", "#Agile"]
+                    },
+                    {
+                        id: 31,
+                        title: "Deepfakes and Social Engineering: Securing Real-Time Executive Voice Verification",
+                        excerpt: "The rising danger of real-time generated AI voices. Mitigating sophisticated spear-phishing with physical fallback tokens.",
+                        category: "security",
+                        badgeText: "Security",
+                        date: "Jan 21, 2026",
+                        img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-security.html",
+                        outboundUrl: "https://www.wired.com/",
+                        tags: ["#DeepfakeSecurity", "#SocialEngineering", "#IdentityProtection", "#CyberThreats"]
+                    },
+                    {
+                        id: 32,
+                        title: "Predictive Analytics in Digital Marketing: Mastering Customer LTV",
+                        excerpt: "Integrate Bayesian forecast models to score and target users showing the highest lifetime spending affinity.",
+                        category: "seo",
+                        badgeText: "Marketing Tech",
+                        date: "Jan 15, 2026",
+                        img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-digital-marketing-360.html",
+                        outboundUrl: "https://www.adweek.com/",
+                        tags: ["#PredictiveMarketing", "#LTVAnalytics", "#Bayesian", "#Targeting"]
+                    },
+                    {
+                        id: 33,
+                        title: "Decentralized Identities (DIDs) & W3C Verifiable Credentials Architecture",
+                        excerpt: "Say goodbye to central password databases. Building zero-knowledge claims where users retain 100% control of personal data assets.",
+                        category: "technology",
+                        badgeText: "Web3 Identity",
+                        date: "Jan 09, 2026",
+                        img: "https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-blockchain.html",
+                        outboundUrl: "https://www.w3.org/TR/did-core/",
+                        tags: ["#DID", "#VerifiableCredentials", "#Identity", "#ZKP"]
+                    },
+                    {
+                        id: 34,
+                        title: "AI Chatbots & Smooth Live-Agent Handoffs: Enhancing Conversion Rates",
+                        excerpt: "The sweet spot of customer support. Harnessing custom NLP routing to ensure perfect transitions between bots and support representatives.",
+                        category: "web-design",
+                        badgeText: "Conversational AI",
+                        date: "Jan 03, 2026",
+                        img: "https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-ecommerce.html",
+                        outboundUrl: "https://chatbotsmagazine.com/",
+                        tags: ["#Chatbots", "#NLPRouting", "#CustomerSupport", "#Conversion"]
+                    },
+                    {
+                        id: 35,
+                        title: "AR/VR Real Estate Showcases: Immersive Property Visits in Bhubaneswar",
+                        excerpt: "Odisha's premium developers are integrating WebXR virtual strolls to scale cross-border investment properties.",
+                        category: "web-design",
+                        badgeText: "Virtual Reality",
+                        date: "Dec 24, 2025",
+                        img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "solution-realestate.html",
+                        outboundUrl: "https://www.vrfocus.com/",
+                        tags: ["#WebXR", "#RealEstateTech", "#BhubaneswarDevelopers", "#ARVR"]
+                    },
+                    {
+                        id: 36,
+                        title: "Programmatic Advertising: Real-Time Bidding (RTB) Algorithms Demystified",
+                        excerpt: "Unpacking SSPs, DSPs, and the algorithmic logic behind targeting millions of digital displays in under 50 milliseconds.",
+                        category: "ppc",
+                        badgeText: "Ad Tech",
+                        date: "Dec 18, 2025",
+                        img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-ppc.html",
+                        outboundUrl: "https://www.iab.com/",
+                        tags: ["#ProgrammaticAds", "#RTB", "#AdOps", "#DataTargeting"]
+                    },
+                    {
+                        id: 37,
+                        title: "PWAs in 2026: Bypass App Store Policies & Build Rich Web Apps",
+                        excerpt: "Discover the push notification extensions, hardware access systems, and local offline caches breaking the App Store monopoly.",
+                        category: "app-dev",
+                        badgeText: "PWA",
+                        date: "Dec 12, 2025",
+                        img: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-pwa.html",
+                        outboundUrl: "https://web.dev/progressive-web-apps/",
+                        tags: ["#PWA", "#AppStoreBypass", "#ServiceWorkers", "#MobileTech"]
+                    },
+                    {
+                        id: 38,
+                        title: "Optimizing Google's INP Metric (Interaction to Next Paint): The ultimate Guide",
+                        excerpt: "Bid farewell to input lag. Advanced JavaScript thread splitting, debouncing, and render-blocking elimination steps.",
+                        category: "seo",
+                        badgeText: "Core Web Vitals",
+                        date: "Dec 05, 2025",
+                        img: "https://images.unsplash.com/photo-1546074177-ffedd79d494d?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-seo.html",
+                        outboundUrl: "https://web.dev/inp/",
+                        tags: ["#INP", "#WebPerformance", "#LighthouseScore", "#JSProfiling"]
+                    },
+                    {
+                        id: 39,
+                        title: "SaaS Micro-Platforms: Bootstrapping Profitable Niche Tools to $10k MRR",
+                        excerpt: "Skip traditional venture capital. How indie developers build high-retention micro-utilities with ultra-low server costs.",
+                        category: "app-dev",
+                        badgeText: "SaaS Startups",
+                        date: "Nov 28, 2025",
+                        img: "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-saas.html",
+                        outboundUrl: "https://www.indiehackers.com/",
+                        tags: ["#MicroSaaS", "#Bootstrapping", "#Solopreneur", "#SaaSLife"]
+                    },
+                    {
+                        id: 40,
+                        title: "Continuous Localization with Automated LLM Translation Workflows",
+                        excerpt: "Learn how modern global software scales seamlessly across international boundaries using localized context translation models.",
+                        category: "technology",
+                        badgeText: "SaaS Stacks",
+                        date: "Nov 20, 2025",
+                        img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+                        inboundUrl: "service-custom-software.html",
+                        outboundUrl: "https://github.com/",
+                        tags: ["#Localization", "#AITranslations", "#GlobalSaaS", "#ContinuousLoc"]
+                    }
+                ];
+
+                const POSTS_PER_PAGE = 6;
+                let currentPage = 1;
+                let currentCategory = "all";
+                let currentSearch = "";
+                let currentTag = "";
+
+                // Elements
+                const container = document.getElementById("blog-posts-container");
+                const paginationContainer = document.getElementById("blog-pagination");
+                const searchInput = document.getElementById("blog-search-input");
+                const searchBtn = document.getElementById("blog-search-btn");
+                const searchClear = document.getElementById("blog-search-clear");
+                const categoryList = document.getElementById("category-filter-list");
+                const tagsCloud = document.getElementById("tags-cloud-container");
+                const recentWidget = document.getElementById("recent-posts-widget-container");
+
+                // Initialize Widget data
+                initWidgets();
+
+                // Listeners
+                searchInput.addEventListener("input", function(e) {
+                    currentSearch = e.target.value.trim().toLowerCase();
+                    if (currentSearch.length > 0) {
+                        searchClear.style.display = "block";
+                    } else {
+                        searchClear.style.display = "none";
+                    }
+                    currentPage = 1;
+                    renderBlogs();
+                });
+
+                searchClear.addEventListener("click", function() {
+                    searchInput.value = "";
+                    currentSearch = "";
+                    searchClear.style.display = "none";
+                    currentPage = 1;
+                    renderBlogs();
+                });
+
+                // Functions
+                function initWidgets() {
+                    // 1. Render Categories count dynamically
+                    const counts = { all: blogs.length };
+                    blogs.forEach(b => {
+                        counts[b.category] = (counts[b.category] || 0) + 1;
+                    });
+
+                    const catMeta = [
+                        { id: "all", label: "All Categories", badgeClass: "bg-secondary-soft" },
+                        { id: "web-design", label: "Web Design", badgeClass: "bg-success-soft" },
+                        { id: "seo", label: "SEO Services", badgeClass: "bg-primary-soft" },
+                        { id: "ppc", label: "PPC Advertising", badgeClass: "bg-warning-soft" },
+                        { id: "technology", label: "Technology Insights", badgeClass: "bg-info-soft" },
+                        { id: "app-dev", label: "App Development", badgeClass: "bg-purple-soft" },
+                        { id: "security", label: "Cyber Security", badgeClass: "bg-danger-soft" }
+                    ];
+
+                    categoryList.innerHTML = catMeta.map(c => {
+                        const count = counts[c.id] || 0;
+                        const activeClass = currentCategory === c.id ? "active" : "";
+                        return `
+                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0 py-2 border-0 ${activeClass}" data-filter="${c.id}">
+                                ${c.label}
+                                <span class="badge rounded-pill ms-2" style="background: rgba(255,255,255,0.08); color: var(--color-primary);">${count}</span>
+                            </a>
+                        `;
+                    }).join('');
+
+                    // Add category click events
+                    categoryList.querySelectorAll("a").forEach(el => {
+                        el.addEventListener("click", function(e) {
+                            e.preventDefault();
+                            categoryList.querySelectorAll("a").forEach(a => a.classList.remove("active"));
+                            this.classList.add("active");
+                            currentCategory = this.getAttribute("data-filter");
+                            currentTag = ""; // reset tag
+                            currentPage = 1;
+                            renderBlogs();
+                        });
+                    });
+
+                    // 2. Render Popular Tags
+                    const allTags = new Set();
+                    blogs.forEach(b => b.tags.forEach(t => allTags.add(t)));
+                    
+                    tagsCloud.innerHTML = `
+                        <a href="#" class="btn btn-sm m-1 tag-link btn-outline-primary active" data-tag="all">All Tags</a>
+                        ${Array.from(allTags).slice(0, 14).map(t => `
+                            <a href="#" class="btn btn-sm m-1 tag-link btn-outline-primary" data-tag="${t}">${t}</a>
+                        `).join('')}
+                    `;
+
+                    tagsCloud.querySelectorAll("a").forEach(el => {
+                        el.addEventListener("click", function(e) {
+                            e.preventDefault();
+                            tagsCloud.querySelectorAll("a").forEach(a => a.classList.remove("active"));
+                            this.classList.add("active");
+                            const selectedTag = this.getAttribute("data-tag");
+                            currentTag = selectedTag === "all" ? "" : selectedTag;
+                            currentPage = 1;
+                            renderBlogs();
+                        });
+                    });
+
+                    // 3. Render 3 Highlights / Recent posts in sidebar
+                    const highlights = blogs.slice(0, 3);
+                    recentWidget.innerHTML = highlights.map(b => `
+                        <li class="mb-3 pb-3 border-bottom" style="border-color: var(--border-dark) !important;">
+                            <a href="${b.inboundUrl}" class="d-flex align-items-center text-decoration-none recent-post-link">
+                                <img src="${b.img}" class="rounded me-3 flex-shrink-0" alt="Thumbnail" width="65" height="65" style="object-fit:cover;">
+                                <div>
+                                    <h6 class="mb-1 text-light small fw-semibold recent-post-title lh-sm">${b.title.substring(0, 42)}...</h6>
+                                    <small class="text-muted-light d-block mt-1" style="font-size:0.75rem;"><i class="far fa-calendar-alt me-1 opacity-75"></i>${b.date}</small>
+                                </div>
+                            </a>
+                        </li>
+                    `).join('');
+                }
+
+                function renderBlogs() {
+                    // Filter logic
+                    let filtered = blogs.filter(b => {
+                        // Category match
+                        const matchesCategory = currentCategory === "all" || b.category === currentCategory;
+                        // Search match (title, excerpt, tags)
+                        const matchesSearch = !currentSearch || 
+                            b.title.toLowerCase().includes(currentSearch) || 
+                            b.excerpt.toLowerCase().includes(currentSearch) || 
+                            b.tags.some(t => t.toLowerCase().includes(currentSearch));
+                        // Tag match
+                        const matchesTag = !currentTag || b.tags.includes(currentTag);
+
+                        return matchesCategory && matchesSearch && matchesTag;
+                    });
+
+                    // Pagination boundaries
+                    const totalItems = filtered.length;
+                    const totalPages = Math.ceil(totalItems / POSTS_PER_PAGE) || 1;
+                    
+                    if (currentPage > totalPages) {
+                        currentPage = totalPages;
+                    }
+
+                    const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+                    const paginated = filtered.slice(startIndex, startIndex + POSTS_PER_PAGE);
+
+                    // Fade out container
+                    container.style.opacity = 0;
+                    container.style.transform = "translateY(15px)";
+                    container.style.transition = "all 0.25s ease-out";
+
+                    setTimeout(() => {
+                        if (paginated.length === 0) {
+                            container.innerHTML = `
+                                <div class="col-12 text-center py-5">
+                                    <div class="card p-5" style="background:var(--bg-dark-card); border:1px solid var(--border-dark); border-radius:1rem;">
+                                        <i class="fas fa-search-minus text-primary display-3 mb-3"></i>
+                                        <h4 class="text-light fw-bold">No Insights Found</h4>
+                                        <p class="text-muted-light">We couldn't find any articles matching your search query. Try another keyword or category!</p>
+                                    </div>
+                                </div>
+                            `;
+                        } else {
+                            container.innerHTML = paginated.map(b => `
+                                <div class="col-md-6 blog-post-item" data-aos="fade-up">
+                                    <div class="card blog-post-card h-100 shadow-sm overflow-hidden d-flex flex-column">
+                                        <div class="blog-img-wrapper position-relative">
+                                            <img src="${b.img}" class="card-img-top blog-post-img" alt="${b.title}" loading="lazy">
+                                            <span class="position-absolute top-3 start-3 badge" style="background: rgba(0, 196, 255, 0.2); border:1px solid rgba(0, 196, 255, 0.4); color: var(--color-primary); z-index:2; backdrop-filter:blur(5px); top:15px; left:15px;">
+                                                ${b.badgeText}
+                                            </span>
+                                        </div>
+                                        <div class="card-body d-flex flex-column flex-grow-1 p-4" style="background: var(--bg-dark-card);">
+                                            <div class="post-meta mb-2 d-flex align-items-center justify-content-between">
+                                                <span class="text-muted-light small"><i class="far fa-calendar-alt me-1 opacity-75"></i>${b.date}</span>
+                                                <div class="tags-row" style="font-size:0.75rem;">
+                                                    <span class="text-primary font-monospace">${b.tags[0]}</span>
+                                                </div>
+                                            </div>
+                                            <h5 class="card-title h5 fw-bold mb-3" style="line-height: 1.4;">
+                                                <a href="${b.inboundUrl}" class="post-title-link text-light text-decoration-none">${b.title}</a>
+                                            </h5>
+                                            <p class="card-text text-muted-light small mb-4 flex-grow-1" style="line-height: 1.6;">
+                                                ${b.excerpt}
+                                            </p>
+                                            <div class="tag-row mb-3 flex-wrap d-flex gap-1" style="font-size:0.72rem;">
+                                                ${b.tags.map(t => `<span class="text-muted-light font-monospace opacity-75">${t}</span>`).join(' ')}
+                                            </div>
+                                            <hr style="border-top:1px solid var(--border-dark); margin: 0 0 15px 0;">
+                                            <div class="d-flex align-items-center justify-content-between mt-auto">
+                                                <a href="${b.inboundUrl}" class="read-more-link fw-medium d-inline-flex align-items-center text-primary" style="font-size:0.88rem;">
+                                                    Read Article <i class="fas fa-arrow-right small ms-1"></i>
+                                                </a>
+                                                <a href="${b.outboundUrl}" target="_blank" rel="noopener" class="text-muted-light small text-decoration-none opacity-50 hover-opacity-100" style="font-size:0.75rem;" title="External Authority Source">
+                                                    Source <i class="fas fa-external-link-alt ms-1" style="font-size:0.65rem;"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `).join('');
+                        }
+
+                        // Fade back in
+                        container.style.opacity = 1;
+                        container.style.transform = "translateY(0)";
+                    }, 250);
+
+                    // 4. Render Pagination Controls
+                    renderPagination(currentPage, totalPages);
+                }
+
+                function renderPagination(current, total) {
+                    if (total <= 1) {
+                        paginationContainer.innerHTML = "";
+                        return;
+                    }
+
+                    let html = "";
+                    
+                    // Prev Button
+                    const prevDisabled = current === 1 ? "disabled" : "";
+                    html += `
+                        <li class="page-item ${prevDisabled}">
+                            <a class="page-link" href="#" data-page="${current - 1}" aria-label="Previous">
+                                <i class="fas fa-angle-left"></i>
+                            </a>
+                        </li>
+                    `;
+
+                    // Numbered Pages
+                    for (let i = 1; i <= total; i++) {
+                        const activeClass = i === current ? "active" : "";
+                        html += `
+                            <li class="page-item ${activeClass}">
+                                <a class="page-link" href="#" data-page="${i}">${i}</a>
+                            </li>
+                        `;
+                    }
+
+                    // Next Button
+                    const nextDisabled = current === total ? "disabled" : "";
+                    html += `
+                        <li class="page-item ${nextDisabled}">
+                            <a class="page-link" href="#" data-page="${current + 1}" aria-label="Next">
+                                <i class="fas fa-angle-right"></i>
+                            </a>
+                        </li>
+                    `;
+
+                    paginationContainer.innerHTML = html;
+
+                    // Click listeners
+                    paginationContainer.querySelectorAll("a").forEach(el => {
+                        el.addEventListener("click", function(e) {
+                            e.preventDefault();
+                            const targetPage = parseInt(this.getAttribute("data-page"));
+                            if (targetPage >= 1 && targetPage <= total) {
+                                currentPage = targetPage;
+                                renderBlogs();
+                                window.scrollTo({ top: document.querySelector("main").offsetTop - 100, behavior: 'smooth' });
+                            }
+                        });
+                    });
+                }
+
+                // Initial Render
+                renderBlogs();
+            });
+        </script>
+    </main>
+    <!-- =======================
+    Main Content End
+    ======================== -->
+
+    <!-- Scroll Progress & WhatsApp -->
+    <!-- Scroll Progress & WhatsApp Widgets (Unified) -->
+    <div id="scroll-tracker"><div id="scroll-dot"></div></div>
+    <a href="https://wa.me/916370584682?text=Hello%20Pabitra%20Technology,%20I'm%20interested%20in%20your%20services." class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp" aria-label="Chat on WhatsApp"></i>
+    </a>
+
+    <!-- JS Libraries & Custom Unified Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/JS/main.js"></script>
+<!-- START_FOOTER_COMPONENT -->
+<!-- ============================================================
+     PABITRA TECHNOLOGY â€” REUSABLE FOOTER COMPONENT
+     
+     ============================================================ -->
+
+<footer class="site-footer">
+
+    <!-- Newsletter Strip -->
+    <div class="footer-newsletter-strip">
+        <div class="container">
+            <div class="row align-items-center gy-3">
+                <div class="col-lg-5">
+                    <h5 class="newsletter-title">
+                        <i class="fas fa-paper-plane me-2"></i>
+                        Stay Updated with Digital Trends
+                    </h5>
+                    <p class="newsletter-sub">Get weekly insights, tips & news delivered to your inbox.</p>
+                </div>
+                <div class="col-lg-7">
+                    <form class="newsletter-form" id="newsletterForm" novalidate>
+                        <div class="newsletter-input-wrap">
+                            <input type="email" class="newsletter-input" placeholder="Enter your email address..." required>
+                            <button type="submit" class="newsletter-btn">
+                                Subscribe <i class="fas fa-arrow-right ms-2"></i>
+                            </button>
+                        </div>
+                        <p class="newsletter-note mt-2"><i class="fas fa-lock me-1"></i> No spam. Unsubscribe anytime.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Footer Body -->
+    <div class="footer-body">
+        <div class="container">
+            <div class="row gy-5">
+
+                <!-- Col 1: About & Logo -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="/" class="footer-logo-wrap">
+                        <img src="/images/pabitra250.png" alt="Pabitra Technology White Logo" class="footer-logo-img">
+                    </a>
+                    <p class="footer-about-text">
+                        Your dedicated digital partner in Bhubaneswar, Odisha. We craft innovative digital marketing, web &amp; app development, and tech solutions that drive real business growth.
+                    </p>
+
+                    <!-- Trust Badges -->
+                    <div class="footer-trust-badges">
+                        <div class="trust-badge">
+                            <i class="fas fa-medal"></i>
+                            <span>ISO Certified</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fab fa-google"></i>
+                            <span>Google Partner</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Trusted Agency</span>
+                        </div>
+                    </div>
+
+                    <!-- Social Icons -->
+                    <div class="footer-socials mt-4">
+                        <a href="https://www.facebook.com/pabitra.technology.2025" class="footer-social-icon facebook" target="_blank" aria-label="Facebook" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/pabitratechnology/" class="footer-social-icon instagram" target="_blank" aria-label="Instagram" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/pabitra-technology/" class="footer-social-icon linkedin" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="footer-social-icon" target="_blank" aria-label="Twitter/X" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://wa.me/916370584682" class="footer-social-icon whatsapp" target="_blank" aria-label="WhatsApp" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@PabitraTechnology" class="footer-social-icon youtube" target="_blank" aria-label="YouTube" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Our Services -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6 class="footer-col-title">Our Services</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="/services/digital-marketing-360/"><i class="fas fa-angle-right"></i> Digital Marketing</a></li>
+                        <li><a href="/services/seo/"><i class="fas fa-angle-right"></i> SEO Services</a></li>
+                        <li><a href="/services/ppc/"><i class="fas fa-angle-right"></i> PPC Advertising</a></li>
+                        <li><a href="/services/smm/"><i class="fas fa-angle-right"></i> Social Media</a></li>
+                        <li><a href="/services/web-dev/"><i class="fas fa-angle-right"></i> Web Development</a></li>
+                        <li><a href="/services/app-dev/"><i class="fas fa-angle-right"></i> App Development</a></li>
+                        <li><a href="/services/ecommerce/"><i class="fas fa-angle-right"></i> E-commerce</a></li>
+                        <li><a href="/services/graphics-uiux/"><i class="fas fa-angle-right"></i> UI/UX Design</a></li>
+                        <li><a href="/services/cloud/"><i class="fas fa-angle-right"></i> Cloud Solutions</a></li>
+                        <li><a href="/services/security/"><i class="fas fa-angle-right"></i> Cyber Security</a></li>
+                        <li><a href="/services/" class="footer-view-all"><i class="fas fa-th"></i> View All Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Company Links -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6 class="footer-col-title">Company</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="/about/"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="/portfolio/"><i class="fas fa-angle-right"></i> Our Portfolio</a></li>
+                        <li><a href="/blog/"><i class="fas fa-angle-right"></i> Blog & Insights</a></li>
+                        <li><a href="/careers/"><i class="fas fa-angle-right"></i> Careers <span class="hiring-tag">Hiring</span></a></li>
+                        <li><a href="/contact/"><i class="fas fa-angle-right"></i> Contact Us</a></li>
+                        <li><a href="/privacy/"><i class="fas fa-angle-right"></i> Privacy Policy</a></li>
+                        <li><a href="/terms/"><i class="fas fa-angle-right"></i> Terms of Service</a></li>
+                        <li><a href="sitemap.xml"><i class="fas fa-angle-right"></i> Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact Info -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="footer-col-title">Get In Touch</h6>
+
+                    <ul class="footer-contact-list">
+                        <li>
+                            <div class="contact-icon-wrap">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <strong>Our Location</strong>
+                                <span>Bhubaneswar, Odisha, India â€” 751001</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon-wrap">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <strong>Call Us Anytime</strong>
+                                <a href="tel:+916370584682">+91 6370584682</a>
+                                <a href="tel:+919861117158">+91 9861117158</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon-wrap">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <strong>Email Us</strong>
+                                <a href="mailto:infopabitratechnology@gmail.com">infopabitratechnology@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon-wrap">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <strong>Working Hours</strong>
+                                <span>Mon â€“ Sat: 10:00 AM â€“ 6:00 PM</span>
+                                <span class="text-muted small">Sunday: Closed</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- Map Button -->
+                    <a href="https://maps.google.com/?q=Bhubaneswar,Odisha,India" target="_blank" class="footer-map-btn mt-3">
+                        <i class="fas fa-map me-2"></i> View on Google Maps
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center gy-2">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="footer-copyright">
+                        &copy; <span id="footer-year"></span> <strong>Pabitra Technology</strong>. All Rights Reserved.
+                        Crafted with <i class="fas fa-heart text-danger" aria-hidden="true"></i> in Bhubaneswar, India.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-bottom-links">
+                        <a href="/privacy/">Privacy Policy</a>
+                        <span class="sep">Â·</span>
+                        <a href="/terms/">Terms of Service</a>
+                        <span class="sep">Â·</span>
+                        <a href="sitemap.xml">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- Scroll Progress Indicator -->
+<div id="scroll-tracker"><div id="scroll-dot"></div></div>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/916370584682?text=Hello%20Pabitra%20Technology,%20I'm%20interested%20in%20your%20services."
+   class="whatsapp-float" target="_blank" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with us!</span>
+</a>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+    // Auto-update copyright year
+    const yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Back to Top Button
+    const bttBtn = document.getElementById('backToTop');
+    if (bttBtn) {
+        window.addEventListener('scroll', () => {
+            bttBtn.classList.toggle('visible', window.scrollY > 400);
+        });
+        bttBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+    // Newsletter Form
+    const nlForm = document.getElementById('newsletterForm');
+    if (nlForm) {
+        nlForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const input = this.querySelector('.newsletter-input');
+            if (input && input.value) {
+                input.value = '';
+                input.placeholder = 'âœ“ Subscribed! Thank you.';
+                setTimeout(() => input.placeholder = 'Enter your email address...', 3000);
+            }
+        });
+    }
+</script>
+
+<!-- END_FOOTER_COMPONENT -->
+    <script src="/JS/components.js"></script>
+</body>
+</html>
+

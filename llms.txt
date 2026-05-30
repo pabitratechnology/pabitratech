@@ -1,0 +1,23 @@
+# llms.txt for Pabitra Technology
+# Controls how AI crawlers & Large Language Models use site content
+
+# --- Allowed AI Crawlers ---
+User-Agent: OpenAI
+Allow: /
+
+User-Agent: Anthropic-AI
+Allow: /
+
+User-Agent: Perplexity-AI
+Allow: /
+
+User-Agent: Google-Extended
+Disallow: /wp-admin/
+Allow: /
+
+# --- Block all unknown AI crawlers ---
+User-Agent: *
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /drafts/

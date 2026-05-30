@@ -1,0 +1,441 @@
+<!-- ============================================================
+     PABITRA TECHNOLOGY — ADVANCED HEADER COMPONENT v2
+     - Top bar: contact, social, country selector, audit CTA
+     - Mega menu: 4 service columns + 20+ IT services
+     - Extra nav pages: Solutions, Case Studies, Careers, More
+     - Free Website Audit modal form
+     - Fully mobile responsive
+     ============================================================ -->
+
+<!-- ====== FREE WEBSITE AUDIT MODAL ====== -->
+<div class="audit-modal-overlay" id="auditModalOverlay">
+    <div class="audit-modal-box">
+        <button class="audit-modal-close" id="auditModalClose" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="audit-modal-header">
+            <div class="audit-icon-ring"><i class="fas fa-chart-line"></i></div>
+            <h4>Free Website Audit Report</h4>
+            <p>Get a comprehensive SEO &amp; performance audit — 100% Free, delivered in 24 hours.</p>
+        </div>
+        <form class="audit-form" id="auditForm" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Access Key (Dynamic Direct Email Delivery) -->
+            <input type="hidden" name="access_key" value="bb4d1b82-4df3-40e9-a681-79b88b488737">
+            <input type="hidden" name="subject" value="New Free Website Audit Request - Pabitra Technology">
+            <input type="hidden" name="from_name" value="Pabitra Audit Portal">
+            <div class="audit-form-group">
+                <label><i class="fas fa-globe me-2"></i>Your Website URL</label>
+                <input type="url" name="website_url" placeholder="https://yourwebsite.com" required>
+            </div>
+            <div class="audit-form-group">
+                <label><i class="fas fa-envelope me-2"></i>Email Address</label>
+                <input type="email" name="email" placeholder="you@company.com" required>
+            </div>
+            <div class="audit-form-group">
+                <label><i class="fas fa-phone me-2"></i>Phone Number</label>
+                <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required>
+            </div>
+            <div class="audit-form-group">
+                <label><i class="fas fa-tasks me-2"></i>What do you need?</label>
+                <select name="audit_type">
+                    <option value="seo">SEO Audit</option>
+                    <option value="performance">Performance Audit</option>
+                    <option value="security">Security Audit</option>
+                    <option value="full">Full Website Audit</option>
+                    <option value="competitor">Competitor Analysis</option>
+                </select>
+            </div>
+            <button type="submit" class="audit-submit-btn">
+                <i class="fas fa-rocket me-2"></i>Get My Free Audit Report
+            </button>
+            <p class="audit-disclaimer"><i class="fas fa-lock me-1"></i>100% Free. No credit card. Results in 24 hrs.</p>
+        </form>
+    </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+
+    <!-- ====== ULTRA TOP BAR ====== -->
+    <div class="ultra-top-bar" id="ultraTopBar">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center justify-content-between top-bar-inner">
+
+                <!-- LEFT: Contact details -->
+                <div class="top-bar-left d-flex align-items-center gap-3">
+                    <a href="tel:+916370584682" class="tbl-item dynamic-phone-link">
+                        <i class="fas fa-phone-alt"></i>
+                        <span class="dynamic-phone-text">+91 6370584682</span>
+                    </a>
+                    <span class="tbl-sep d-none d-md-inline">|</span>
+                    <a href="mailto:infopabitratechnology@gmail.com" class="tbl-item d-none d-md-flex">
+                        <i class="fas fa-envelope"></i>
+                        <span>infopabitratechnology@gmail.com</span>
+                    </a>
+                    <span class="tbl-sep d-none d-lg-inline">|</span>
+                    <span class="tbl-item d-none d-lg-flex">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Bhubaneswar, Odisha, India</span>
+                    </span>
+
+                </div>
+
+                <!-- RIGHT: Social + Country + Audit CTA -->
+                <div class="top-bar-right d-flex align-items-center gap-2">
+
+                    <!-- Social Icons -->
+                    <div class="tb-socials d-none d-sm-flex align-items-center gap-1">
+                        <a href="https://www.facebook.com/pabitra.technology.2025" class="tb-social facebook" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/pabitratechnology/" class="tb-social instagram" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/pabitra-technology/" class="tb-social linkedin" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/PabitraTech2025" class="tb-social twitter" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/916370584682" class="tb-social tb-wa" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+
+                    <span class="tbl-sep d-none d-sm-inline">|</span>
+
+                    <!-- Country Selector -->
+                    <div class="country-selector" id="countrySel">
+                        <button class="country-btn" id="countryBtn" type="button">
+                            <span class="flag-icon">🇮🇳</span>
+                            <span class="country-code d-none d-md-inline">IN</span>
+                            <i class="fas fa-chevron-down caret ms-1"></i>
+                        </button>
+                        <div class="country-dropdown" id="countryDropdown">
+                            <a href="#" class="country-opt active" data-flag="🇮🇳" data-code="IN" data-phone="+91" data-fullphone="+91 6370584682">🇮🇳 India (+91)</a>
+                            <a href="#" class="country-opt" data-flag="🇺🇸" data-code="US" data-phone="+1" data-fullphone="+1 (650) 489-6370">🇺🇸 United States (+1)</a>
+                            <a href="#" class="country-opt" data-flag="🇬🇧" data-code="GB" data-phone="+44" data-fullphone="+44 20 7946 0192">🇬🇧 United Kingdom (+44)</a>
+                            <a href="#" class="country-opt" data-flag="🇦🇪" data-code="AE" data-phone="+971" data-fullphone="+971 4 312 9000">🇦🇪 UAE (+971)</a>
+                            <a href="#" class="country-opt" data-flag="🇦🇺" data-code="AU" data-phone="+61" data-fullphone="+61 2 9382 1111">🇦🇺 Australia (+61)</a>
+                            <a href="#" class="country-opt" data-flag="🇸🇬" data-code="SG" data-phone="+65" data-fullphone="+65 6789 0123">🇸🇬 Singapore (+65)</a>
+                            <a href="#" class="country-opt" data-flag="🇨🇦" data-code="CA" data-phone="+1" data-fullphone="+1 (416) 555-0199">🇨🇦 Canada (+1)</a>
+                            <a href="#" class="country-opt" data-flag="🇩🇪" data-code="DE" data-phone="+49" data-fullphone="+49 30 8973 8921">🇩🇪 Germany (+49)</a>
+                            <a href="#" class="country-opt" data-flag="🇸🇦" data-code="SA" data-phone="+966" data-fullphone="+966 11 405 8920">🇸🇦 Saudi Arabia (+966)</a>
+                            <div class="country-dd-footer">
+                                <a href="/locations/" class="country-dd-loc-link">
+                                    <i class="fas fa-globe-asia"></i>
+                                    <span>View All Global Locations</span>
+                                    <i class="fas fa-arrow-right ms-auto"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Free Audit CTA -->
+                    <button class="tb-audit-btn" id="openAuditModal" type="button">
+                        <i class="fas fa-search-plus me-1"></i>
+                        <span class="d-none d-lg-inline">Free Website Audit</span>
+                        <span class="d-inline d-lg-none">Audit</span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== MAIN NAVBAR ====== -->
+    <nav class="main-navbar navbar navbar-expand-xl" id="mainNavbar">
+        <div class="container-xl">
+
+            <!-- Brand Logo -->
+            <a class="navbar-brand brand-logo" href="/">
+                <img src="/images/pabitra250.png" alt="Pabitra Technology" class="logo-img">
+            </a>
+
+            <!-- Mobile: Audit + Hamburger -->
+            <div class="d-flex d-xl-none align-items-center gap-2 ms-auto">
+                <button class="tb-audit-btn mobile-audit" id="openAuditModalMobile" type="button">
+                    <i class="fas fa-chart-bar"></i>
+                </button>
+                <button class="hamburger-btn" type="button" id="hamburgerBtn"
+                        data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                        aria-controls="navbarMain" aria-expanded="false" aria-label="Menu">
+                    <span class="ham-bar bar-top"></span>
+                    <span class="ham-bar bar-mid"></span>
+                    <span class="ham-bar bar-bot"></span>
+                </button>
+            </div>
+
+            <!-- Nav Links -->
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto align-items-xl-center">
+
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link-custom" href="/">Home</a>
+                    </li>
+
+                    <!-- About Dropdown -->
+                    <li class="nav-item dropdown simple-dropdown" id="aboutDropdown">
+                        <a class="nav-link-custom" href="/about/story/" id="aboutBtn">
+                            About <i class="fas fa-chevron-down chevron-icon ms-1"></i>
+                        </a>
+                        <div class="simple-menu">
+                            <a href="/about/story/" class="simple-item">
+                                <i class="fas fa-building"></i>
+                                <span><strong>About Us</strong><small>Our story & vision</small></span>
+                            </a>
+                            <a href="/about/team/" class="simple-item">
+                                <i class="fas fa-users"></i>
+                                <span><strong>Our Team</strong><small>Meet the experts</small></span>
+                            </a>
+                            <a href="/about/awards/" class="simple-item">
+                                <i class="fas fa-trophy"></i>
+                                <span><strong>Awards & Recognition</strong><small>Our achievements</small></span>
+                            </a>
+                            <a href="/about/values/" class="simple-item">
+                                <i class="fas fa-bullseye"></i>
+                                <span><strong>Mission & Values</strong><small>What drives us</small></span>
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- SERVICES MEGA MENU -->
+                    <li class="nav-item mega-dropdown" id="servicesDropdown">
+                        <a class="nav-link-custom" href="/services/" id="servicesMenuBtn">
+                            Services <i class="fas fa-chevron-down chevron-icon ms-1"></i>
+                        </a>
+
+                        <div class="mega-menu-panel" id="megaMenuPanel">
+                            <div class="container-xl">
+                                <div class="mega-inner row g-0">
+
+                                    <!-- Col 1: Digital Marketing -->
+                                    <div class="col-xl-3 mega-col mega-col-border">
+                                        <div class="mega-col-header">
+                                            <div class="mega-col-icon bg-blue-glow"><i class="fas fa-chart-line"></i></div>
+                                            <div>
+                                                <h6 class="mega-col-title">Digital Marketing</h6>
+                                                <p class="mega-col-sub">Grow your online presence</p>
+                                            </div>
+                                        </div>
+                                        <ul class="mega-link-list">
+                                            <li><a href="/services/digital-marketing-360/" class="mega-link"><i class="fas fa-bullseye"></i><span><strong>360° Digital Marketing</strong><small>Full-funnel campaigns</small></span></a></li>
+                                            <li><a href="/services/seo/" class="mega-link"><i class="fas fa-search"></i><span><strong>SEO Services</strong><small>Rank #1 on Google</small></span></a></li>
+                                            <li><a href="/services/ppc/" class="mega-link"><i class="fas fa-ad"></i><span><strong>PPC & Google Ads</strong><small>Instant qualified traffic</small></span></a></li>
+                                            <li><a href="/services/smm/" class="mega-link"><i class="fab fa-instagram"></i><span><strong>Social Media Marketing</strong><small>Build brand community</small></span></a></li>
+                                            <li><a href="/services/email/" class="mega-link"><i class="fas fa-envelope-open-text"></i><span><strong>Email Marketing</strong><small>High ROI campaigns</small></span></a></li>
+                                            <li><a href="/services/content-marketing/" class="mega-link"><i class="fas fa-pen-nib"></i><span><strong>Content Marketing</strong><small>Engage &amp; convert</small></span></a></li>
+                                            <li><a href="/services/orm/" class="mega-link"><i class="fas fa-star"></i><span><strong>ORM &amp; Reputation</strong><small>Protect your brand</small></span></a></li>
+                                            <li><a href="/services/influencer-marketing/" class="mega-link"><i class="fas fa-users"></i><span><strong>Influencer Marketing</strong><small>Reach new audiences</small></span></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Col 2: Web & App Development -->
+                                    <div class="col-xl-3 mega-col mega-col-border">
+                                        <div class="mega-col-header">
+                                            <div class="mega-col-icon bg-accent-glow"><i class="fas fa-laptop-code"></i></div>
+                                            <div>
+                                                <h6 class="mega-col-title">Web & App Dev</h6>
+                                                <p class="mega-col-sub">Build powerful products</p>
+                                            </div>
+                                        </div>
+                                        <ul class="mega-link-list">
+                                            <li><a href="/services/web-dev/" class="mega-link"><i class="fas fa-code"></i><span><strong>Website Development</strong><small>Fast, modern websites</small></span></a></li>
+                                            <li><a href="/services/app-dev/" class="mega-link"><i class="fas fa-mobile-alt"></i><span><strong>Mobile App Development</strong><small>iOS &amp; Android apps</small></span></a></li>
+                                            <li><a href="/services/ecommerce/" class="mega-link"><i class="fas fa-shopping-cart"></i><span><strong>E-commerce Development</strong><small>Sell online seamlessly</small></span></a></li>
+                                            <li><a href="/services/graphics-uiux/" class="mega-link"><i class="fas fa-paint-brush"></i><span><strong>UI/UX &amp; Graphic Design</strong><small>Stunning interfaces</small></span></a></li>
+                                            <li><a href="/services/api-cms/" class="mega-link"><i class="fas fa-plug"></i><span><strong>API &amp; CMS Integration</strong><small>Connect your systems</small></span></a></li>
+                                            <li><a href="/services/custom-software/" class="mega-link"><i class="fas fa-cogs"></i><span><strong>Custom Software Dev</strong><small>Tailored business tools</small></span></a></li>
+                                            <li><a href="/services/pwa/" class="mega-link"><i class="fas fa-window-restore"></i><span><strong>PWA Development</strong><small>App-like web experience</small></span></a></li>
+                                            <li><a href="/services/saas/" class="mega-link"><i class="fas fa-cube"></i><span><strong>SaaS Development</strong><small>Scalable cloud products</small></span></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Col 3: IT & Technology Solutions -->
+                                    <div class="col-xl-3 mega-col mega-col-border">
+                                        <div class="mega-col-header">
+                                            <div class="mega-col-icon bg-green-glow"><i class="fas fa-server"></i></div>
+                                            <div>
+                                                <h6 class="mega-col-title">IT & Technology</h6>
+                                                <p class="mega-col-sub">Scale with confidence</p>
+                                            </div>
+                                        </div>
+                                        <ul class="mega-link-list">
+                                            <li><a href="/services/cloud/" class="mega-link"><i class="fas fa-cloud"></i><span><strong>Cloud Solutions</strong><small>AWS, Azure &amp; GCP</small></span></a></li>
+                                            <li><a href="/services/devops/" class="mega-link"><i class="fas fa-infinity"></i><span><strong>DevOps &amp; CI/CD</strong><small>Automate deployments</small></span></a></li>
+                                            <li><a href="/services/security/" class="mega-link"><i class="fas fa-shield-alt"></i><span><strong>Cyber Security</strong><small>Protect your assets</small></span></a></li>
+                                            <li><a href="/services/automation/" class="mega-link"><i class="fas fa-robot"></i><span><strong>AI &amp; Automation</strong><small>Intelligent workflows</small></span></a></li>
+                                            <li><a href="/services/data-analytics/" class="mega-link"><i class="fas fa-chart-bar"></i><span><strong>Data Analytics &amp; BI</strong><small>Insights that matter</small></span></a></li>
+                                            <li><a href="/services/machine-learning/" class="mega-link"><i class="fas fa-brain"></i><span><strong>Machine Learning / AI</strong><small>Next-gen intelligence</small></span></a></li>
+                                            <li><a href="/services/iot/" class="mega-link"><i class="fas fa-network-wired"></i><span><strong>IoT Solutions</strong><small>Connect smart devices</small></span></a></li>
+                                            <li><a href="/services/blockchain/" class="mega-link"><i class="fas fa-link"></i><span><strong>Blockchain Development</strong><small>Decentralized systems</small></span></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Col 4: CTA Panel -->
+                                    <div class="col-xl-3 mega-col mega-cta-col">
+                                        <div class="mega-cta-card">
+                                            <div class="mega-cta-icon"><i class="fas fa-chart-pie"></i></div>
+                                            <h5 class="mega-cta-title">Free Website Audit</h5>
+                                            <p class="mega-cta-text">Get a free SEO &amp; performance audit of your website — delivered in 24 hours.</p>
+                                            <button type="button" class="mega-cta-btn" id="megaAuditBtn">
+                                                <i class="fas fa-search-plus me-2"></i>Get Free Audit
+                                            </button>
+                                            <div class="mega-cta-stats">
+                                                <div class="cta-stat"><strong>50+</strong><small>Projects</small></div>
+                                                <div class="cta-stat"><strong>98%</strong><small>Satisfied</small></div>
+                                                <div class="cta-stat"><strong>24/7</strong><small>Support</small></div>
+                                            </div>
+                                        </div>
+                                        <a href="/services/" class="view-all-link">
+                                            View All 30+ Services <i class="fas fa-arrow-right ms-1"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Solutions Dropdown -->
+                    <li class="nav-item dropdown simple-dropdown" id="solutionsDropdown">
+                        <a class="nav-link-custom" href="#" id="solutionsBtn">
+                            Solutions <i class="fas fa-chevron-down chevron-icon ms-1"></i>
+                        </a>
+                        <div class="simple-menu wide-menu">
+                            <div class="simple-menu-grid">
+                                <a href="/solutions/startups/" class="simple-item">
+                                    <i class="fas fa-rocket"></i>
+                                    <span><strong>For Startups</strong><small>Launch fast &amp; smart</small></span>
+                                </a>
+                                <a href="/solutions/sme/" class="simple-item">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span><strong>For SMEs</strong><small>Grow your business</small></span>
+                                </a>
+                                <a href="/solutions/enterprise/" class="simple-item">
+                                    <i class="fas fa-industry"></i>
+                                    <span><strong>Enterprise Solutions</strong><small>Scale at any size</small></span>
+                                </a>
+                                <a href="/solutions/education/" class="simple-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span><strong>Education / EdTech</strong><small>Interactive LMS portals</small></span>
+                                </a>
+                                <a href="/solutions/healthcare/" class="simple-item">
+                                    <i class="fas fa-heartbeat"></i>
+                                    <span><strong>Healthcare Systems</strong><small>Secure patient charts</small></span>
+                                </a>
+                                <a href="/solutions/ecommerce/" class="simple-item">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <span><strong>Retail &amp; E-commerce</strong><small>Increase online sales</small></span>
+                                </a>
+                                <a href="/solutions/hospitality/" class="simple-item">
+                                    <i class="fas fa-hotel"></i>
+                                    <span><strong>Hospitality &amp; Travel</strong><small>Smart booking systems</small></span>
+                                </a>
+                                <a href="/solutions/finance/" class="simple-item">
+                                    <i class="fas fa-wallet"></i>
+                                    <span><strong>Financial Services</strong><small>High security FinTech</small></span>
+                                </a>
+                                <a href="/solutions/manufacturing/" class="simple-item">
+                                    <i class="fas fa-cogs"></i>
+                                    <span><strong>Manufacturing ERP</strong><small>Automate plant operations</small></span>
+                                </a>
+                                <a href="/solutions/realestate/" class="simple-item">
+                                    <i class="fas fa-home"></i>
+                                    <span><strong>Real Estate Portals</strong><small>Interactive property listings</small></span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Portfolio -->
+                    <li class="nav-item">
+                        <a class="nav-link-custom" href="/portfolio/">Portfolio</a>
+                    </li>
+
+                    <!-- Blog -->
+                    <li class="nav-item">
+                        <a class="nav-link-custom" href="/blog/">Blog</a>
+                    </li>
+
+                    <!-- Careers -->
+                    <li class="nav-item">
+                        <a class="nav-link-custom" href="/careers/">
+                            Careers <span class="hiring-badge">Hiring</span>
+                        </a>
+                    </li>
+
+                    <!-- More Pages -->
+                    <li class="nav-item dropdown simple-dropdown" id="moreDropdown">
+                        <a class="nav-link-custom" href="#" id="moreBtn">
+                            More <i class="fas fa-chevron-down chevron-icon ms-1"></i>
+                        </a>
+                        <div class="simple-menu">
+                            <a href="/case-studies/" class="simple-item">
+                                <i class="fas fa-file-alt"></i>
+                                <span><strong>Case Studies</strong><small>Our success stories</small></span>
+                            </a>
+                            <a href="/partners/" class="simple-item">
+                                <i class="fas fa-handshake"></i>
+                                <span><strong>Partners &amp; Clients</strong><small>Who we work with</small></span>
+                            </a>
+                            <a href="/faqs/" class="simple-item">
+                                <i class="fas fa-question-circle"></i>
+                                <span><strong>FAQs</strong><small>Common questions</small></span>
+                            </a>
+                            <a href="/privacy/" class="simple-item">
+                                <i class="fas fa-user-shield"></i>
+                                <span><strong>Privacy Policy</strong><small>How we use data</small></span>
+                            </a>
+                            <a href="/terms/" class="simple-item">
+                                <i class="fas fa-file-contract"></i>
+                                <span><strong>Terms of Service</strong><small>Our usage terms</small></span>
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <!-- Navbar CTA -->
+                <div class="navbar-cta ms-xl-3">
+                    
+                    <!-- Mobile Country Selector (visible only on mobile/tablet) -->
+                    <div class="mobile-country-selector d-xl-none mb-3">
+                        <label class="mobile-country-label"><i class="fas fa-globe me-2"></i>Select Region</label>
+                        <div class="mobile-country-wrapper">
+                            <button class="mobile-country-btn" id="mobileCountryBtn" type="button">
+                                <span class="flag-icon">🇮🇳</span>
+                                <span class="country-name-selected">India (+91)</span>
+                                <i class="fas fa-chevron-down caret ms-auto"></i>
+                            </button>
+                            <div class="mobile-country-dropdown" id="mobileCountryDropdown">
+                                <a href="#" class="country-opt active" data-flag="🇮🇳" data-code="IN" data-phone="+91" data-fullphone="+91 6370584682">🇮🇳 India (+91)</a>
+                                <a href="#" class="country-opt" data-flag="🇺🇸" data-code="US" data-phone="+1" data-fullphone="+1 (650) 489-6370">🇺🇸 United States (+1)</a>
+                                <a href="#" class="country-opt" data-flag="🇬🇧" data-code="GB" data-phone="+44" data-fullphone="+44 20 7946 0192">🇬🇧 United Kingdom (+44)</a>
+                                <a href="#" class="country-opt" data-flag="🇦🇪" data-code="AE" data-phone="+971" data-fullphone="+971 4 312 9000">🇦🇪 UAE (+971)</a>
+                                <a href="#" class="country-opt" data-flag="🇦🇺" data-code="AU" data-phone="+61" data-fullphone="+61 2 9382 1111">🇦🇺 Australia (+61)</a>
+                                <a href="#" class="country-opt" data-flag="🇸🇬" data-code="SG" data-phone="+65" data-fullphone="+65 6789 0123">🇸🇬 Singapore (+65)</a>
+                                <a href="#" class="country-opt" data-flag="🇨🇦" data-code="CA" data-phone="+1" data-fullphone="+1 (416) 555-0199">🇨🇦 Canada (+1)</a>
+                                <a href="#" class="country-opt" data-flag="🇩🇪" data-code="DE" data-phone="+49" data-fullphone="+49 30 8973 8921">🇩🇪 Germany (+49)</a>
+                                <a href="#" class="country-opt" data-flag="🇸🇦" data-code="SA" data-phone="+966" data-fullphone="+966 11 405 8920">🇸🇦 Saudi Arabia (+966)</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navbar-cta-buttons d-flex align-items-center gap-2">
+                        <!-- Desktop Dynamic Call Button -->
+                        <a href="tel:+916370584682" class="btn-call dynamic-phone-link d-none d-xl-inline-flex" title="Call us">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+
+                        <!-- Mobile Dynamic Call Button (Full width, visible on mobile) -->
+                        <a href="tel:+916370584682" class="btn-call-mobile dynamic-phone-link d-xl-none" title="Call Us Now">
+                            <i class="fas fa-phone-alt me-2"></i>
+                            <span>Call Us: </span>
+                            <span class="dynamic-phone-text ms-1">+91 6370584682</span>
+                        </a>
+
+                        <button type="button" class="btn-get-quote" id="navAuditBtn">
+                            <i class="fas fa-search-plus me-1"></i>Free Audit
+                        </button>
+                        
+                        <a href="/contact/" class="btn-contact">
+                            Contact Us <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</header>

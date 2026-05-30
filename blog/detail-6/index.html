@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- === ADVANCED SEO METADATA === -->
+    <title>Common Website Security Vulnerabilities & How to Prevent Them | Pabitra Technology Blog</title>
+    <meta name="description" content="Protect your website and user data by understanding key security risks like XSS, SQL Injection, and outdated plugins, and learn how to proactively address them.">
+    <meta name="keywords" content="common website security vulnerabilities & how to prevent them, pabitra technology blog, digital strategy, technical guide, modern web insights, software scaling tips">
+    <link rel="canonical" href="https://pabitratechnology.com/blog-post-detail-6.html">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- === SEO: Title & Description for Blog Post === -->
+    
+    
+
+    <!-- Bootstrap CSS, Fonts, Icons, Animate, AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- === Custom CSS (Single file for all pages) === -->
+    <link rel="stylesheet" href="/CSS/blog.css">
+    <!-- Additional styles for blog post content -->
+    <style>
+        .blog-post-content h2, .blog-post-content h3, .blog-post-content h4 { margin-top: 2rem; margin-bottom: 1.2rem; }
+        .blog-post-content p { margin-bottom: 1rem; color: #495057; }
+        .blog-post-content ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+        .blog-post-content ul li { margin-bottom: 0.5rem; }
+        .blog-post-content blockquote {
+            border-left: 4px solid var(--bs-danger);
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+            background-color: #fef4f4; /* Light red background */
+            font-style: italic;
+            color: #6c757d;
+        }
+    </style>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/pabitra1.png" type="image/png">
+
+    <link rel="stylesheet" href="/CSS/components.css">
+    </head>
+<body>
+<!-- START_HEADER_COMPONENT -->
+<!-- ============================================================
+     PABITRA TECHNOLOGY — ADVANCED HEADER COMPONENT v2
+     - Top bar: contact, social, country selector, audit CTA
+     - Mega menu: 4 service columns + 20+ IT services
+     - Extra nav pages: Solutions, Case Studies, Careers, More
+     - Free Website Audit modal form
+     - Fully mobile responsive
+     ============================================================ -->
+
+<!-- ====== FREE WEBSITE AUDIT MODAL ====== -->
+<div class="audit-modal-overlay" id="auditModalOverlay">
+    <div class="audit-modal-box">
+        <button class="audit-modal-close" id="auditModalClose" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="audit-modal-header">
+            <div class="audit-icon-ring"><i class="fas fa-chart-line"></i></div>
+            <h4>Free Website Audit Report</h4>
+            <p>Get a comprehensive SEO &amp; performance audit — 100% Free, delivered in 24 hours.</p>
+        </div>
+        <form class="audit-form" id="auditForm" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Access Key (Dynamic Direct Email Delivery) -->
+            <input type="hidden" name="access_key" value="bb4d1b82-4df3-40e9-a681-79b88b488737">
+            <input type="hidden" name="subject" value="New Free Website Audit Request - Pabitra Technology">
+            <input type="hidden" name="from_name" value="Pabitra Audit Portal">
+            <div class="audit-form-group">
+                <label><i class="fas fa-globe me-2"></i>Your Website URL</label>
+                <input type="url" name="website_url" placeholder="https://yourwebsite.com" required>
+            </div>
+            <div class="audit-form-group">
+                <label><i class="fas fa-envelope me-2"></i>Email Address</label>
+                <input type="email" name="email" placeholder="you@company.com" required>
+            </div>
+            <div class="audit-form-group">
+                <label><i class="fas fa-phone me-2"></i>Phone Number</label>
+                <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required>
+            </div>
+            <div class="audit-form-group">
+                <label><i class="fas fa-tasks me-2"></i>What do you need?</label>
+                <select name="audit_type">
+                    <option value="seo">SEO Audit</option>
+                    <option value="performance">Performance Audit</option>
+                    <option value="security">Security Audit</option>
+                    <option value="full">Full Website Audit</option>
+                    <option value="competitor">Competitor Analysis</option>
+                </select>
+            </div>
+            <button type="submit" class="audit-submit-btn">
+                <i class="fas fa-rocket me-2"></i>Get My Free Audit Report
+            </button>
+            <p class="audit-disclaimer"><i class="fas fa-lock me-1"></i>100% Free. No credit card. Results in 24 hrs.</p>
+        </form>
+    </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+
+    <!-- ====== ULTRA TOP BAR ====== -->
+    <div class="ultra-top-bar" id="ultraTopBar">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center justify-content-between top-bar-inner">
+
+                <!-- LEFT: Contact details -->
+                <div class="top-bar-left d-flex align-items-center gap-3">
+                    <a href="tel:+916370584682" class="tbl-item dynamic-phone-link">
+                        <i class="fas fa-phone-alt"></i>
+                        <span class="dynamic-phone-text">+91 6370584682</span>
+                    </a>
+                    <span class="tbl-sep d-none d-md-inline">|</span>
+                    <a href="mailto:infopabitratechnology@gmail.com" class="tbl-item d-none d-md-flex">
+                        <i class="fas fa-envelope"></i>
+                        <span>infopabitratechnology@gmail.com</span>
+                    </a>
+                    <span class="tbl-sep d-none d-lg-inline">|</span>
+                    <span class="tbl-item d-none d-lg-flex">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Bhubaneswar, Odisha, India</span>
+                    </span>
+
+                </div>
+
+                <!-- RIGHT: Social + Country + Audit CTA -->
+                <div class="top-bar-right d-flex align-items-center gap-2">
+
+                    <!-- Social Icons -->
+                    <div class="tb-socials d-none d-sm-flex align-items-center gap-1">
+                        <a href="https://www.facebook.com/pabitra.technology.2025" class="tb-social facebook" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/pabitratechnology/" class="tb-social instagram" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/pabitra-technology/" class="tb-social linkedin" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/PabitraTech2025" class="tb-social twitter" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/916370584682" class="tb-social tb-wa" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+
+                    <span class="tbl-sep d-none d-sm-inline">|</span>
+
+                    <!-- Country Selector -->
+                    <div class="country-selector" id="countrySel">
+                        <button class="country-btn" id="countryBtn" type="button">
+                            <span class="flag-icon">🇮🇳</span>
+                            <span class="country-code d-none d-md-inline">IN</span>
+                            <i class="fas fa-chevron-down caret ms-1"></i>
+                        </button>
+                        <div class="country-dropdown" id="countryDropdown">
+                            <a href="#" class="country-opt active" data-flag="🇮🇳" data-code="IN" data-phone="+91" data-fullphone="+91 6370584682">🇮🇳 India (+91)</a>
+                            <a href="#" class="country-opt" data-flag="🇺🇸" data-code="US" data-phone="+1" data-fullphone="+1 (650) 489-6370">🇺🇸 United States (+1)</a>
+                            <a href="#" class="country-opt" data-flag="🇬🇧" data-code="GB" data-phone="+44" data-fullphone="+44 20 7946 0192">🇬🇧 United Kingdom (+44)</a>
+                            <a href="#" class="country-opt" data-flag="🇦🇪" data-code="AE" data-phone="+971" data-fullphone="+971 4 312 9000">🇦🇪 UAE (+971)</a>
+                            <a href="#" class="country-opt" data-flag="🇦🇺" data-code="AU" data-phone="+61" data-fullphone="+61 2 9382 1111">🇦🇺 Australia (+61)</a>
+                            <a href="#" class="country-opt" data-flag="🇸🇬" data-code="SG" data-phone="+65" data-fullphone="+65 6789 0123">🇸🇬 Singapore (+65)</a>
+                            <a href="#" class="country-opt" data-flag="🇨🇦" data-code="CA" data-phone="+1" data-fullphone="+1 (416) 555-0199">🇨🇦 Canada (+1)</a>
+                            <a href="#" class="country-opt" data-flag="🇩🇪" data-code="DE" data-phone="+49" data-fullphone="+49 30 8973 8921">🇩🇪 Germany (+49)</a>
+                            <a href="#" class="country-opt" data-flag="🇸🇦" data-code="SA" data-phone="+966" data-fullphone="+966 11 405 8920">🇸🇦 Saudi Arabia (+966)</a>
+                            <div class="country-dd-footer">
+                                <a href="/locations/" class="country-dd-loc-link">
+                                    <i class="fas fa-globe-asia"></i>
+                                    <span>View All Global Locations</span>
+                                    <i class="fas fa-arrow-right ms-auto"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Free Audit CTA -->
+                    <button class="tb-audit-btn" id="openAuditModal" type="button">
+                        <i class="fas fa-search-plus me-1"></i>
+                        <span class="d-none d-lg-inline">Free Website Audit</span>
+                        <span class="d-inline d-lg-none">Audit</span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== MAIN NAVBAR ====== -->
+    <nav class="main-navbar navbar navbar-expand-xl" id="mainNavbar">
+        <div class="container-xl">
+
+            <!-- Brand Logo -->
+            <a class="navbar-brand brand-logo" href="/">
+                <img src="/images/pabitra250.png" alt="Pabitra Technology" class="logo-img">
+            </a>
+
+            <!-- Mobile: Audit + Hamburger -->
+            <div class="d-flex d-xl-none align-items-center gap-2 ms-auto">
+                <button class="tb-audit-btn mobile-audit" id="openAuditModalMobile" type="button">
+                    <i class="fas fa-chart-bar"></i>
+                </button>
+                <button class="hamburger-btn" type="button" id="hamburgerBtn"
+                        data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                        aria-controls="navbarMain" aria-expanded="false" aria-label="Menu">
+                    <span class="ham-bar bar-top"></span>
+                    <span class="ham-bar bar-mid"></span>
+                    <span class="ham-bar bar-bot"></span>
+                </button>
+            </div>
+
+            <!-- Nav Links -->
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto align-items-xl-center">
+
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link-custom" href="/">Home</a>
+                    </li>
+
+                    <!-- About Dropdown -->
+                    <li class="nav-item dropdown simple-dropdown" id="aboutDropdown">
+                        <a class="nav-link-custom" href="/about/story/" id="aboutBtn">
+                            About <i class="fas fa-chevron-down chevron-icon ms-1"></i>
+                        </a>
+                        <div class="simple-menu">
+                            <a href="/about/story/" class="simple-item">
+                                <i class="fas fa-building"></i>
+                                <span><strong>About Us</strong><small>Our story & vision</small></span>
+                            </a>
+                            <a href="/about/team/" class="simple-item">
+                                <i class="fas fa-users"></i>
+                                <span><strong>Our Team</strong><small>Meet the experts</small></span>
+                            </a>
+                            <a href="/about/awards/" class="simple-item">
+                                <i class="fas fa-trophy"></i>
+                                <span><strong>Awards & Recognition</strong><small>Our achievements</small></span>
+                            </a>
+                            <a href="/about/values/" class="simple-item">
+                                <i class="fas fa-bullseye"></i>
+                                <span><strong>Mission & Values</strong><small>What drives us</small></span>
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- SERVICES MEGA MENU -->
+                    <li class="nav-item mega-dropdown" id="servicesDropdown">
+                        <a class="nav-link-custom" href="/services/" id="servicesMenuBtn">
+                            Services <i class="fas fa-chevron-down chevron-icon ms-1"></i>
+                        </a>
+
+                        <div class="mega-menu-panel" id="megaMenuPanel">
+                            <div class="container-xl">
+                                <div class="mega-inner row g-0">
+
+                                    <!-- Col 1: Digital Marketing -->
+                                    <div class="col-xl-3 mega-col mega-col-border">
+                                        <div class="mega-col-header">
+                                            <div class="mega-col-icon bg-blue-glow"><i class="fas fa-chart-line"></i></div>
+                                            <div>
+                                                <h6 class="mega-col-title">Digital Marketing</h6>
+                                                <p class="mega-col-sub">Grow your online presence</p>
+                                            </div>
+                                        </div>
+                                        <ul class="mega-link-list">
+                                            <li><a href="/services/digital-marketing-360/" class="mega-link"><i class="fas fa-bullseye"></i><span><strong>360° Digital Marketing</strong><small>Full-funnel campaigns</small></span></a></li>
+                                            <li><a href="/services/seo/" class="mega-link"><i class="fas fa-search"></i><span><strong>SEO Services</strong><small>Rank #1 on Google</small></span></a></li>
+                                            <li><a href="/services/ppc/" class="mega-link"><i class="fas fa-ad"></i><span><strong>PPC & Google Ads</strong><small>Instant qualified traffic</small></span></a></li>
+                                            <li><a href="/services/smm/" class="mega-link"><i class="fab fa-instagram"></i><span><strong>Social Media Marketing</strong><small>Build brand community</small></span></a></li>
+                                            <li><a href="/services/email/" class="mega-link"><i class="fas fa-envelope-open-text"></i><span><strong>Email Marketing</strong><small>High ROI campaigns</small></span></a></li>
+                                            <li><a href="/services/content-marketing/" class="mega-link"><i class="fas fa-pen-nib"></i><span><strong>Content Marketing</strong><small>Engage &amp; convert</small></span></a></li>
+                                            <li><a href="/services/orm/" class="mega-link"><i class="fas fa-star"></i><span><strong>ORM &amp; Reputation</strong><small>Protect your brand</small></span></a></li>
+                                            <li><a href="/services/influencer-marketing/" class="mega-link"><i class="fas fa-users"></i><span><strong>Influencer Marketing</strong><small>Reach new audiences</small></span></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Col 2: Web & App Development -->
+                                    <div class="col-xl-3 mega-col mega-col-border">
+                                        <div class="mega-col-header">
+                                            <div class="mega-col-icon bg-accent-glow"><i class="fas fa-laptop-code"></i></div>
+                                            <div>
+                                                <h6 class="mega-col-title">Web & App Dev</h6>
+                                                <p class="mega-col-sub">Build powerful products</p>
+                                            </div>
+                                        </div>
+                                        <ul class="mega-link-list">
+                                            <li><a href="/services/web-dev/" class="mega-link"><i class="fas fa-code"></i><span><strong>Website Development</strong><small>Fast, modern websites</small></span></a></li>
+                                            <li><a href="/services/app-dev/" class="mega-link"><i class="fas fa-mobile-alt"></i><span><strong>Mobile App Development</strong><small>iOS &amp; Android apps</small></span></a></li>
+                                            <li><a href="/services/ecommerce/" class="mega-link"><i class="fas fa-shopping-cart"></i><span><strong>E-commerce Development</strong><small>Sell online seamlessly</small></span></a></li>
+                                            <li><a href="/services/graphics-uiux/" class="mega-link"><i class="fas fa-paint-brush"></i><span><strong>UI/UX &amp; Graphic Design</strong><small>Stunning interfaces</small></span></a></li>
+                                            <li><a href="/services/api-cms/" class="mega-link"><i class="fas fa-plug"></i><span><strong>API &amp; CMS Integration</strong><small>Connect your systems</small></span></a></li>
+                                            <li><a href="/services/custom-software/" class="mega-link"><i class="fas fa-cogs"></i><span><strong>Custom Software Dev</strong><small>Tailored business tools</small></span></a></li>
+                                            <li><a href="/services/pwa/" class="mega-link"><i class="fas fa-window-restore"></i><span><strong>PWA Development</strong><small>App-like web experience</small></span></a></li>
+                                            <li><a href="/services/saas/" class="mega-link"><i class="fas fa-cube"></i><span><strong>SaaS Development</strong><small>Scalable cloud products</small></span></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Col 3: IT & Technology Solutions -->
+                                    <div class="col-xl-3 mega-col mega-col-border">
+                                        <div class="mega-col-header">
+                                            <div class="mega-col-icon bg-green-glow"><i class="fas fa-server"></i></div>
+                                            <div>
+                                                <h6 class="mega-col-title">IT & Technology</h6>
+                                                <p class="mega-col-sub">Scale with confidence</p>
+                                            </div>
+                                        </div>
+                                        <ul class="mega-link-list">
+                                            <li><a href="/services/cloud/" class="mega-link"><i class="fas fa-cloud"></i><span><strong>Cloud Solutions</strong><small>AWS, Azure &amp; GCP</small></span></a></li>
+                                            <li><a href="/services/devops/" class="mega-link"><i class="fas fa-infinity"></i><span><strong>DevOps &amp; CI/CD</strong><small>Automate deployments</small></span></a></li>
+                                            <li><a href="/services/security/" class="mega-link"><i class="fas fa-shield-alt"></i><span><strong>Cyber Security</strong><small>Protect your assets</small></span></a></li>
+                                            <li><a href="/services/automation/" class="mega-link"><i class="fas fa-robot"></i><span><strong>AI &amp; Automation</strong><small>Intelligent workflows</small></span></a></li>
+                                            <li><a href="/services/data-analytics/" class="mega-link"><i class="fas fa-chart-bar"></i><span><strong>Data Analytics &amp; BI</strong><small>Insights that matter</small></span></a></li>
+                                            <li><a href="/services/machine-learning/" class="mega-link"><i class="fas fa-brain"></i><span><strong>Machine Learning / AI</strong><small>Next-gen intelligence</small></span></a></li>
+                                            <li><a href="/services/iot/" class="mega-link"><i class="fas fa-network-wired"></i><span><strong>IoT Solutions</strong><small>Connect smart devices</small></span></a></li>
+                                            <li><a href="/services/blockchain/" class="mega-link"><i class="fas fa-link"></i><span><strong>Blockchain Development</strong><small>Decentralized systems</small></span></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Col 4: CTA Panel -->
+                                    <div class="col-xl-3 mega-col mega-cta-col">
+                                        <div class="mega-cta-card">
+                                            <div class="mega-cta-icon"><i class="fas fa-chart-pie"></i></div>
+                                            <h5 class="mega-cta-title">Free Website Audit</h5>
+                                            <p class="mega-cta-text">Get a free SEO &amp; performance audit of your website — delivered in 24 hours.</p>
+                                            <button type="button" class="mega-cta-btn" id="megaAuditBtn">
+                                                <i class="fas fa-search-plus me-2"></i>Get Free Audit
+                                            </button>
+                                            <div class="mega-cta-stats">
+                                                <div class="cta-stat"><strong>50+</strong><small>Projects</small></div>
+                                                <div class="cta-stat"><strong>98%</strong><small>Satisfied</small></div>
+                                                <div class="cta-stat"><strong>24/7</strong><small>Support</small></div>
+                                            </div>
+                                        </div>
+                                        <a href="/services/" class="view-all-link">
+                                            View All 30+ Services <i class="fas fa-arrow-right ms-1"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Solutions Dropdown -->
+                    <li class="nav-item dropdown simple-dropdown" id="solutionsDropdown">
+                        <a class="nav-link-custom" href="#" id="solutionsBtn">
+                            Solutions <i class="fas fa-chevron-down chevron-icon ms-1"></i>
+                        </a>
+                        <div class="simple-menu wide-menu">
+                            <div class="simple-menu-grid">
+                                <a href="/solutions/startups/" class="simple-item">
+                                    <i class="fas fa-rocket"></i>
+                                    <span><strong>For Startups</strong><small>Launch fast &amp; smart</small></span>
+                                </a>
+                                <a href="/solutions/sme/" class="simple-item">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span><strong>For SMEs</strong><small>Grow your business</small></span>
+                                </a>
+                                <a href="/solutions/enterprise/" class="simple-item">
+                                    <i class="fas fa-industry"></i>
+                                    <span><strong>Enterprise Solutions</strong><small>Scale at any size</small></span>
+                                </a>
+                                <a href="/solutions/education/" class="simple-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span><strong>Education / EdTech</strong><small>Interactive LMS portals</small></span>
+                                </a>
+                                <a href="/solutions/healthcare/" class="simple-item">
+                                    <i class="fas fa-heartbeat"></i>
+                                    <span><strong>Healthcare Systems</strong><small>Secure patient charts</small></span>
+                                </a>
+                                <a href="/solutions/ecommerce/" class="simple-item">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <span><strong>Retail &amp; E-commerce</strong><small>Increase online sales</small></span>
+                                </a>
+                                <a href="/solutions/hospitality/" class="simple-item">
+                                    <i class="fas fa-hotel"></i>
+                                    <span><strong>Hospitality &amp; Travel</strong><small>Smart booking systems</small></span>
+                                </a>
+                                <a href="/solutions/finance/" class="simple-item">
+                                    <i class="fas fa-wallet"></i>
+                                    <span><strong>Financial Services</strong><small>High security FinTech</small></span>
+                                </a>
+                                <a href="/solutions/manufacturing/" class="simple-item">
+                                    <i class="fas fa-cogs"></i>
+                                    <span><strong>Manufacturing ERP</strong><small>Automate plant operations</small></span>
+                                </a>
+                                <a href="/solutions/realestate/" class="simple-item">
+                                    <i class="fas fa-home"></i>
+                                    <span><strong>Real Estate Portals</strong><small>Interactive property listings</small></span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Portfolio -->
+                    <li class="nav-item">
+                        <a class="nav-link-custom" href="/portfolio/">Portfolio</a>
+                    </li>
+
+                    <!-- Blog -->
+                    <li class="nav-item">
+                        <a class="nav-link-custom" href="/blog/">Blog</a>
+                    </li>
+
+                    <!-- Careers -->
+                    <li class="nav-item">
+                        <a class="nav-link-custom" href="/careers/">
+                            Careers <span class="hiring-badge">Hiring</span>
+                        </a>
+                    </li>
+
+                    <!-- More Pages -->
+                    <li class="nav-item dropdown simple-dropdown" id="moreDropdown">
+                        <a class="nav-link-custom" href="#" id="moreBtn">
+                            More <i class="fas fa-chevron-down chevron-icon ms-1"></i>
+                        </a>
+                        <div class="simple-menu">
+                            <a href="/case-studies/" class="simple-item">
+                                <i class="fas fa-file-alt"></i>
+                                <span><strong>Case Studies</strong><small>Our success stories</small></span>
+                            </a>
+                            <a href="/partners/" class="simple-item">
+                                <i class="fas fa-handshake"></i>
+                                <span><strong>Partners &amp; Clients</strong><small>Who we work with</small></span>
+                            </a>
+                            <a href="/faqs/" class="simple-item">
+                                <i class="fas fa-question-circle"></i>
+                                <span><strong>FAQs</strong><small>Common questions</small></span>
+                            </a>
+                            <a href="/privacy/" class="simple-item">
+                                <i class="fas fa-user-shield"></i>
+                                <span><strong>Privacy Policy</strong><small>How we use data</small></span>
+                            </a>
+                            <a href="/terms/" class="simple-item">
+                                <i class="fas fa-file-contract"></i>
+                                <span><strong>Terms of Service</strong><small>Our usage terms</small></span>
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <!-- Navbar CTA -->
+                <div class="navbar-cta ms-xl-3">
+                    
+                    <!-- Mobile Country Selector (visible only on mobile/tablet) -->
+                    <div class="mobile-country-selector d-xl-none mb-3">
+                        <label class="mobile-country-label"><i class="fas fa-globe me-2"></i>Select Region</label>
+                        <div class="mobile-country-wrapper">
+                            <button class="mobile-country-btn" id="mobileCountryBtn" type="button">
+                                <span class="flag-icon">🇮🇳</span>
+                                <span class="country-name-selected">India (+91)</span>
+                                <i class="fas fa-chevron-down caret ms-auto"></i>
+                            </button>
+                            <div class="mobile-country-dropdown" id="mobileCountryDropdown">
+                                <a href="#" class="country-opt active" data-flag="🇮🇳" data-code="IN" data-phone="+91" data-fullphone="+91 6370584682">🇮🇳 India (+91)</a>
+                                <a href="#" class="country-opt" data-flag="🇺🇸" data-code="US" data-phone="+1" data-fullphone="+1 (650) 489-6370">🇺🇸 United States (+1)</a>
+                                <a href="#" class="country-opt" data-flag="🇬🇧" data-code="GB" data-phone="+44" data-fullphone="+44 20 7946 0192">🇬🇧 United Kingdom (+44)</a>
+                                <a href="#" class="country-opt" data-flag="🇦🇪" data-code="AE" data-phone="+971" data-fullphone="+971 4 312 9000">🇦🇪 UAE (+971)</a>
+                                <a href="#" class="country-opt" data-flag="🇦🇺" data-code="AU" data-phone="+61" data-fullphone="+61 2 9382 1111">🇦🇺 Australia (+61)</a>
+                                <a href="#" class="country-opt" data-flag="🇸🇬" data-code="SG" data-phone="+65" data-fullphone="+65 6789 0123">🇸🇬 Singapore (+65)</a>
+                                <a href="#" class="country-opt" data-flag="🇨🇦" data-code="CA" data-phone="+1" data-fullphone="+1 (416) 555-0199">🇨🇦 Canada (+1)</a>
+                                <a href="#" class="country-opt" data-flag="🇩🇪" data-code="DE" data-phone="+49" data-fullphone="+49 30 8973 8921">🇩🇪 Germany (+49)</a>
+                                <a href="#" class="country-opt" data-flag="🇸🇦" data-code="SA" data-phone="+966" data-fullphone="+966 11 405 8920">🇸🇦 Saudi Arabia (+966)</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navbar-cta-buttons d-flex align-items-center gap-2">
+                        <!-- Desktop Dynamic Call Button -->
+                        <a href="tel:+916370584682" class="btn-call dynamic-phone-link d-none d-xl-inline-flex" title="Call us">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+
+                        <!-- Mobile Dynamic Call Button (Full width, visible on mobile) -->
+                        <a href="tel:+916370584682" class="btn-call-mobile dynamic-phone-link d-xl-none" title="Call Us Now">
+                            <i class="fas fa-phone-alt me-2"></i>
+                            <span>Call Us: </span>
+                            <span class="dynamic-phone-text ms-1">+91 6370584682</span>
+                        </a>
+
+                        <button type="button" class="btn-get-quote" id="navAuditBtn">
+                            <i class="fas fa-search-plus me-1"></i>Free Audit
+                        </button>
+                        
+                        <a href="/contact/" class="btn-contact">
+                            Contact Us <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<!-- END_HEADER_COMPONENT -->
+
+    <!-- =======================
+    Header (Mark Blog Active)
+    ======================== -->
+    
+    <!-- =======================
+    Header End
+    ======================== -->
+
+    <!-- =======================
+    Main Content Start
+    ======================== -->
+    <main>
+        <section class="py-5 py-lg-6 bg-light-alt">
+            <div class="container">
+                <div class="row g-5">
+
+                    <!-- Blog Post Column -->
+                    <div class="col-lg-8">
+                        <article class="blog-post-content bg-white p-4 p-md-5 rounded shadow-sm">
+                            <!-- Post Header -->
+                            <header class="mb-4">
+                                <a href="/blog/" class="badge bg-danger-soft text-danger me-2 rounded-pill px-2 py-1 text-decoration-none">Security</a>
+                                
+                                <!-- Breadcrumb Navigation -->
+                                <nav aria-label="breadcrumb" class="page-breadcrumb-nav" data-aos="fade-down">
+                                    <ol class="page-breadcrumb">
+                                                                <li><a href="/"><i class="fas fa-home me-1" style="font-size:0.7rem;"></i>Home</a></li>
+                                    <li><i class="fas fa-chevron-right"></i></li>
+                                    <li><a href="/blog/"><i class="fas fa-home me-1" style="font-size:0.7rem;"></i>Blog</a></li>
+                                    <li><i class="fas fa-chevron-right"></i></li>
+                                                                <li class="active" aria-current="page">Blog Post</li>
+                                    </ol>
+                                </nav>
+<h1 class="h2 fw-bold mb-3 mt-3">Common Website Security Vulnerabilities and How to Prevent Them</h1>
+                                <div class="d-flex align-items-center text-muted small">
+                                    <span>By Pabitra Technology</span>
+                                    <span class="mx-2">|</span>
+                                    <span><i class="far fa-calendar-alt me-1 opacity-75"></i> Feb 05, 2024</span>
+                                    <span class="mx-2">|</span>
+                                    <span><i class="far fa-clock me-1 opacity-75"></i> 8 min read</span>
+                                </div>
+                            </header>
+
+                            <!-- Post Image -->
+                            <figure class="my-4">
+                                <img src="https://images.unsplash.com/photo-1593642532454-e138e28a63f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" class="img-fluid rounded-3" alt="A laptop showing code with a digital lock overlay, representing website security.">
+                            </figure>
+
+                            <!-- Post Body -->
+                            <p class="lead">In the digital age, your website is your most valuable asset—your 24/7 salesperson, your brand's front door, and a direct line to your customers. But just like a physical storefront, it needs protection. A single security breach can lead to devastating consequences: loss of customer trust, stolen data, hefty fines, and a damaged reputation that can take years to rebuild.</p>
+                            <p>Many businesses assume they are too small to be a target, but the reality is that hackers often use automated bots to scan for any vulnerable website, regardless of its size. The key is to move from a reactive to a proactive security posture. This guide will demystify some of the most common threats and provide actionable steps to protect your digital presence.</p>
+
+                            <h3 class="fw-bold">1. SQL Injection (SQLi)</h3>
+                            <p><strong>What it is:</strong> Imagine your website's database is a vault, and a user form (like a login or search bar) is the teller who retrieves information. In an SQLi attack, a hacker gives the teller a malicious command disguised as a normal request, tricking them into handing over the entire vault's contents. Attackers can use this to steal, modify, or delete your entire database.</p>
+                            <p><strong>How to Prevent It:</strong>
+                                <ul>
+                                    <li><strong>Use Parameterized Queries (Prepared Statements):</strong> This is the gold standard. It creates a strict template for database queries, ensuring that user input is treated as data, not as an executable command.</li>
+                                    <li><strong>Sanitize and Validate User Input:</strong> Never trust user input. Implement strict rules for what kind of data is acceptable in each form field.</li>
+                                </ul>
+                            </p>
+
+                            <h3 class="fw-bold">2. Cross-Site Scripting (XSS)</h3>
+                            <p><strong>What it is:</strong> If SQLi targets your database, XSS targets your website's visitors. An attacker injects malicious code (usually JavaScript) into a legitimate page. When an unsuspecting user visits that page, the script runs in their browser, allowing the attacker to steal session cookies, login credentials, or redirect them to a malicious site.</p>
+                            <p><strong>How to Prevent It:</strong>
+                                <ul>
+                                    <li><strong>Output Encoding:</strong> Before displaying any user-generated content, ensure it's properly encoded so the browser treats it as plain text, not executable code.</li>
+                                    <li><strong>Implement a Content Security Policy (CSP):</strong> A CSP is a powerful browser-level security measure that tells the browser which sources of content (scripts, styles, images) are trusted, effectively blocking any unauthorized scripts from running.</li>
+                                </ul>
+                            </p>
+
+                            <h3 class="fw-bold">3. Outdated Software & Plugins</h3>
+                            <p><strong>What it is:</strong> This is one of the most common and easily preventable vulnerabilities, especially for platforms like WordPress. Every piece of software—from your core CMS to themes and plugins—can have security holes. Developers release updates to patch these holes. Failing to update leaves your front door wide open for attackers who specifically look for sites running older, known-vulnerable software versions.</p>
+                            <p><strong>How to Prevent It:</strong>
+                                <ul>
+                                    <li><strong>Maintain a Strict Update Schedule:</strong> Regularly update your CMS, plugins, and themes. Use automated update features where possible.</li>
+                                    <li><strong>Use Reputable Sources:</strong> Only download plugins and themes from trusted marketplaces.</li>
+                                    <li><strong>Delete Unused Plugins/Themes:</strong> If you're not using it, remove it. Even deactivated plugins can be a security risk.</li>
+                                </ul>
+                            </p>
+
+                            <blockquote>
+                                <p class="mb-0">Security isn't a one-time setup; it's an ongoing process of vigilance and maintenance. Proactive protection is always cheaper than reactive damage control.</p>
+                            </blockquote>
+
+                            <h3 class="fw-bold">4. Weak Access Control & Passwords</h3>
+                            <p><strong>What it is:</strong> The human element is often the weakest link. Using simple, guessable passwords (`admin123`, `password`), sharing login credentials, or failing to remove access for former employees creates easy entry points for unauthorized users.</p>
+                            <p><strong>How to Prevent It:</strong>
+                                <ul>
+                                    <li><strong>Enforce Strong Password Policies:</strong> Require a mix of uppercase, lowercase, numbers, and symbols.</li>
+                                    <li><strong>Implement Two-Factor Authentication (2FA):</strong> This adds a crucial second layer of security, requiring a code from a user's phone in addition to their password.</li>
+                                    <li><strong>Apply the Principle of Least Privilege:</strong> Give users only the minimum level of access they need to perform their jobs. A content editor, for example, doesn't need full administrative rights.</li>
+                                </ul>
+                            </p>
+
+                            <h3 class="fw-bold">Your Proactive Security Checklist</h3>
+                            <p>Protecting your website is a continuous effort. Here’s where to start:</p>
+                            <ul>
+                                <li><strong>Install an SSL Certificate (HTTPS):</strong> Encrypts data between your site and its visitors, builds trust, and is essential for SEO.</li>
+                                <li><strong>Use a Web Application Firewall (WAF):</strong> Acts as a protective shield, filtering out malicious traffic before it ever reaches your website.</li>
+                                <li><strong>Schedule Regular Backups:</strong> Ensure you have frequent, automated backups of your site stored in a separate, secure location. If the worst happens, you can restore a clean version quickly.</li>
+                                <li><strong>Conduct Regular Security Audits:</strong> Periodically scan your website for vulnerabilities to catch potential issues before they are exploited.</li>
+                            </ul>
+
+                            <h3 class="fw-bold">Secure Your Digital Future Today</h3>
+                            <p>Understanding these vulnerabilities is the first step toward building a more secure website. While these tips provide a strong foundation, the security landscape is always changing. Partnering with a technology expert can provide peace of mind and robust protection.</p>
+                            <p>At Pabitra Technology, we offer comprehensive <a href="/services/security/" class="fw-bold">website security services</a>, from audits and hardening to ongoing monitoring and maintenance. <a href="/contact/" class="fw-bold">Contact us today</a> to ensure your digital storefront is safe, secure, and ready for business.</p>
+                        </article>
+                    </div>
+                    <!-- End Blog Post Column -->
+
+                    <!-- Sidebar Column -->
+                    <div class="col-lg-4">
+                        <div class="blog-sidebar position-sticky" style="top: 110px;">
+                            <!-- Search Widget -->
+                            <div class="sidebar-widget card border-0 shadow-sm mb-4" data-aos="fade-left" data-aos-delay="100">
+                                <div class="card-body p-4">
+                                    <h5 class="widget-title fw-bold mb-3">Search Blog</h5>
+                                    <form class="d-flex">
+                                        <input class="form-control me-2 form-control-sm" type="search" placeholder="Enter keywords..." aria-label="Search">
+                                        <button class="btn btn-primary btn-sm px-3" type="submit" aria-label="Search"><i class="fas fa-search"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- Categories Widget -->
+                            <div class="sidebar-widget card border-0 shadow-sm mb-4" data-aos="fade-left" data-aos-delay="200">
+                               <div class="card-body p-4">
+                                     <h5 class="widget-title fw-bold mb-3">Categories</h5>
+                                    <ul class="list-group list-group-flush category-list">
+                                        <a href="/blog/" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0 py-2 border-0">All Categories <span class="badge bg-dark-soft text-dark rounded-pill ms-2">6</span></a>
+                                        <a href="/blog/" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0 py-2 border-0">Web Design <span class="badge bg-success-soft text-success rounded-pill ms-2">1</span></a>
+                                        <a href="/blog/" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0 py-2 border-0">SEO <span class="badge bg-primary-soft text-primary rounded-pill ms-2">1</span></a>
+                                        <a href="/blog/" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0 py-2 border-0">PPC <span class="badge bg-warning-soft text-warning rounded-pill ms-2">1</span></a>
+                                        <a href="/blog/" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0 py-2 border-0">Technology <span class="badge bg-info-soft text-info rounded-pill ms-2">1</span></a>
+                                        <a href="/blog/" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0 py-2 border-0">App Development <span class="badge bg-purple-soft text-purple rounded-pill ms-2">1</span></a>
+                                        <a href="/blog/" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0 py-2 border-0 active">Security <span class="badge bg-danger-soft text-danger rounded-pill ms-2">1</span></a>
+                                    </ul>
+                               </div>
+                            </div>
+                             <!-- Recent Posts Widget -->
+                             <div class="sidebar-widget card border-0 shadow-sm mb-4" data-aos="fade-left" data-aos-delay="300">
+                                <div class="card-body p-4">
+                                    <h5 class="widget-title fw-bold mb-3">Recent Posts</h5>
+                                    <ul class="list-unstyled recent-posts-list">
+                                        <li class="mb-3 pb-3 border-bottom border-light">
+                                            <a href="/blog/local-seo/" class="d-flex align-items-center text-decoration-none recent-post-link">
+                                                <img src="https://images.unsplash.com/photo-1579532582937-16c108930bf6?auto=format&fit=crop&w=100&h=100&q=80" class="rounded me-3 flex-shrink-0" alt="Thumbnail for Local SEO post" width="65" height="65">
+                                                <div>
+                                                    <h6 class="mb-1 text-dark small fw-semibold recent-post-title lh-sm">Top 5 Local SEO Strategies for Bhubaneswar...</h6>
+                                                    <small class="text-muted d-block mt-1"><i class="far fa-calendar-alt me-1 opacity-75"></i>Mar 01, 2024</small>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="mb-3 pb-3 border-bottom border-light">
+                                             <a href="/blog/mobile-first/" class="d-flex align-items-center text-decoration-none recent-post-link">
+                                                 <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=100&h=100&q=80" class="rounded me-3 flex-shrink-0" alt="Thumbnail for Mobile-First Design post" width="65" height="65">
+                                                <div>
+                                                    <h6 class="mb-1 text-dark small fw-semibold recent-post-title lh-sm">Why Mobile-First Web Design is Non-Negotiable...</h6>
+                                                    <small class="text-muted d-block mt-1"><i class="far fa-calendar-alt me-1 opacity-75"></i>Feb 25, 2024</small>
+                                                </div>
+                                            </a>
+                                        </li>
+                                         <li class="mb-0">
+                                             <a href="/blog/pmax/" class="d-flex align-items-center text-decoration-none recent-post-link">
+                                                 <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=100&h=100&q=80" class="rounded me-3 flex-shrink-0" alt="Thumbnail for Google Ads post" width="65" height="65">
+                                                <div>
+                                                    <h6 class="mb-1 text-dark small fw-semibold recent-post-title lh-sm">Maximizing ROI with Google Ads Performance Max...</h6>
+                                                    <small class="text-muted d-block mt-1"><i class="far fa-calendar-alt me-1 opacity-75"></i>Feb 20, 2024</small>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!-- End Sidebar -->
+                    </div>
+                    <!-- End Sidebar Column -->
+                </div><!-- End row -->
+            </div><!-- End container -->
+        </section>
+    </main>
+    <!-- =======================
+    Main Content End
+    ======================== -->
+
+    <!-- =======================
+    Footer (Identical)
+    ======================== -->
+    
+    <!-- =======================
+    Footer End
+    ======================== -->
+
+    <!-- Scroll Progress & WhatsApp -->
+    <!-- Scroll Progress & WhatsApp Widgets (Unified) -->
+    <div id="scroll-tracker"><div id="scroll-dot"></div></div>
+    <a href="https://wa.me/916370584682?text=Hello%20Pabitra%20Technology,%20I'm%20interested%20in%20your%20services." class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp" aria-label="Chat on WhatsApp"></i>
+    </a>
+
+    <!-- JS Libraries & Custom Unified Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/JS/main.js"></script>
+<!-- START_FOOTER_COMPONENT -->
+<!-- ============================================================
+     PABITRA TECHNOLOGY — REUSABLE FOOTER COMPONENT
+     
+     ============================================================ -->
+
+<footer class="site-footer">
+
+    <!-- Newsletter Strip -->
+    <div class="footer-newsletter-strip">
+        <div class="container">
+            <div class="row align-items-center gy-3">
+                <div class="col-lg-5">
+                    <h5 class="newsletter-title">
+                        <i class="fas fa-paper-plane me-2"></i>
+                        Stay Updated with Digital Trends
+                    </h5>
+                    <p class="newsletter-sub">Get weekly insights, tips & news delivered to your inbox.</p>
+                </div>
+                <div class="col-lg-7">
+                    <form class="newsletter-form" id="newsletterForm" novalidate>
+                        <div class="newsletter-input-wrap">
+                            <input type="email" class="newsletter-input" placeholder="Enter your email address..." required>
+                            <button type="submit" class="newsletter-btn">
+                                Subscribe <i class="fas fa-arrow-right ms-2"></i>
+                            </button>
+                        </div>
+                        <p class="newsletter-note mt-2"><i class="fas fa-lock me-1"></i> No spam. Unsubscribe anytime.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Footer Body -->
+    <div class="footer-body">
+        <div class="container">
+            <div class="row gy-5">
+
+                <!-- Col 1: About & Logo -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="/" class="footer-logo-wrap">
+                        <img src="/images/pabitra250.png" alt="Pabitra Technology White Logo" class="footer-logo-img">
+                    </a>
+                    <p class="footer-about-text">
+                        Your dedicated digital partner in Bhubaneswar, Odisha. We craft innovative digital marketing, web &amp; app development, and tech solutions that drive real business growth.
+                    </p>
+
+                    <!-- Trust Badges -->
+                    <div class="footer-trust-badges">
+                        <div class="trust-badge">
+                            <i class="fas fa-medal"></i>
+                            <span>ISO Certified</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fab fa-google"></i>
+                            <span>Google Partner</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Trusted Agency</span>
+                        </div>
+                    </div>
+
+                    <!-- Social Icons -->
+                    <div class="footer-socials mt-4">
+                        <a href="https://www.facebook.com/pabitra.technology.2025" class="footer-social-icon facebook" target="_blank" aria-label="Facebook" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/pabitratechnology/" class="footer-social-icon instagram" target="_blank" aria-label="Instagram" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/pabitra-technology/" class="footer-social-icon linkedin" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="footer-social-icon" target="_blank" aria-label="Twitter/X" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://wa.me/916370584682" class="footer-social-icon whatsapp" target="_blank" aria-label="WhatsApp" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@PabitraTechnology" class="footer-social-icon youtube" target="_blank" aria-label="YouTube" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Our Services -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6 class="footer-col-title">Our Services</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="/services/digital-marketing-360/"><i class="fas fa-angle-right"></i> Digital Marketing</a></li>
+                        <li><a href="/services/seo/"><i class="fas fa-angle-right"></i> SEO Services</a></li>
+                        <li><a href="/services/ppc/"><i class="fas fa-angle-right"></i> PPC Advertising</a></li>
+                        <li><a href="/services/smm/"><i class="fas fa-angle-right"></i> Social Media</a></li>
+                        <li><a href="/services/web-dev/"><i class="fas fa-angle-right"></i> Web Development</a></li>
+                        <li><a href="/services/app-dev/"><i class="fas fa-angle-right"></i> App Development</a></li>
+                        <li><a href="/services/ecommerce/"><i class="fas fa-angle-right"></i> E-commerce</a></li>
+                        <li><a href="/services/graphics-uiux/"><i class="fas fa-angle-right"></i> UI/UX Design</a></li>
+                        <li><a href="/services/cloud/"><i class="fas fa-angle-right"></i> Cloud Solutions</a></li>
+                        <li><a href="/services/security/"><i class="fas fa-angle-right"></i> Cyber Security</a></li>
+                        <li><a href="/services/" class="footer-view-all"><i class="fas fa-th"></i> View All Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Company Links -->
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6 class="footer-col-title">Company</h6>
+                    <ul class="footer-link-list">
+                        <li><a href="/about/"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="/portfolio/"><i class="fas fa-angle-right"></i> Our Portfolio</a></li>
+                        <li><a href="/blog/"><i class="fas fa-angle-right"></i> Blog & Insights</a></li>
+                        <li><a href="/careers/"><i class="fas fa-angle-right"></i> Careers <span class="hiring-tag">Hiring</span></a></li>
+                        <li><a href="/contact/"><i class="fas fa-angle-right"></i> Contact Us</a></li>
+                        <li><a href="/privacy/"><i class="fas fa-angle-right"></i> Privacy Policy</a></li>
+                        <li><a href="/terms/"><i class="fas fa-angle-right"></i> Terms of Service</a></li>
+                        <li><a href="sitemap.xml"><i class="fas fa-angle-right"></i> Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact Info -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="footer-col-title">Get In Touch</h6>
+
+                    <ul class="footer-contact-list">
+                        <li>
+                            <div class="contact-icon-wrap">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <strong>Our Location</strong>
+                                <span>Bhubaneswar, Odisha, India — 751001</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon-wrap">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <strong>Call Us Anytime</strong>
+                                <a href="tel:+916370584682">+91 6370584682</a>
+                                <a href="tel:+919861117158">+91 9861117158</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon-wrap">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <strong>Email Us</strong>
+                                <a href="mailto:infopabitratechnology@gmail.com">infopabitratechnology@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon-wrap">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <strong>Working Hours</strong>
+                                <span>Mon – Sat: 10:00 AM – 6:00 PM</span>
+                                <span class="text-muted small">Sunday: Closed</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- Map Button -->
+                    <a href="https://maps.google.com/?q=Bhubaneswar,Odisha,India" target="_blank" class="footer-map-btn mt-3">
+                        <i class="fas fa-map me-2"></i> View on Google Maps
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center gy-2">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="footer-copyright">
+                        &copy; <span id="footer-year"></span> <strong>Pabitra Technology</strong>. All Rights Reserved.
+                        Crafted with <i class="fas fa-heart text-danger" aria-hidden="true"></i> in Bhubaneswar, India.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-bottom-links">
+                        <a href="/privacy/">Privacy Policy</a>
+                        <span class="sep">·</span>
+                        <a href="/terms/">Terms of Service</a>
+                        <span class="sep">·</span>
+                        <a href="sitemap.xml">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- Scroll Progress Indicator -->
+<div id="scroll-tracker"><div id="scroll-dot"></div></div>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/916370584682?text=Hello%20Pabitra%20Technology,%20I'm%20interested%20in%20your%20services."
+   class="whatsapp-float" target="_blank" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat with us!</span>
+</a>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+    // Auto-update copyright year
+    const yearEl = document.getElementById('footer-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Back to Top Button
+    const bttBtn = document.getElementById('backToTop');
+    if (bttBtn) {
+        window.addEventListener('scroll', () => {
+            bttBtn.classList.toggle('visible', window.scrollY > 400);
+        });
+        bttBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+    // Newsletter Form
+    const nlForm = document.getElementById('newsletterForm');
+    if (nlForm) {
+        nlForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const input = this.querySelector('.newsletter-input');
+            if (input && input.value) {
+                input.value = '';
+                input.placeholder = '✓ Subscribed! Thank you.';
+                setTimeout(() => input.placeholder = 'Enter your email address...', 3000);
+            }
+        });
+    }
+</script>
+
+<!-- END_FOOTER_COMPONENT -->
+    <script src="/JS/components.js"></script>
+</body>
+</html>
