@@ -1,14 +1,29 @@
 @import "globals.css";
 
-html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    /* This prevents the horizontal scrollbar caused by animations or wide elements */
+/* 1. Force the main browser window to handle the scroll */
+html {
+    overflow-y: scroll;
+    /* Shows one vertical scrollbar always to prevent jumping */
     overflow-x: hidden;
-    /* This ensures vertical scrolling only happens once */
-    height: auto;
+    height: 100%;
+}
+
+/* 2. Prevent the body from creating its own second scrollbar */
+body {
+    overflow-x: hidden;
+    overflow-y: visible !important;
+    /* Forces it to use the html scrollbar */
+    height: auto !important;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* 3. Search for any 'wrapper' div that might be causing this */
+/* If you have a div like <div class="main-wrapper">, add this: */
+.main-wrapper,
+#main-content {
+    height: auto !important;
+    overflow: visible !important;
 }
 
 /* =======================
