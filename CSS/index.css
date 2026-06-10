@@ -1,16 +1,5 @@
 @import "globals.css";
 
-/* 1. Force the main browser window to handle the scroll */
-
-
-/* 3. Search for any 'wrapper' div that might be causing this */
-/* If you have a div like <div class="main-wrapper">, add this: */
-.main-wrapper,
-#main-content {
-    height: auto !important;
-    overflow: visible !important;
-}
-
 /* =======================
 Hero Section - Advanced (Now matches About Hero)
 ======================== */
@@ -548,7 +537,7 @@ Hero Section - Advanced (Now matches About Hero)
     position: relative;
     margin-top: -60px;
     margin-left: 30px;
-    margin-right: 0;
+    margin-right: -20px;
     z-index: 12;
     background: rgba(6, 13, 26, 0.78);
     backdrop-filter: blur(25px);
@@ -2941,62 +2930,4 @@ a.group.hover-border-cyan:hover i.fa-chevron-right {
     .hero-section h1 {
         font-size: clamp(1.5rem, 8vw, 2rem) !important;
     }
-}
-
-/* ============================================================
-   FINAL SYSTEM RESET: KILL DOUBLE SCROLLBARS
-   ============================================================ */
-
-/* 1. Reset the Root - The only place scrolling is allowed */
-html {
-    height: auto !important;
-    overflow-y: auto !important;
-    /* Let the browser decide when to scroll */
-    overflow-x: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* 2. Reset the Body - Make it a passive container */
-body {
-    position: relative !important;
-    height: auto !important;
-    min-height: 100vh !important;
-    overflow-y: visible !important;
-    /* Stop the body from scrolling itself */
-    overflow-x: hidden !important;
-    margin: 0 !important;
-    display: block !important;
-}
-
-/* 3. Fix every element identified by the red-border script */
-section,
-div[class*="-section"],
-.main-wrapper,
-.service-card,
-.vertical-matrix-card,
-#about,
-#tech-radar,
-#portfolio-snippet,
-#blog-snippet,
-#faq,
-#quote-calculator,
-#global-reach {
-    overflow: visible !important;
-    /* Allow content to spill out into the main page */
-    max-height: none !important;
-    height: auto !important;
-}
-
-/* 4. Keep background elements contained but NOT scrolling */
-.hero-slideshow-container,
-.hero-particles,
-.cta-bg-elements {
-    overflow: hidden !important;
-    height: 100% !important;
-    width: 100% !important;
-    position: absolute !important;
-    top: 0;
-    left: 0;
-    pointer-events: none;
 }
