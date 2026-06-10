@@ -250,6 +250,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             Thank you! Your message has been sent successfully. We will get back to you shortly.
                             <button type="button" class="btn-close btn-sm p-2" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>`;
+                        messagesDiv.setAttribute('role', 'status');
+                        messagesDiv.setAttribute('aria-live', 'polite');
+                        try { messagesDiv.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch(e){}
                     }
                     contactForm.reset();
                 } else {
@@ -257,6 +260,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         messagesDiv.innerHTML = `<div class="alert alert-danger alert-dismissible fade show small p-3" role="alert">
                             Oops! Something went wrong and we could not send your message. Please try again.
                         </div>`;
+                        messagesDiv.setAttribute('role', 'status');
+                        messagesDiv.setAttribute('aria-live', 'polite');
+                        try { messagesDiv.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch(e){}
                     }
                 }
             })

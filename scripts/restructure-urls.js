@@ -152,10 +152,63 @@ for (const filePath of allPageFiles) {
   updated = updated.replace(/(href|src)=(\\"|\\')\.\.+\/JS\//g, '$1=$2/JS/');
   updated = updated.replace(/(src)=(\\"|\\')\.\.+\/images\//g, '$1=$2/images/');
 
+  // Update canonical tag to point to the correct new clean URL path
+  const relativePath = path.relative(workspaceRoot, filePath).replace(/\\/g, '/');
+  const mapEntry = Object.entries(fileMap).find(([oldName, newRelative]) => newRelative === relativePath);
+  if (mapEntry) {
+    const [oldName, newRelative] = mapEntry;
+    const newUrl = slugToUrl(newRelative);
+    const correctCanonical = `https://pabitratechnology.com${newUrl}`;
+    
+    if (updated.match(/<link[^>]*?rel=["']canonical["'][^>]*?>/gi)) {
+      updated = updated.replace(/<link[^>]*?rel=["']canonical["'][^>]*?>/gi, `<link rel="canonical" href="${correctCanonical}">`);
+    } else {
+      const headEndIdx = updated.search(/<\/head>/i);
+      if (headEndIdx !== -1) {
+        updated = updated.substring(0, headEndIdx) + `    <link rel="canonical" href="${correctCanonical}">\n` + updated.substring(headEndIdx);
+      }
+    }
+  }
+
   if (updated !== content) {
     fs.writeFileSync(filePath, updated, 'utf8');
-    console.log(`✅ Updated links in ${path.relative(workspaceRoot, filePath)}`);
+    console.log(`✅ Updated links and canonical in ${path.relative(workspaceRoot, filePath)}`);
   }
 }
 
+console.log('\n🔄 Generating SEO redirect pages for old flat HTML URLs...');
+let redirectsCount = 0;
+for (const [oldName, newRelative] of Object.entries(fileMap)) {
+  // Skip pages that are still served at their original location
+  if (oldName === '404.html' || oldName === 'index.html') {
+    continue;
+  }
+
+  const newUrl = slugToUrl(newRelative);
+  const targetRedirectUrl = `https://pabitratechnology.com${newUrl}`;
+  const redirectFilePath = path.join(workspaceRoot, oldName);
+
+  const redirectHtmlContent = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=${targetRedirectUrl}">
+    <link rel="canonical" href="${targetRedirectUrl}">
+    <title>Page Redirecting...</title>
+    <script type="text/javascript">
+        window.location.href = "${targetRedirectUrl}";
+    </script>
+</head>
+<body>
+    <p>This page has moved. If you are not redirected automatically, please <a href="${targetRedirectUrl}">click here</a>.</p>
+</body>
+</html>
+`;
+
+  fs.writeFileSync(redirectFilePath, redirectHtmlContent, 'utf8');
+  redirectsCount++;
+}
+console.log(`✅ Successfully generated ${redirectsCount} SEO redirect pages.`);
+
 console.log('\n🎉 Refactor complete. Review the new root folders and test the URLs.');
+

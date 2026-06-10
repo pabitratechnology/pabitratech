@@ -182,48 +182,116 @@
             if (e.key === 'Escape') closeAudit();
         });
 
-        // Formspree submission handler
+        // Formspree / Web3Forms submission handler with improved UX + accessibility
         if (auditForm) {
+            // ensure a messages container exists for consistent feedback
+            let messagesEl = auditForm.querySelector('.audit-messages');
+            if (!messagesEl) {
+                messagesEl = document.createElement('div');
+                messagesEl.className = 'audit-messages mt-3';
+                const disclaimer = auditForm.querySelector('.audit-disclaimer');
+                if (disclaimer) {
+                    auditForm.insertBefore(messagesEl, disclaimer);
+                } else {
+                    auditForm.appendChild(messagesEl);
+                }
+            }
+
             auditForm.addEventListener('submit', function (e) {
                 e.preventDefault();
+
+                // Client-side validity
+                if (!this.checkValidity()) {
+                    this.classList.add('was-validated');
+                    messagesEl.innerHTML = `<div class="alert alert-warning small p-2" role="alert">Please complete all required fields before submitting.</div>`;
+                    messagesEl.setAttribute('aria-live', 'polite');
+                    try { messagesEl.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (err) {}
+                    return;
+                }
+
+                // Trim access_key to avoid accidental spaces which cause invalid key errors
+                const accessInput = this.querySelector('input[name="access_key"]');
+                if (accessInput && typeof accessInput.value === 'string') {
+                    accessInput.value = accessInput.value.trim();
+                }
+
+                // If access_key is missing or empty, show a clear error to help debugging
+                if (!accessInput || !accessInput.value) {
+                    messagesEl.innerHTML = `<div class="alert alert-danger small p-2" role="alert">Invalid Form ID / Access Key. Please verify the hidden <strong>access_key</strong> value in the form and ensure there are no extra spaces.</div>`;
+                    messagesEl.setAttribute('aria-live', 'polite');
+                    try { messagesEl.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (err) {}
+                    return;
+                }
+
                 const btn = this.querySelector('.audit-submit-btn');
-                const origHtml = btn.innerHTML;
-                
-                btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending Request...';
-                btn.disabled = true;
+                const origHtml = btn ? btn.innerHTML : 'Sending...';
+
+                if (btn) {
+                    btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2" aria-hidden="true"></i>Sending Request...';
+                    btn.disabled = true;
+                    btn.setAttribute('aria-disabled', 'true');
+                }
+
+                messagesEl.innerHTML = '';
+                messagesEl.removeAttribute('role');
 
                 fetch(this.action, {
                     method: 'POST',
                     body: new FormData(this),
-                    headers: { 'Accept': 'application/json' }
+                    headers: { 'Accept': 'application/json', 'X-Requested-With': 'XMLHttpRequest' }
                 })
-                .then(res => {
+                .then(async res => {
+                    const text = await res.text();
+                    let data = {};
+                    try { data = text ? JSON.parse(text) : {}; } catch (err) { data = { raw: text }; }
+
                     if (res.ok) {
-                        btn.innerHTML = '<i class="fas fa-check me-2"></i>Audit Scheduled! Check Email.';
-                        btn.style.background = '#25d366';
-                        btn.style.color = '#fff';
-                        auditForm.reset();
+                        // Prefer server message if available
+                        const successMsg = (data.message || data.success || 'Thank you! Your free audit request has been received. Check your email for details.');
+                        messagesEl.innerHTML = `<div class="alert alert-success small p-3" role="status">${successMsg}</div>`;
+                        messagesEl.setAttribute('aria-live', 'polite');
+                        try { messagesEl.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (err) {}
+                        this.reset();
+                        // small visual confirmation on button
+                        if (btn) {
+                            btn.innerHTML = '<i class="fas fa-check me-2" aria-hidden="true"></i>Request Sent';
+                            btn.style.background = '#25d366';
+                            btn.style.color = '#fff';
+                        }
+                        // close the modal after a short pause
                         setTimeout(() => {
                             closeAudit();
-                            btn.innerHTML = origHtml;
-                            btn.style.background = '';
-                            btn.style.color = '';
-                            btn.disabled = false;
-                        }, 3000);
+                            if (btn) {
+                                btn.innerHTML = origHtml;
+                                btn.style.background = '';
+                                btn.style.color = '';
+                                btn.disabled = false;
+                                btn.removeAttribute('aria-disabled');
+                            }
+                        }, 2200);
                     } else {
-                        throw new Error('Network error');
+                        // show server-provided error details when possible
+                        const errMsg = (data.error || data.message || 'We could not process your request. Please try again later.');
+                        messagesEl.innerHTML = `<div class="alert alert-danger small p-3" role="alert">${errMsg}</div>`;
+                        messagesEl.setAttribute('aria-live', 'polite');
+                        try { messagesEl.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (err) {}
+                        if (btn) {
+                            btn.innerHTML = origHtml;
+                            btn.disabled = false;
+                            btn.removeAttribute('aria-disabled');
+                        }
                     }
                 })
-                .catch(() => {
-                    btn.innerHTML = '<i class="fas fa-exclamation-triangle me-2"></i>Submission Failed.';
-                    btn.style.background = '#ff4d4d';
-                    btn.style.color = '#fff';
-                    setTimeout(() => {
+                .catch((err) => {
+                    console.error('Audit submit error:', err);
+                    messagesEl.innerHTML = `<div class="alert alert-danger small p-3" role="alert">A network error occurred. Please check your connection and try again.</div>`;
+                    messagesEl.setAttribute('aria-live', 'polite');
+                    try { messagesEl.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (e) {}
+                    if (btn) {
                         btn.innerHTML = origHtml;
-                        btn.style.background = '';
-                        btn.style.color = '';
                         btn.disabled = false;
-                    }, 3000);
+                        btn.removeAttribute('aria-disabled');
+                    }
                 });
             });
         }
