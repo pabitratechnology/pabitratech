@@ -2957,3 +2957,54 @@ a.group.hover-border-cyan:hover i.fa-chevron-right {
         font-size: clamp(1.5rem, 8vw, 2rem) !important;
     }
 }
+
+/* ============================================================
+   CLEAN SWEEP: FIXING ALL IDENTIFIED SCROLLING ELEMENTS
+   ============================================================ */
+
+/* 1. Force all sections to let the main page handle scrolling */
+section,
+.about-section,
+.stats-section,
+.capabilities-radar-section,
+.portfolio-section,
+.testimonials-section,
+.lifecycle-section,
+.blog-section,
+.faq-section,
+.pricing-calculator-section,
+.global-reach-section {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: auto !important;
+}
+
+/* 2. Fix the Hero Slideshow and Particles */
+.hero-slideshow-container,
+.hero-particles,
+.cta-bg-elements {
+    overflow: hidden !important;
+    /* Keep background elements clipped */
+    height: 100% !important;
+    position: absolute !important;
+    pointer-events: none;
+    /* Make sure they don't block clicks */
+}
+
+/* 3. Fix the Cards (Service and Vertical Matrix) */
+/* They were scrolling because they were too small for their text */
+.service-card,
+.vertical-matrix-card {
+    overflow: visible !important;
+    height: auto !important;
+    /* Changed from h-100 */
+    min-height: 100% !important;
+}
+
+/* 4. Fix the overall Page structure */
+html,
+body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    height: auto !important;
+}
