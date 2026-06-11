@@ -2,3 +2,6 @@ node_modules/
 .DS_Store 
 CNAME_backup 
 *.log 
+
+# Image optimization backup folder
+images_backup/

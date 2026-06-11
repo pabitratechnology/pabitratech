@@ -22,20 +22,20 @@
             <input type="hidden" name="subject" value="New Free Website Audit Request - Pabitra Technology">
             <input type="hidden" name="from_name" value="Pabitra Audit Portal">
             <div class="audit-form-group">
-                <label><i class="fas fa-globe me-2"></i>Your Website URL</label>
-                <input type="url" name="website_url" placeholder="https://yourwebsite.com" required>
+                <label for="auditWebsiteUrl"><i class="fas fa-globe me-2"></i>Your Website URL</label>
+                <input type="url" id="auditWebsiteUrl" name="website_url" placeholder="https://yourwebsite.com" required>
             </div>
             <div class="audit-form-group">
-                <label><i class="fas fa-envelope me-2"></i>Email Address</label>
-                <input type="email" name="email" placeholder="you@company.com" required>
+                <label for="auditEmail"><i class="fas fa-envelope me-2"></i>Email Address</label>
+                <input type="email" id="auditEmail" name="email" placeholder="you@company.com" required>
             </div>
             <div class="audit-form-group">
-                <label><i class="fas fa-phone me-2"></i>Phone Number</label>
-                <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                <label for="auditPhone"><i class="fas fa-phone me-2"></i>Phone Number</label>
+                <input type="tel" id="auditPhone" name="phone" placeholder="+91 XXXXX XXXXX" required>
             </div>
             <div class="audit-form-group">
-                <label><i class="fas fa-tasks me-2"></i>What do you need?</label>
-                <select name="audit_type">
+                <label for="auditType"><i class="fas fa-tasks me-2"></i>What do you need?</label>
+                <select id="auditType" name="audit_type">
                     <option value="seo">SEO Audit</option>
                     <option value="performance">Performance Audit</option>
                     <option value="security">Security Audit</option>
@@ -93,7 +93,7 @@
 
                     <!-- Country Selector -->
                     <div class="country-selector" id="countrySel">
-                        <button class="country-btn" id="countryBtn" type="button">
+                        <button class="country-btn" id="countryBtn" type="button" aria-label="Select Country">
                             <span class="flag-icon">🇮🇳</span>
                             <span class="country-code d-none d-md-inline">IN</span>
                             <i class="fas fa-chevron-down caret ms-1"></i>
@@ -119,7 +119,7 @@
                     </div>
 
                     <!-- Free Audit CTA -->
-                    <button class="tb-audit-btn" id="openAuditModal" type="button">
+                    <button class="tb-audit-btn" id="openAuditModal" type="button" aria-label="Request Free Website Audit">
                         <i class="fas fa-search-plus me-1"></i>
                         <span class="d-none d-lg-inline">Free Website Audit</span>
                         <span class="d-inline d-lg-none">Audit</span>
@@ -135,13 +135,11 @@
         <div class="container-xl">
 
             <!-- Brand Logo -->
-            <a class="navbar-brand brand-logo" href="/">
-                <img src="/images/pabitra250.png" alt="Pabitra Technology" class="logo-img">
-            </a>
+            <a  class="navbar-brand brand-logo" href="/" aria-label="Learn more details"><img src="/images/pabitra250.webp" alt="Pabitra Technology" class="logo-img" width="237" height="97" loading="eager"></a>
 
             <!-- Mobile: Audit + Hamburger -->
             <div class="d-flex d-xl-none align-items-center gap-2 ms-auto">
-                <button class="tb-audit-btn mobile-audit" id="openAuditModalMobile" type="button">
+                <button class="tb-audit-btn mobile-audit" id="openAuditModalMobile" type="button" aria-label="Request Free Website Audit">
                     <i class="fas fa-chart-bar"></i>
                 </button>
                 <button class="hamburger-btn" type="button" id="hamburgerBtn"
@@ -355,9 +353,7 @@
 
                     <!-- More Pages -->
                     <li class="nav-item dropdown simple-dropdown" id="moreDropdown">
-                        <a class="nav-link-custom" href="#" id="moreBtn">
-                            More <i class="fas fa-chevron-down chevron-icon ms-1"></i>
-                        </a>
+                        <a  class="nav-link-custom" href="#" id="moreBtn" aria-label="Read more about our more">More <i class="fas fa-chevron-down chevron-icon ms-1"></i></a>
                         <div class="simple-menu">
                             <a href="/case-studies/" class="simple-item">
                                 <i class="fas fa-file-alt"></i>
@@ -389,9 +385,9 @@
                     
                     <!-- Mobile Country Selector (visible only on mobile/tablet) -->
                     <div class="mobile-country-selector d-xl-none mb-3">
-                        <label class="mobile-country-label"><i class="fas fa-globe me-2"></i>Select Region</label>
+                        <label class="mobile-country-label" for="mobileCountryBtn"><i class="fas fa-globe me-2"></i>Select Region</label>
                         <div class="mobile-country-wrapper">
-                            <button class="mobile-country-btn" id="mobileCountryBtn" type="button">
+                            <button class="mobile-country-btn" id="mobileCountryBtn" type="button" aria-label="Select Country Region">
                                 <span class="flag-icon">🇮🇳</span>
                                 <span class="country-name-selected">India (+91)</span>
                                 <i class="fas fa-chevron-down caret ms-auto"></i>
@@ -423,7 +419,7 @@
                             <span class="dynamic-phone-text ms-1">+91 6370584682</span>
                         </a>
 
-                        <button type="button" class="btn-get-quote" id="navAuditBtn">
+                        <button type="button" class="btn-get-quote" id="navAuditBtn" aria-label="Request Free Website Audit">
                             <i class="fas fa-search-plus me-1"></i>Free Audit
                         </button>
                         

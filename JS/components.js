@@ -297,58 +297,21 @@
         }
     }
 
-    // ── 6. Scroll Tracker & Back to Top ──────────────────────────────────────
-    function initScrollTracker() {
-        const tracker = document.getElementById('scroll-tracker');
-        const dot     = document.getElementById('scroll-dot');
-        const bttBtn  = document.getElementById('backToTop');
-        const body    = document.body;
-        const html    = document.documentElement;
+    // ── 6. Back to Top Button ────────────────────────────────────────────────
+    function initBackToTop() {
+        const bttBtn = document.getElementById('backToTop');
+        if (!bttBtn) return;
 
-        if (!tracker || !dot) return;
-
-        let ticking = false;
-        function updateScroll() {
-            const scrollPos = window.scrollY || window.pageYOffset;
-            const total = Math.max(
-                body.scrollHeight, body.offsetHeight,
-                html.clientHeight, html.scrollHeight, html.offsetHeight
-            ) - html.clientHeight;
-
-            if (total <= 0) {
-                tracker.style.opacity = '0';
-                return;
-            }
-
-            const pct = scrollPos / total;
-            const maxMove = tracker.offsetHeight - dot.offsetHeight;
-            dot.style.transform = `translateY(${Math.max(0, Math.min(maxMove, pct * maxMove))}px)`;
-            
-            // Show/hide trackers
-            tracker.style.opacity = scrollPos > 100 ? '1' : '0';
-            if (bttBtn) {
-                bttBtn.classList.toggle('visible', scrollPos > 400);
-            }
-            
-            ticking = false;
-        }
-
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(updateScroll);
-                ticking = true;
-            }
-        }, { passive: true });
-
-        window.addEventListener('resize', updateScroll, { passive: true });
+        const onScroll = () => {
+            bttBtn.classList.toggle('visible', window.scrollY > 400);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
         
-        if (bttBtn) {
-            bttBtn.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
+        bttBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
         
-        updateScroll();
+        onScroll(); // Run immediately
     }
 
     // Initialize all components once the HTML is ready in DOM
@@ -358,7 +321,7 @@
         initCountrySelector();
         initMobileDropdowns();
         initAuditModal();
-        initScrollTracker();
+        initBackToTop();
     }
 
     if (document.readyState === 'loading') {

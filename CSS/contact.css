@@ -8,7 +8,7 @@
 .contact-hero-section {
     background-image:
         linear-gradient(160deg, rgba(4, 10, 24, 0.97) 0%, rgba(8, 20, 48, 0.93) 60%, rgba(5, 15, 35, 0.98) 100%),
-        url('../images/hero5.jpg');
+        url('../images/hero5.webp');
     background-size: cover;
     background-position: center top;
     background-attachment: fixed;

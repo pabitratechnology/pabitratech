@@ -6,6 +6,31 @@
     <meta name="description" content="Premium Cloud solutions by Pabitra Technology. We design, build, and optimize high-performance corporate platforms to grow your brand globally and locally.">
     <meta name="keywords" content="Cloud services, hire Cloud developers, cloud company Bhubaneswar, corporate IT solutions, digital marketing Odisha, tech partner Bhubaneswar">
     <link rel="canonical" href="https://pabitratechnology.com/services/cloud/">
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- === SEO & META CONFIG === -->
@@ -19,13 +44,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print" onload="this.media='all'">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
     
     <!-- Custom CSS Stylesheets -->
     <link rel="stylesheet" href="/CSS/services.css">
-    <link rel="icon" href="/images/pabitra1.png" type="image/png">
+    <link rel="icon" href="/images/pabitra1.webp" type="image/png">
     <link rel="stylesheet" href="/CSS/components.css">
 
     <!-- Schema Markup Injection -->
@@ -93,25 +118,23 @@
             <p>Get a comprehensive SEO &amp; performance audit — 100% Free, delivered in 24 hours.</p>
         </div>
         <form class="audit-form" id="auditForm" action="https://formspree.io/f/mzdwnvwp" method="POST">
-            <!-- Web3Forms Access Key (Dynamic Direct Email Delivery) -->
-
             <input type="hidden" name="subject" value="New Free Website Audit Request - Pabitra Technology">
             <input type="hidden" name="from_name" value="Pabitra Audit Portal">
             <div class="audit-form-group">
-                <label><i class="fas fa-globe me-2"></i>Your Website URL</label>
-                <input type="url" name="website_url" placeholder="https://yourwebsite.com" required>
+                <label for="auditWebsiteUrl"><i class="fas fa-globe me-2"></i>Your Website URL</label>
+                <input type="url" id="auditWebsiteUrl" name="website_url" placeholder="https://yourwebsite.com" required>
             </div>
             <div class="audit-form-group">
-                <label><i class="fas fa-envelope me-2"></i>Email Address</label>
-                <input type="email" name="email" placeholder="you@company.com" required>
+                <label for="auditEmail"><i class="fas fa-envelope me-2"></i>Email Address</label>
+                <input type="email" id="auditEmail" name="email" placeholder="you@company.com" required>
             </div>
             <div class="audit-form-group">
-                <label><i class="fas fa-phone me-2"></i>Phone Number</label>
-                <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                <label for="auditPhone"><i class="fas fa-phone me-2"></i>Phone Number</label>
+                <input type="tel" id="auditPhone" name="phone" placeholder="+91 XXXXX XXXXX" required>
             </div>
             <div class="audit-form-group">
-                <label><i class="fas fa-tasks me-2"></i>What do you need?</label>
-                <select name="audit_type">
+                <label for="auditType"><i class="fas fa-tasks me-2"></i>What do you need?</label>
+                <select id="auditType" name="audit_type">
                     <option value="seo">SEO Audit</option>
                     <option value="performance">Performance Audit</option>
                     <option value="security">Security Audit</option>
@@ -169,7 +192,7 @@
 
                     <!-- Country Selector -->
                     <div class="country-selector" id="countrySel">
-                        <button class="country-btn" id="countryBtn" type="button">
+                        <button class="country-btn" id="countryBtn" type="button" aria-label="Select Country">
                             <span class="flag-icon">🇮🇳</span>
                             <span class="country-code d-none d-md-inline">IN</span>
                             <i class="fas fa-chevron-down caret ms-1"></i>
@@ -195,7 +218,7 @@
                     </div>
 
                     <!-- Free Audit CTA -->
-                    <button class="tb-audit-btn" id="openAuditModal" type="button">
+                    <button class="tb-audit-btn" id="openAuditModal" type="button" aria-label="Request Free Website Audit">
                         <i class="fas fa-search-plus me-1"></i>
                         <span class="d-none d-lg-inline">Free Website Audit</span>
                         <span class="d-inline d-lg-none">Audit</span>
@@ -211,13 +234,11 @@
         <div class="container-xl">
 
             <!-- Brand Logo -->
-            <a class="navbar-brand brand-logo" href="/">
-                <img src="/images/pabitra250.png" alt="Pabitra Technology" class="logo-img">
-            </a>
+            <a  class="navbar-brand brand-logo" href="/" aria-label="Learn more details"><img src="/images/pabitra250.webp" alt="Pabitra Technology" class="logo-img" width="237" height="97" loading="eager"></a>
 
             <!-- Mobile: Audit + Hamburger -->
             <div class="d-flex d-xl-none align-items-center gap-2 ms-auto">
-                <button class="tb-audit-btn mobile-audit" id="openAuditModalMobile" type="button">
+                <button class="tb-audit-btn mobile-audit" id="openAuditModalMobile" type="button" aria-label="Request Free Website Audit">
                     <i class="fas fa-chart-bar"></i>
                 </button>
                 <button class="hamburger-btn" type="button" id="hamburgerBtn"
@@ -431,9 +452,7 @@
 
                     <!-- More Pages -->
                     <li class="nav-item dropdown simple-dropdown" id="moreDropdown">
-                        <a class="nav-link-custom" href="#" id="moreBtn">
-                            More <i class="fas fa-chevron-down chevron-icon ms-1"></i>
-                        </a>
+                        <a  class="nav-link-custom" href="#" id="moreBtn" aria-label="Read more about our more">More <i class="fas fa-chevron-down chevron-icon ms-1"></i></a>
                         <div class="simple-menu">
                             <a href="/case-studies/" class="simple-item">
                                 <i class="fas fa-file-alt"></i>
@@ -465,9 +484,9 @@
                     
                     <!-- Mobile Country Selector (visible only on mobile/tablet) -->
                     <div class="mobile-country-selector d-xl-none mb-3">
-                        <label class="mobile-country-label"><i class="fas fa-globe me-2"></i>Select Region</label>
+                        <label class="mobile-country-label" for="mobileCountryBtn"><i class="fas fa-globe me-2"></i>Select Region</label>
                         <div class="mobile-country-wrapper">
-                            <button class="mobile-country-btn" id="mobileCountryBtn" type="button">
+                            <button class="mobile-country-btn" id="mobileCountryBtn" type="button" aria-label="Select Country Region">
                                 <span class="flag-icon">🇮🇳</span>
                                 <span class="country-name-selected">India (+91)</span>
                                 <i class="fas fa-chevron-down caret ms-auto"></i>
@@ -499,7 +518,7 @@
                             <span class="dynamic-phone-text ms-1">+91 6370584682</span>
                         </a>
 
-                        <button type="button" class="btn-get-quote" id="navAuditBtn">
+                        <button type="button" class="btn-get-quote" id="navAuditBtn" aria-label="Request Free Website Audit">
                             <i class="fas fa-search-plus me-1"></i>Free Audit
                         </button>
                         
@@ -772,7 +791,7 @@
                         </ul>
                     </div>
                     <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-                        <img src="/images/cloud.png" class="img-fluid rounded shadow-lg" alt="Pabitra Technology Cloud Solutions & AWS Consulting in Bhubaneswar Integration" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop'">
+                        <img src="/images/cloud.webp" class="img-fluid rounded shadow-lg" alt="Pabitra Technology Cloud Solutions & AWS Consulting in Bhubaneswar Integration" onerror="this." width="1200" height="1200" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -1025,7 +1044,7 @@
                 <div class="col-lg-7">
                     <form class="newsletter-form" id="newsletterForm" novalidate>
                         <div class="newsletter-input-wrap">
-                            <input type="email" class="newsletter-input" placeholder="Enter your email address..." required>
+                            <input type="email" class="newsletter-input" placeholder="Enter your email address..." aria-label="Email Address" required>
                             <button type="submit" class="newsletter-btn">
                                 Subscribe <i class="fas fa-arrow-right ms-2"></i>
                             </button>
@@ -1044,9 +1063,7 @@
 
                 <!-- Col 1: About & Logo -->
                 <div class="col-lg-4 col-md-6">
-                    <a href="/" class="footer-logo-wrap">
-                        <img src="/images/pabitra250.png" alt="Pabitra Technology White Logo" class="footer-logo-img">
-                    </a>
+                    <a  href="/" class="footer-logo-wrap" aria-label="Learn more details"><img src="/images/pabitra250.webp" alt="Pabitra Technology White Logo" class="footer-logo-img" width="237" height="97" loading="eager"></a>
                     <p class="footer-about-text">
                         Your dedicated digital partner in Bhubaneswar, Odisha. We craft innovative digital marketing, web &amp; app development, and tech solutions that drive real business growth.
                     </p>
@@ -1078,7 +1095,7 @@
                         <a href="https://www.linkedin.com/company/pabitra-technology/" class="footer-social-icon linkedin" target="_blank" aria-label="LinkedIn" title="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="footer-social-icon" target="_blank" aria-label="Twitter/X" title="Twitter">
+                        <a href="https://x.com/PabitraTech2025" class="footer-social-icon twitter" target="_blank" aria-label="Twitter/X" title="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
                         <a href="https://wa.me/916370584682" class="footer-social-icon whatsapp" target="_blank" aria-label="WhatsApp" title="WhatsApp">
@@ -1203,8 +1220,7 @@
 
 </footer>
 
-<!-- Scroll Progress Indicator -->
-<div id="scroll-tracker"><div id="scroll-dot"></div></div>
+
 
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/916370584682?text=Hello%20Pabitra%20Technology,%20I'm%20interested%20in%20your%20services."

@@ -4,7 +4,7 @@
 Blog Page Hero Section - Advanced
 ======================== */
 .blog-hero-section {
-    background-image: url('../images/hero4.jpg'); /* Your specified background image */
+    background-image: url('../images/hero4.webp'); /* Your specified background image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Parallax effect */

@@ -6,6 +6,31 @@
     <meta name="description" content="Explore expert articles, tips, and trends in digital marketing, SEO, web design, cloud migration, and custom software from the engineering team at Pabitra Technology.">
     <meta name="keywords" content="Pabitra Technology blog, tech trends, digital marketing insights, web development tips, SEO strategies 2026, software engineering blog">
     <link rel="canonical" href="https://pabitratechnology.com/blog/">
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- === SEO: Title & Description for Blog Page === -->
@@ -19,17 +44,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
     <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print" onload="this.media='all'">
     <!-- AOS (Animate On Scroll) CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/CSS/blog.css">
 
     <!-- Favicon -->
-    <link rel="icon" href="/images/pabitra1.png" type="image/png">
+    <link rel="icon" href="/images/pabitra1.webp" type="image/png">
 
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -41,7 +66,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <body>
 <!-- START_HEADER_COMPONENT -->
 <!-- ============================================================
-     PABITRA TECHNOLOGY â€” ADVANCED HEADER COMPONENT v2
+     PABITRA TECHNOLOGY — ADVANCED HEADER COMPONENT v2
      - Top bar: contact, social, country selector, audit CTA
      - Mega menu: 4 service columns + 20+ IT services
      - Extra nav pages: Solutions, Case Studies, Careers, More
@@ -58,28 +83,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="audit-modal-header">
             <div class="audit-icon-ring"><i class="fas fa-chart-line"></i></div>
             <h4>Free Website Audit Report</h4>
-            <p>Get a comprehensive SEO &amp; performance audit â€” 100% Free, delivered in 24 hours.</p>
+            <p>Get a comprehensive SEO &amp; performance audit — 100% Free, delivered in 24 hours.</p>
         </div>
         <form class="audit-form" id="auditForm" action="https://formspree.io/f/mzdwnvwp" method="POST">
-            <!-- Web3Forms Access Key (Dynamic Direct Email Delivery) -->
-
             <input type="hidden" name="subject" value="New Free Website Audit Request - Pabitra Technology">
             <input type="hidden" name="from_name" value="Pabitra Audit Portal">
             <div class="audit-form-group">
-                <label><i class="fas fa-globe me-2"></i>Your Website URL</label>
-                <input type="url" name="website_url" placeholder="https://yourwebsite.com" required>
+                <label for="auditWebsiteUrl"><i class="fas fa-globe me-2"></i>Your Website URL</label>
+                <input type="url" id="auditWebsiteUrl" name="website_url" placeholder="https://yourwebsite.com" required>
             </div>
             <div class="audit-form-group">
-                <label><i class="fas fa-envelope me-2"></i>Email Address</label>
-                <input type="email" name="email" placeholder="you@company.com" required>
+                <label for="auditEmail"><i class="fas fa-envelope me-2"></i>Email Address</label>
+                <input type="email" id="auditEmail" name="email" placeholder="you@company.com" required>
             </div>
             <div class="audit-form-group">
-                <label><i class="fas fa-phone me-2"></i>Phone Number</label>
-                <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                <label for="auditPhone"><i class="fas fa-phone me-2"></i>Phone Number</label>
+                <input type="tel" id="auditPhone" name="phone" placeholder="+91 XXXXX XXXXX" required>
             </div>
             <div class="audit-form-group">
-                <label><i class="fas fa-tasks me-2"></i>What do you need?</label>
-                <select name="audit_type">
+                <label for="auditType"><i class="fas fa-tasks me-2"></i>What do you need?</label>
+                <select id="auditType" name="audit_type">
                     <option value="seo">SEO Audit</option>
                     <option value="performance">Performance Audit</option>
                     <option value="security">Security Audit</option>
@@ -137,26 +160,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                     <!-- Country Selector -->
                     <div class="country-selector" id="countrySel">
-                        <button class="country-btn" id="countryBtn" type="button">
-                            <span class="flag-icon">ðŸ‡®ðŸ‡³</span>
+                        <button class="country-btn" id="countryBtn" type="button" aria-label="Select Country">
+                            <span class="flag-icon">🇮🇳</span>
                             <span class="country-code d-none d-md-inline">IN</span>
                             <i class="fas fa-chevron-down caret ms-1"></i>
                         </button>
                         <div class="country-dropdown" id="countryDropdown">
-                            <a href="#" class="country-opt active" data-flag="ðŸ‡®ðŸ‡³" data-code="IN" data-phone="+91" data-fullphone="+91 6370584682">ðŸ‡®ðŸ‡³ India (+91)</a>
-                            <a href="#" class="country-opt" data-flag="ðŸ‡ºðŸ‡¸" data-code="US" data-phone="+1" data-fullphone="+1 (650) 489-6370">ðŸ‡ºðŸ‡¸ United States (+1)</a>
-                            <a href="#" class="country-opt" data-flag="ðŸ‡¬ðŸ‡§" data-code="GB" data-phone="+44" data-fullphone="+44 20 7946 0192">ðŸ‡¬ðŸ‡§ United Kingdom (+44)</a>
-                            <a href="#" class="country-opt" data-flag="ðŸ‡¦ðŸ‡ª" data-code="AE" data-phone="+971" data-fullphone="+971 4 312 9000">ðŸ‡¦ðŸ‡ª UAE (+971)</a>
-                            <a href="#" class="country-opt" data-flag="ðŸ‡¦ðŸ‡º" data-code="AU" data-phone="+61" data-fullphone="+61 2 9382 1111">ðŸ‡¦ðŸ‡º Australia (+61)</a>
-                            <a href="#" class="country-opt" data-flag="ðŸ‡¸ðŸ‡¬" data-code="SG" data-phone="+65" data-fullphone="+65 6789 0123">ðŸ‡¸ðŸ‡¬ Singapore (+65)</a>
-                            <a href="#" class="country-opt" data-flag="ðŸ‡¨ðŸ‡¦" data-code="CA" data-phone="+1" data-fullphone="+1 (416) 555-0199">ðŸ‡¨ðŸ‡¦ Canada (+1)</a>
-                            <a href="#" class="country-opt" data-flag="ðŸ‡©ðŸ‡ª" data-code="DE" data-phone="+49" data-fullphone="+49 30 8973 8921">ðŸ‡©ðŸ‡ª Germany (+49)</a>
-                            <a href="#" class="country-opt" data-flag="ðŸ‡¸ðŸ‡¦" data-code="SA" data-phone="+966" data-fullphone="+966 11 405 8920">ðŸ‡¸ðŸ‡¦ Saudi Arabia (+966)</a>
+                            <a href="#" class="country-opt active" data-flag="🇮🇳" data-code="IN" data-phone="+91" data-fullphone="+91 6370584682">🇮🇳 India (+91)</a>
+                            <a href="#" class="country-opt" data-flag="🇺🇸" data-code="US" data-phone="+1" data-fullphone="+1 (650) 489-6370">🇺🇸 United States (+1)</a>
+                            <a href="#" class="country-opt" data-flag="🇬🇧" data-code="GB" data-phone="+44" data-fullphone="+44 20 7946 0192">🇬🇧 United Kingdom (+44)</a>
+                            <a href="#" class="country-opt" data-flag="🇦🇪" data-code="AE" data-phone="+971" data-fullphone="+971 4 312 9000">🇦🇪 UAE (+971)</a>
+                            <a href="#" class="country-opt" data-flag="🇦🇺" data-code="AU" data-phone="+61" data-fullphone="+61 2 9382 1111">🇦🇺 Australia (+61)</a>
+                            <a href="#" class="country-opt" data-flag="🇸🇬" data-code="SG" data-phone="+65" data-fullphone="+65 6789 0123">🇸🇬 Singapore (+65)</a>
+                            <a href="#" class="country-opt" data-flag="🇨🇦" data-code="CA" data-phone="+1" data-fullphone="+1 (416) 555-0199">🇨🇦 Canada (+1)</a>
+                            <a href="#" class="country-opt" data-flag="🇩🇪" data-code="DE" data-phone="+49" data-fullphone="+49 30 8973 8921">🇩🇪 Germany (+49)</a>
+                            <a href="#" class="country-opt" data-flag="🇸🇦" data-code="SA" data-phone="+966" data-fullphone="+966 11 405 8920">🇸🇦 Saudi Arabia (+966)</a>
+                            <div class="country-dd-footer">
+                                <a href="/locations/" class="country-dd-loc-link">
+                                    <i class="fas fa-globe-asia"></i>
+                                    <span>View All Global Locations</span>
+                                    <i class="fas fa-arrow-right ms-auto"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
                     <!-- Free Audit CTA -->
-                    <button class="tb-audit-btn" id="openAuditModal" type="button">
+                    <button class="tb-audit-btn" id="openAuditModal" type="button" aria-label="Request Free Website Audit">
                         <i class="fas fa-search-plus me-1"></i>
                         <span class="d-none d-lg-inline">Free Website Audit</span>
                         <span class="d-inline d-lg-none">Audit</span>
@@ -172,13 +202,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="container-xl">
 
             <!-- Brand Logo -->
-            <a class="navbar-brand brand-logo" href="/">
-                <img src="/images/pabitra250.png" alt="Pabitra Technology" class="logo-img">
-            </a>
+            <a  class="navbar-brand brand-logo" href="/" aria-label="Learn more details"><img src="/images/pabitra250.webp" alt="Pabitra Technology" class="logo-img" width="237" height="97" loading="eager"></a>
 
             <!-- Mobile: Audit + Hamburger -->
             <div class="d-flex d-xl-none align-items-center gap-2 ms-auto">
-                <button class="tb-audit-btn mobile-audit" id="openAuditModalMobile" type="button">
+                <button class="tb-audit-btn mobile-audit" id="openAuditModalMobile" type="button" aria-label="Request Free Website Audit">
                     <i class="fas fa-chart-bar"></i>
                 </button>
                 <button class="hamburger-btn" type="button" id="hamburgerBtn"
@@ -244,7 +272,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                             </div>
                                         </div>
                                         <ul class="mega-link-list">
-                                            <li><a href="/services/digital-marketing-360/" class="mega-link"><i class="fas fa-bullseye"></i><span><strong>360Â° Digital Marketing</strong><small>Full-funnel campaigns</small></span></a></li>
+                                            <li><a href="/services/digital-marketing-360/" class="mega-link"><i class="fas fa-bullseye"></i><span><strong>360° Digital Marketing</strong><small>Full-funnel campaigns</small></span></a></li>
                                             <li><a href="/services/seo/" class="mega-link"><i class="fas fa-search"></i><span><strong>SEO Services</strong><small>Rank #1 on Google</small></span></a></li>
                                             <li><a href="/services/ppc/" class="mega-link"><i class="fas fa-ad"></i><span><strong>PPC & Google Ads</strong><small>Instant qualified traffic</small></span></a></li>
                                             <li><a href="/services/smm/" class="mega-link"><i class="fab fa-instagram"></i><span><strong>Social Media Marketing</strong><small>Build brand community</small></span></a></li>
@@ -302,7 +330,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <div class="mega-cta-card">
                                             <div class="mega-cta-icon"><i class="fas fa-chart-pie"></i></div>
                                             <h5 class="mega-cta-title">Free Website Audit</h5>
-                                            <p class="mega-cta-text">Get a free SEO &amp; performance audit of your website â€” delivered in 24 hours.</p>
+                                            <p class="mega-cta-text">Get a free SEO &amp; performance audit of your website — delivered in 24 hours.</p>
                                             <button type="button" class="mega-cta-btn" id="megaAuditBtn">
                                                 <i class="fas fa-search-plus me-2"></i>Get Free Audit
                                             </button>
@@ -392,9 +420,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                     <!-- More Pages -->
                     <li class="nav-item dropdown simple-dropdown" id="moreDropdown">
-                        <a class="nav-link-custom" href="#" id="moreBtn">
-                            More <i class="fas fa-chevron-down chevron-icon ms-1"></i>
-                        </a>
+                        <a  class="nav-link-custom" href="#" id="moreBtn" aria-label="Read more about our more">More <i class="fas fa-chevron-down chevron-icon ms-1"></i></a>
                         <div class="simple-menu">
                             <a href="/case-studies/" class="simple-item">
                                 <i class="fas fa-file-alt"></i>
@@ -426,23 +452,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     
                     <!-- Mobile Country Selector (visible only on mobile/tablet) -->
                     <div class="mobile-country-selector d-xl-none mb-3">
-                        <label class="mobile-country-label"><i class="fas fa-globe me-2"></i>Select Region</label>
+                        <label class="mobile-country-label" for="mobileCountryBtn"><i class="fas fa-globe me-2"></i>Select Region</label>
                         <div class="mobile-country-wrapper">
-                            <button class="mobile-country-btn" id="mobileCountryBtn" type="button">
-                                <span class="flag-icon">ðŸ‡®ðŸ‡³</span>
+                            <button class="mobile-country-btn" id="mobileCountryBtn" type="button" aria-label="Select Country Region">
+                                <span class="flag-icon">🇮🇳</span>
                                 <span class="country-name-selected">India (+91)</span>
                                 <i class="fas fa-chevron-down caret ms-auto"></i>
                             </button>
                             <div class="mobile-country-dropdown" id="mobileCountryDropdown">
-                                <a href="#" class="country-opt active" data-flag="ðŸ‡®ðŸ‡³" data-code="IN" data-phone="+91" data-fullphone="+91 6370584682">ðŸ‡®ðŸ‡³ India (+91)</a>
-                                <a href="#" class="country-opt" data-flag="ðŸ‡ºðŸ‡¸" data-code="US" data-phone="+1" data-fullphone="+1 (650) 489-6370">ðŸ‡ºðŸ‡¸ United States (+1)</a>
-                                <a href="#" class="country-opt" data-flag="ðŸ‡¬ðŸ‡§" data-code="GB" data-phone="+44" data-fullphone="+44 20 7946 0192">ðŸ‡¬ðŸ‡§ United Kingdom (+44)</a>
-                                <a href="#" class="country-opt" data-flag="ðŸ‡¦ðŸ‡ª" data-code="AE" data-phone="+971" data-fullphone="+971 4 312 9000">ðŸ‡¦ðŸ‡ª UAE (+971)</a>
-                                <a href="#" class="country-opt" data-flag="ðŸ‡¦ðŸ‡º" data-code="AU" data-phone="+61" data-fullphone="+61 2 9382 1111">ðŸ‡¦ðŸ‡º Australia (+61)</a>
-                                <a href="#" class="country-opt" data-flag="ðŸ‡¸ðŸ‡¬" data-code="SG" data-phone="+65" data-fullphone="+65 6789 0123">ðŸ‡¸ðŸ‡¬ Singapore (+65)</a>
-                                <a href="#" class="country-opt" data-flag="ðŸ‡¨ðŸ‡¦" data-code="CA" data-phone="+1" data-fullphone="+1 (416) 555-0199">ðŸ‡¨ðŸ‡¦ Canada (+1)</a>
-                                <a href="#" class="country-opt" data-flag="ðŸ‡©ðŸ‡ª" data-code="DE" data-phone="+49" data-fullphone="+49 30 8973 8921">ðŸ‡©ðŸ‡ª Germany (+49)</a>
-                                <a href="#" class="country-opt" data-flag="ðŸ‡¸ðŸ‡¦" data-code="SA" data-phone="+966" data-fullphone="+966 11 405 8920">ðŸ‡¸ðŸ‡¦ Saudi Arabia (+966)</a>
+                                <a href="#" class="country-opt active" data-flag="🇮🇳" data-code="IN" data-phone="+91" data-fullphone="+91 6370584682">🇮🇳 India (+91)</a>
+                                <a href="#" class="country-opt" data-flag="🇺🇸" data-code="US" data-phone="+1" data-fullphone="+1 (650) 489-6370">🇺🇸 United States (+1)</a>
+                                <a href="#" class="country-opt" data-flag="🇬🇧" data-code="GB" data-phone="+44" data-fullphone="+44 20 7946 0192">🇬🇧 United Kingdom (+44)</a>
+                                <a href="#" class="country-opt" data-flag="🇦🇪" data-code="AE" data-phone="+971" data-fullphone="+971 4 312 9000">🇦🇪 UAE (+971)</a>
+                                <a href="#" class="country-opt" data-flag="🇦🇺" data-code="AU" data-phone="+61" data-fullphone="+61 2 9382 1111">🇦🇺 Australia (+61)</a>
+                                <a href="#" class="country-opt" data-flag="🇸🇬" data-code="SG" data-phone="+65" data-fullphone="+65 6789 0123">🇸🇬 Singapore (+65)</a>
+                                <a href="#" class="country-opt" data-flag="🇨🇦" data-code="CA" data-phone="+1" data-fullphone="+1 (416) 555-0199">🇨🇦 Canada (+1)</a>
+                                <a href="#" class="country-opt" data-flag="🇩🇪" data-code="DE" data-phone="+49" data-fullphone="+49 30 8973 8921">🇩🇪 Germany (+49)</a>
+                                <a href="#" class="country-opt" data-flag="🇸🇦" data-code="SA" data-phone="+966" data-fullphone="+966 11 405 8920">🇸🇦 Saudi Arabia (+966)</a>
                             </div>
                         </div>
                     </div>
@@ -460,7 +486,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <span class="dynamic-phone-text ms-1">+91 6370584682</span>
                         </a>
 
-                        <button type="button" class="btn-get-quote" id="navAuditBtn">
+                        <button type="button" class="btn-get-quote" id="navAuditBtn" aria-label="Request Free Website Audit">
                             <i class="fas fa-search-plus me-1"></i>Free Audit
                         </button>
                         
@@ -552,7 +578,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                     <h5 class="widget-title fw-bold mb-3 text-light">Search Insights</h5>
                                     <div class="d-flex position-relative">
                                         <input class="form-control me-2 form-control-sm" type="text" id="blog-search-input" placeholder="Type keyword (e.g. AI, SEO)..." aria-label="Search">
-                                        <button class="btn btn-primary btn-sm px-3" id="blog-search-clear" style="display:none; position:absolute; right:60px; top:50%; transform:translateY(-50%); background:none; border:none; color:var(--text-muted-light);"><i class="fas fa-times"></i></button>
+                                        <button  class="btn btn-primary btn-sm px-3" id="blog-search-clear" style="display:none; position:absolute; right:60px; top:50%; transform:translateY(-50%); background:none; border:none; color:var(--text-muted-light);" aria-label="Close"><i class="fas fa-times"></i></button>
                                         <button class="btn btn-primary btn-sm px-3" type="button" id="blog-search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
                                     </div>
                                 </div>
@@ -1366,7 +1392,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script src="/JS/main.js"></script>
 <!-- START_FOOTER_COMPONENT -->
 <!-- ============================================================
-     PABITRA TECHNOLOGY â€” REUSABLE FOOTER COMPONENT
+     PABITRA TECHNOLOGY — REUSABLE FOOTER COMPONENT
      
      ============================================================ -->
 
@@ -1386,7 +1412,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="col-lg-7">
                     <form class="newsletter-form" id="newsletterForm" novalidate>
                         <div class="newsletter-input-wrap">
-                            <input type="email" class="newsletter-input" placeholder="Enter your email address..." required>
+                            <input type="email" class="newsletter-input" placeholder="Enter your email address..." aria-label="Email Address" required>
                             <button type="submit" class="newsletter-btn">
                                 Subscribe <i class="fas fa-arrow-right ms-2"></i>
                             </button>
@@ -1405,9 +1431,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                 <!-- Col 1: About & Logo -->
                 <div class="col-lg-4 col-md-6">
-                    <a href="/" class="footer-logo-wrap">
-                        <img src="/images/pabitra250.png" alt="Pabitra Technology White Logo" class="footer-logo-img">
-                    </a>
+                    <a  href="/" class="footer-logo-wrap" aria-label="Learn more details"><img src="/images/pabitra250.webp" alt="Pabitra Technology White Logo" class="footer-logo-img" width="237" height="97" loading="eager"></a>
                     <p class="footer-about-text">
                         Your dedicated digital partner in Bhubaneswar, Odisha. We craft innovative digital marketing, web &amp; app development, and tech solutions that drive real business growth.
                     </p>
@@ -1439,7 +1463,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <a href="https://www.linkedin.com/company/pabitra-technology/" class="footer-social-icon linkedin" target="_blank" aria-label="LinkedIn" title="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="footer-social-icon" target="_blank" aria-label="Twitter/X" title="Twitter">
+                        <a href="https://x.com/PabitraTech2025" class="footer-social-icon twitter" target="_blank" aria-label="Twitter/X" title="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
                         <a href="https://wa.me/916370584682" class="footer-social-icon whatsapp" target="_blank" aria-label="WhatsApp" title="WhatsApp">
@@ -1495,7 +1519,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
                             <div>
                                 <strong>Our Location</strong>
-                                <span>Bhubaneswar, Odisha, India â€” 751001</span>
+                                <span>Bhubaneswar, Odisha, India — 751001</span>
                             </div>
                         </li>
                         <li>
@@ -1523,7 +1547,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             </div>
                             <div>
                                 <strong>Working Hours</strong>
-                                <span>Mon â€“ Sat: 10:00 AM â€“ 6:00 PM</span>
+                                <span>Mon – Sat: 10:00 AM – 6:00 PM</span>
                                 <span class="text-muted small">Sunday: Closed</span>
                             </div>
                         </li>
@@ -1552,9 +1576,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="col-md-6 text-center text-md-end">
                     <div class="footer-bottom-links">
                         <a href="/privacy/">Privacy Policy</a>
-                        <span class="sep">Â·</span>
+                        <span class="sep">·</span>
                         <a href="/terms/">Terms of Service</a>
-                        <span class="sep">Â·</span>
+                        <span class="sep">·</span>
                         <a href="sitemap.xml">Sitemap</a>
                     </div>
                 </div>
@@ -1564,8 +1588,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </footer>
 
-<!-- Scroll Progress Indicator -->
-<div id="scroll-tracker"><div id="scroll-dot"></div></div>
+
 
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/916370584682?text=Hello%20Pabitra%20Technology,%20I'm%20interested%20in%20your%20services."
@@ -1601,7 +1624,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             const input = this.querySelector('.newsletter-input');
             if (input && input.value) {
                 input.value = '';
-                input.placeholder = 'âœ“ Subscribed! Thank you.';
+                input.placeholder = '✓ Subscribed! Thank you.';
                 setTimeout(() => input.placeholder = 'Enter your email address...', 3000);
             }
         });

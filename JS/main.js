@@ -65,46 +65,55 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     highlightActiveNav();
 
-    // 4. Scroll Progress Indicator Tracker
-    const scrollTracker = document.getElementById('scroll-tracker');
-    const scrollDot = document.getElementById('scroll-dot');
-    const body = document.body;
-    const html = document.documentElement;
+    // 4. Advanced Scroll Progress Tracker
+    const scrollTracker  = document.getElementById('scroll-tracker');
+    const scrollFill     = document.getElementById('scroll-fill');
+    const scrollDot      = document.getElementById('scroll-dot');
+    const scrollPct      = document.getElementById('scroll-pct');
+    const body           = document.body;
+    const html           = document.documentElement;
 
     function updateScrollProgress() {
-        if (!scrollTracker || !scrollDot) return;
+        if (!scrollTracker) return;
 
-        const scrollPos = window.pageYOffset || html.scrollTop || body.scrollTop || 0;
-        const totalScrollHeight = Math.max(
+        const scrollPos = window.pageYOffset || html.scrollTop || 0;
+        const totalH    = Math.max(
             body.scrollHeight, body.offsetHeight,
             html.clientHeight, html.scrollHeight, html.offsetHeight
         ) - html.clientHeight;
 
-        if (totalScrollHeight <= 0) { // No scrollbar or at top
-            scrollDot.style.transform = `translateY(0px)`;
+        if (totalH <= 0) {
             body.classList.remove('scrolled');
-            scrollTracker.style.opacity = '0';
             return;
         }
 
-        const scrollPercentage = (scrollPos / totalScrollHeight);
-        const trackerHeight = scrollTracker.offsetHeight;
-        const dotHeight = scrollDot.offsetHeight;
-        const maxDotTranslate = trackerHeight - dotHeight;
-        const dotPosition = Math.max(0, Math.min(maxDotTranslate, scrollPercentage * maxDotTranslate));
+        const pct         = Math.min(1, scrollPos / totalH);          // 0 – 1
+        const pctInt      = Math.round(pct * 100);                    // 0 – 100
+        const trackH      = scrollTracker.offsetHeight;                // px height of track
+        const dotH        = scrollDot ? scrollDot.offsetHeight : 14;  // dot height
+        const dotTop      = pct * (trackH - dotH);                    // px from track top
 
-        scrollDot.style.transform = `translateY(${dotPosition}px)`;
+        // 1. Fill bar
+        if (scrollFill) scrollFill.style.height = `${pct * 100}%`;
 
-        if (scrollPos > 100) {
-            if (!body.classList.contains('scrolled')) {
-                body.classList.add('scrolled');
+        // 2. Dot position — we control `top` not `transform` (CSS handles centering offset)
+        if (scrollDot)  scrollDot.style.top  = `${Math.max(0, dotTop + dotH / 2)}px`;
+
+        // 3. Live % label — colour shifts cyan → gold at 50%
+        if (scrollPct) {
+            scrollPct.textContent = `${pctInt}%`;
+            if (pctInt >= 50) {
+                scrollPct.style.color = `hsl(${45 + (pctInt - 50) * 0.5}deg 100% 58%)`;
+            } else {
+                scrollPct.style.color = `hsl(${195 - pctInt * 1.5}deg 100% 60%)`;
             }
-            scrollTracker.style.opacity = '1';
+        }
+
+        // 4. Show / hide tracker with slide-in effect
+        if (scrollPos > 120) {
+            body.classList.add('scrolled');
         } else {
-            if (body.classList.contains('scrolled')) {
-                body.classList.remove('scrolled');
-            }
-            scrollTracker.style.opacity = '0';
+            body.classList.remove('scrolled');
         }
     }
 
@@ -119,11 +128,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    if (scrollTracker && scrollDot) {
+    if (scrollTracker) {
         window.addEventListener('scroll', scrollHandler, { passive: true });
         window.addEventListener('resize', scrollHandler, { passive: true });
         updateScrollProgress();
     }
+
 
     // 5. Smooth Scroll for Anchor Links (excluding dropdowns/toggles)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

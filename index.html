@@ -6,6 +6,31 @@
     <meta name="description" content="Pabitra Technology is Bhubaneswar's premier IT services, web development, and digital marketing agency. We build modern websites, scale apps, and grow brands with advanced SEO & PPC.">
     <meta name="keywords" content="IT services Bhubaneswar, digital marketing agency, website development Odisha, SEO company Bhubaneswar, mobile app development, Pabitra Technology, IT solutions India">
     <link rel="canonical" href="https://pabitratechnology.com/">
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -48,16 +73,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
 
     <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print" onload="this.media='all'">
 
     <!-- AOS (Animate On Scroll) CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Favicon -->
-    <link rel="icon" href="/images/pabitra1.png" type="image/png">
+    <link rel="icon" href="/images/pabitra1.webp" type="image/png">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/CSS/components.css">
@@ -70,7 +95,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "@type": "Organization",
       "name": "Pabitra Technology",
       "url": "https://pabitratechnology.com", 
-      "logo": "https://pabitratechnology.com/images/pabitra250.png", 
+      "logo": "https://pabitratechnology.com/images/pabitra250.webp", 
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+916370584682",
@@ -124,25 +149,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>Get a comprehensive SEO &amp; performance audit — 100% Free, delivered in 24 hours.</p>
         </div>
         <form class="audit-form" id="auditForm" action="https://formspree.io/f/mzdwnvwp" method="POST">
-            <!-- Web3Forms Access Key (Dynamic Direct Email Delivery) -->
-
             <input type="hidden" name="subject" value="New Free Website Audit Request - Pabitra Technology">
             <input type="hidden" name="from_name" value="Pabitra Audit Portal">
             <div class="audit-form-group">
-                <label><i class="fas fa-globe me-2"></i>Your Website URL</label>
-                <input type="url" name="website_url" placeholder="https://yourwebsite.com" required>
+                <label for="auditWebsiteUrl"><i class="fas fa-globe me-2"></i>Your Website URL</label>
+                <input type="url" id="auditWebsiteUrl" name="website_url" placeholder="https://yourwebsite.com" required>
             </div>
             <div class="audit-form-group">
-                <label><i class="fas fa-envelope me-2"></i>Email Address</label>
-                <input type="email" name="email" placeholder="you@company.com" required>
+                <label for="auditEmail"><i class="fas fa-envelope me-2"></i>Email Address</label>
+                <input type="email" id="auditEmail" name="email" placeholder="you@company.com" required>
             </div>
             <div class="audit-form-group">
-                <label><i class="fas fa-phone me-2"></i>Phone Number</label>
-                <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                <label for="auditPhone"><i class="fas fa-phone me-2"></i>Phone Number</label>
+                <input type="tel" id="auditPhone" name="phone" placeholder="+91 XXXXX XXXXX" required>
             </div>
             <div class="audit-form-group">
-                <label><i class="fas fa-tasks me-2"></i>What do you need?</label>
-                <select name="audit_type">
+                <label for="auditType"><i class="fas fa-tasks me-2"></i>What do you need?</label>
+                <select id="auditType" name="audit_type">
                     <option value="seo">SEO Audit</option>
                     <option value="performance">Performance Audit</option>
                     <option value="security">Security Audit</option>
@@ -200,7 +223,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <!-- Country Selector -->
                     <div class="country-selector" id="countrySel">
-                        <button class="country-btn" id="countryBtn" type="button">
+                        <button class="country-btn" id="countryBtn" type="button" aria-label="Select Country">
                             <span class="flag-icon">🇮🇳</span>
                             <span class="country-code d-none d-md-inline">IN</span>
                             <i class="fas fa-chevron-down caret ms-1"></i>
@@ -226,7 +249,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
 
                     <!-- Free Audit CTA -->
-                    <button class="tb-audit-btn" id="openAuditModal" type="button">
+                    <button class="tb-audit-btn" id="openAuditModal" type="button" aria-label="Request Free Website Audit">
                         <i class="fas fa-search-plus me-1"></i>
                         <span class="d-none d-lg-inline">Free Website Audit</span>
                         <span class="d-inline d-lg-none">Audit</span>
@@ -242,13 +265,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="container-xl">
 
             <!-- Brand Logo -->
-            <a class="navbar-brand brand-logo" href="/">
-                <img src="/images/pabitra250.png" alt="Pabitra Technology" class="logo-img">
-            </a>
+            <a  class="navbar-brand brand-logo" href="/" aria-label="Learn more details"><img src="/images/pabitra250.webp" alt="Pabitra Technology" class="logo-img" width="237" height="97" loading="eager"></a>
 
             <!-- Mobile: Audit + Hamburger -->
             <div class="d-flex d-xl-none align-items-center gap-2 ms-auto">
-                <button class="tb-audit-btn mobile-audit" id="openAuditModalMobile" type="button">
+                <button class="tb-audit-btn mobile-audit" id="openAuditModalMobile" type="button" aria-label="Request Free Website Audit">
                     <i class="fas fa-chart-bar"></i>
                 </button>
                 <button class="hamburger-btn" type="button" id="hamburgerBtn"
@@ -462,9 +483,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <!-- More Pages -->
                     <li class="nav-item dropdown simple-dropdown" id="moreDropdown">
-                        <a class="nav-link-custom" href="#" id="moreBtn">
-                            More <i class="fas fa-chevron-down chevron-icon ms-1"></i>
-                        </a>
+                        <a  class="nav-link-custom" href="#" id="moreBtn" aria-label="Read more about our more">More <i class="fas fa-chevron-down chevron-icon ms-1"></i></a>
                         <div class="simple-menu">
                             <a href="/case-studies/" class="simple-item">
                                 <i class="fas fa-file-alt"></i>
@@ -496,9 +515,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     
                     <!-- Mobile Country Selector (visible only on mobile/tablet) -->
                     <div class="mobile-country-selector d-xl-none mb-3">
-                        <label class="mobile-country-label"><i class="fas fa-globe me-2"></i>Select Region</label>
+                        <label class="mobile-country-label" for="mobileCountryBtn"><i class="fas fa-globe me-2"></i>Select Region</label>
                         <div class="mobile-country-wrapper">
-                            <button class="mobile-country-btn" id="mobileCountryBtn" type="button">
+                            <button class="mobile-country-btn" id="mobileCountryBtn" type="button" aria-label="Select Country Region">
                                 <span class="flag-icon">🇮🇳</span>
                                 <span class="country-name-selected">India (+91)</span>
                                 <i class="fas fa-chevron-down caret ms-auto"></i>
@@ -530,7 +549,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <span class="dynamic-phone-text ms-1">+91 6370584682</span>
                         </a>
 
-                        <button type="button" class="btn-get-quote" id="navAuditBtn">
+                        <button type="button" class="btn-get-quote" id="navAuditBtn" aria-label="Request Free Website Audit">
                             <i class="fas fa-search-plus me-1"></i>Free Audit
                         </button>
                         
@@ -1658,7 +1677,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <!-- Left Column: Generated Graphic -->
                     <div class="col-lg-5" data-aos="fade-right">
                         <div class="position-relative overflow-hidden rounded-4 border border-primary-glow" style="height: 380px; box-shadow: 0 10px 30px rgba(0,196,255,0.15);">
-                            <img src="/images/tech_capabilities.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Pabitra Technology Capabilities Radar Dashboard Illustration">
+                            <img src="/images/tech_capabilities.webp" class="img-fluid w-100 h-100 object-fit-cover" alt="Pabitra Technology Capabilities Radar Dashboard Illustration" width="1024" height="1024" loading="lazy">
                         </div>
                     </div>
                     
@@ -1743,7 +1762,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <!-- Portfolio Item 1 -->
                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
                         <div class="card portfolio-card h-100">
-                            <img src="/images/e-commerce.jpg" class="card-img-top portfolio-img" alt="E-commerce platform screenshot for a local retail chain project"> <!-- IMPROVED ALT TEXT -->
+                            <img src="/images/e-commerce.webp" class="card-img-top portfolio-img" alt="E-commerce platform screenshot for a local retail chain project" width="1200" height="672" loading="lazy"> <!-- IMPROVED ALT TEXT -->
                             <div class="card-body">
                                 <h6 class="card-subtitle small mb-2">Web Development</h6>
                                 <h5 class="card-title fw-bold mb-3">Custom E-commerce Platform</h5>
@@ -1755,7 +1774,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <!-- Portfolio Item 2 -->
                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="card portfolio-card h-100">
-                            <img src="/images/seo.jpg" class="card-img-top portfolio-img" alt="Google search results with high local rankings for a service business"> <!-- IMPROVED ALT TEXT -->
+                            <img src="/images/seo.webp" class="card-img-top portfolio-img" alt="Google search results with high local rankings for a service business" width="1920" height="1920" loading="lazy"> <!-- IMPROVED ALT TEXT -->
                             <div class="card-body">
                                 <h6 class="card-subtitle small mb-2">Digital Marketing</h6>
                                 <h5 class="card-title fw-bold mb-3">Advanced Local SEO Campaign</h5>
@@ -1767,7 +1786,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                      <!-- Portfolio Item 3 -->
                     <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                         <div class="card portfolio-card h-100">
-                            <img src="/images/uiux.jpg" class="card-img-top portfolio-img" alt="Screenshot of an intuitive mobile booking application UI/UX design"> <!-- IMPROVED ALT TEXT -->
+                            <img src="/images/uiux.webp" class="card-img-top portfolio-img" alt="Screenshot of an intuitive mobile booking application UI/UX design" width="1200" height="959" loading="lazy"> <!-- IMPROVED ALT TEXT -->
                             <div class="card-body">
                                 <h6 class="card-subtitle small mb-2">App Development</h6>
                                 <h5 class="card-title fw-bold mb-3">Intuitive Booking Mobile App</h5>
@@ -1809,7 +1828,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="ai-agent-flow-box">
                             <!-- Integrated generated AI illustration -->
                             <div class="position-relative overflow-hidden rounded-3 mb-4 border border-secondary" style="height: 180px;">
-                                <img src="/images/ai_agents_workflow.png" class="img-fluid w-100 h-100 object-fit-cover" alt="AI Agent Workflow Pipeline Graphics">
+                                <img src="/images/ai_agents_workflow.webp" class="img-fluid w-100 h-100 object-fit-cover" alt="AI Agent Workflow Pipeline Graphics" width="1024" height="1024" loading="lazy">
                             </div>
                             
                             <h5 class="fw-bold mb-4 text-light"><i class="fas fa-network-wired text-warning me-2"></i>Active Agent Pipeline</h5>
@@ -1870,7 +1889,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                             <p class="testimonial-text">"Pabitra Technology built our entire online booking system from the ground up! Our sales increased by 200% within the first three months of launching the new portal. Truly the best website development company in Bhubaneswar!"</p>
                             <div class="client-info">
-                                 <img src="/images/avatar_sharma.png" alt="Mr. Sharma, CEO of Odisha Tour & Travels" class="client-avatar" width="60" height="60">
+                                 <img src="/images/avatar_sharma.webp" alt="Mr. Sharma, CEO of Odisha Tour & Travels" class="client-avatar" width="60" height="60" loading="lazy">
                                  <div>
                                     <h6 class="client-name">Mr. Sharma</h6>
                                     <small class="client-role">CEO, Odisha Tour & Travels</small>
@@ -1885,7 +1904,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                             <p class="testimonial-text">"Their e-commerce expertise is outstanding. The integration of high-performance shopping experiences and automated transaction tracking has completely streamlined our boutique store. Flawless UI and extreme professionalism!"</p>
                             <div class="client-info">
-                                 <img src="/images/avatar_priyadarshini.png" alt="Ms. Priyadarshini, Founder of Kalashri E-Commerce" class="client-avatar" width="60" height="60">
+                                 <img src="/images/avatar_priyadarshini.webp" alt="Ms. Priyadarshini, Founder of Kalashri E-Commerce" class="client-avatar" width="60" height="60" loading="lazy">
                                  <div>
                                     <h6 class="client-name">Ms. Priyadarshini</h6>
                                     <small class="client-role">Founder, Kalashri E-Commerce</small>
@@ -1900,7 +1919,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                             <p class="testimonial-text">"Pabitra Technology engineered an advanced EdTech portal for our students. The interactive learning dashboard, responsive width layouts, and custom database layers work flawlessly. An absolute technology pioneer in Odisha!"</p>
                             <div class="client-info">
-                                 <img src="/images/avatar_subasish.png" alt="Dr. Subasish Mohapatra, Director of KBSVM Education" class="client-avatar" width="60" height="60">
+                                 <img src="/images/avatar_subasish.webp" alt="Dr. Subasish Mohapatra, Director of KBSVM Education" class="client-avatar" width="60" height="60" loading="lazy">
                                  <div>
                                     <h6 class="client-name">Dr. Subasish Mohapatra</h6>
                                     <small class="client-role">Director, KBSVM Education</small>
@@ -1915,7 +1934,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                             <p class="testimonial-text">"The local SEO campaign executed by their team supercharged our website traffic. We went from being invisible to ranking #1 for premium tourism keywords in Bhubaneswar. Outstanding customer support!"</p>
                             <div class="client-info">
-                                 <img src="/images/avatar_das.png" alt="Ms. Das, Founder of The Royal Journey" class="client-avatar" width="60" height="60">
+                                 <img src="/images/avatar_das.webp" alt="Ms. Das, Founder of The Royal Journey" class="client-avatar" width="60" height="60" loading="lazy">
                                  <div>
                                     <h6 class="client-name">Ms. Das</h6>
                                     <small class="client-role">Founder, The Royal Journey</small>
@@ -1930,7 +1949,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                             <p class="testimonial-text">"We needed a highly secure, encrypted web system for our gems business. Pabitra Technology deployed a robust custom software suite that exceeds our expectations. Highly recommended IT security partners!"</p>
                             <div class="client-info">
-                                 <img src="/images/avatar_sahu.png" alt="Mr. Jagannath Sahu, Director of VIP Gem Smart" class="client-avatar" width="60" height="60">
+                                 <img src="/images/avatar_sahu.webp" alt="Mr. Jagannath Sahu, Director of VIP Gem Smart" class="client-avatar" width="60" height="60" loading="lazy">
                                  <div>
                                     <h6 class="client-name">Mr. Jagannath Sahu</h6>
                                     <small class="client-role">Director, VIP Gem Smart</small>
@@ -1945,7 +1964,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                             <p class="testimonial-text">"Their 360-degree digital marketing campaign and ad optimization gave us an incredible return on investment. Our localized ads generated highly qualified leads instantly. Extremely responsive and data-driven!"</p>
                             <div class="client-info">
-                                 <img src="/images/avatar_patel.png" alt="Mr. Amit Patel, Manager at Pabitra Fixer Online" class="client-avatar" width="60" height="60">
+                                 <img src="/images/avatar_patel.webp" alt="Mr. Amit Patel, Manager at Pabitra Fixer Online" class="client-avatar" width="60" height="60" loading="lazy">
                                  <div>
                                     <h6 class="client-name">Mr. Amit Patel</h6>
                                     <small class="client-role">Manager, Pabitra Fixer Online</small>
@@ -2175,7 +2194,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                                 <h5 class="card-title fw-bold">Top 5 SEO Trends to Watch in Bhubaneswar</h5>
                                 <p class="card-text small mb-3">Discover the key SEO strategies that local businesses in Bhubaneswar need to implement to stay ahead in search rankings...</p>
-                                <a href="/blog/local-seo/" class="read-more-link">Read More <i class="fas fa-arrow-right small"></i></a>
+                                <a  href="/blog/local-seo/" class="read-more-link" aria-label="Read more about our SEO services">Read More <i class="fas fa-arrow-right small"></i></a>
                             </div>
                         </div>
                     </div>
@@ -2189,7 +2208,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                                 <h5 class="card-title fw-bold">Why Mobile-First Web Design is Non-Negotiable Today</h5>
                                 <p class="card-text small mb-3">Learn why prioritizing mobile design is crucial for user experience, SEO rankings, and overall website success in today's digital world.</p>
-                                <a href="/blog/mobile-first/" class="read-more-link">Read More <i class="fas fa-arrow-right small"></i></a>
+                                <a  href="/blog/mobile-first/" class="read-more-link" aria-label="Read more about this blog post">Read More <i class="fas fa-arrow-right small"></i></a>
                             </div>
                         </div>
                     </div>
@@ -2203,7 +2222,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                                 <h5 class="card-title fw-bold">Maximizing ROI with Google Ads Performance Max Campaigns</h5>
                                 <p class="card-text small mb-3">Understanding the potential and pitfalls of Google's automated campaign type for effective ad spend and optimized results.</p>
-                                <a href="blog-post.html" class="read-more-link">Read More <i class="fas fa-arrow-right small"></i></a>
+                                <a  href="blog-post.html" class="read-more-link" aria-label="Read more about this blog post">Read More <i class="fas fa-arrow-right small"></i></a>
                             </div>
                         </div>
                     </div>
@@ -3068,7 +3087,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="col-lg-7">
                     <form class="newsletter-form" id="newsletterForm" novalidate>
                         <div class="newsletter-input-wrap">
-                            <input type="email" class="newsletter-input" placeholder="Enter your email address..." required>
+                            <input type="email" class="newsletter-input" placeholder="Enter your email address..." aria-label="Email Address" required>
                             <button type="submit" class="newsletter-btn">
                                 Subscribe <i class="fas fa-arrow-right ms-2"></i>
                             </button>
@@ -3087,9 +3106,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <!-- Col 1: About & Logo -->
                 <div class="col-lg-4 col-md-6">
-                    <a href="/" class="footer-logo-wrap">
-                        <img src="/images/pabitra250.png" alt="Pabitra Technology White Logo" class="footer-logo-img">
-                    </a>
+                    <a  href="/" class="footer-logo-wrap" aria-label="Learn more details"><img src="/images/pabitra250.webp" alt="Pabitra Technology White Logo" class="footer-logo-img" width="237" height="97" loading="eager"></a>
                     <p class="footer-about-text">
                         Your dedicated digital partner in Bhubaneswar, Odisha. We craft innovative digital marketing, web &amp; app development, and tech solutions that drive real business growth.
                     </p>
@@ -3246,8 +3263,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </footer>
 
-<!-- Scroll Progress Indicator -->
-<div id="scroll-tracker"><div id="scroll-dot"></div></div>
+
 
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/916370584682?text=Hello%20Pabitra%20Technology,%20I'm%20interested%20in%20your%20services."

@@ -4,7 +4,7 @@
 Portfolio Page Hero Section - NEW
 ======================== */
 .portfolio-hero-section {
-    background-image: url('../images/hero2.jpg'); /* Your specified background image */
+    background-image: url('../images/hero2.webp'); /* Your specified background image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Parallax effect */

@@ -42,6 +42,9 @@
 html {
     background-color: #0A192F;
     overflow-x: hidden;
+    /* Custom scrollbar for Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) var(--bg-dark-primary);
 }
 
 body {
@@ -50,6 +53,27 @@ body {
     line-height: 1.8;
     background-color: var(--bg-dark-primary);
     overflow-x: hidden;
+}
+
+/* Premium Custom Scrollbar for WebKit (Chrome, Safari, Edge, Opera) */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--color-primary), var(--color-primary-dark));
+    border-radius: 5px;
+    border: 2px solid var(--bg-dark-primary);
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--color-accent), var(--color-accent-dark));
 }
 
 /* Prevent any particle/orb/animation from causing horizontal scroll on mobile */
@@ -633,41 +657,118 @@ header {
 }
 
 /* ==========================================================================
-   WIDGETS & TOOLS (WhatsApp + Scroll Tracker)
+   ADVANCED SCROLL PROGRESS TRACKER
    ========================================================================== */
+
+/* ── Outer Track ─────────────────────────────────────────────────────────── */
 #scroll-tracker {
     position: fixed;
-    right: 25px;
+    right: 8px;
     top: 50%;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 220px;
-    background: rgba(10, 25, 47, 0.65);
-    border-radius: 20px;
-    z-index: 1050;
+    transform: translateY(-50%) translateX(40px); /* slides in from right */
+    width: 4px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    z-index: 9999;
     opacity: 0;
-    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.4s ease;
-    border: 1.5px solid rgba(0, 196, 255, 0.35);
-    box-shadow: 0 0 20px rgba(0, 196, 255, 0.15), inset 0 0 8px rgba(0, 196, 255, 0.1);
+    transition:
+        opacity   0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+        transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(0, 196, 255, 0.15);
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.4),
+        0 4px 24px rgba(0, 196, 255, 0.08),
+        inset 0 0 8px rgba(0, 196, 255, 0.04);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    overflow: visible;
 }
 
-#scroll-dot {
-    width: 14px;
-    height: 14px;
-    background: linear-gradient(135deg, #00C4FF 0%, #FFC107 100%);
-    border-radius: 50%;
-    position: absolute;
-    left: -3.5px;
-    transition: transform 0.05s linear;
-    box-shadow: 0 0 15px #00C4FF, 0 0 30px #FFC107;
-    border: 2px solid #0A192F;
-}
-
+/* Visible state — slides in smoothly */
 body.scrolled #scroll-tracker {
     opacity: 1;
+    transform: translateY(-50%) translateX(0);
 }
+
+/* ── Fill Bar (progress fill inside track) ───────────────────────────────── */
+#scroll-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%; /* updated by JS */
+    background: linear-gradient(
+        180deg,
+        #00C4FF 0%,
+        #0077ff 50%,
+        #FFC107 100%
+    );
+    border-radius: 10px;
+    transition: height 0.08s linear;
+    box-shadow: 0 0 10px rgba(0, 196, 255, 0.5);
+}
+
+/* ── Glowing Thumb Dot ───────────────────────────────────────────────────── */
+#scroll-dot {
+    position: absolute;
+    left: 50%;
+    top: 0; /* updated by JS */
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00C4FF, #FFC107);
+    box-shadow:
+        0 0 0 2px rgba(10, 25, 47, 0.9),
+        0 0 10px rgba(0, 196, 255, 0.8),
+        0 0 22px rgba(255, 193, 7, 0.4);
+    transition: top 0.08s linear;
+    z-index: 2;
+    cursor: default;
+}
+
+/* Inner pulse ring */
+#scroll-dot-inner {
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(0, 196, 255, 0.5);
+    animation: scrollDotPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollDotPulse {
+    0%, 100% { transform: scale(1);   opacity: 0.7; }
+    50%       { transform: scale(1.5); opacity: 0;   }
+}
+
+/* ── Percentage Label ────────────────────────────────────────────────────── */
+#scroll-pct {
+    position: absolute;
+    left: 50%;
+    bottom: -28px;
+    transform: translateX(-50%);
+    font-family: var(--font-heading);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--color-primary);
+    white-space: nowrap;
+    text-shadow: 0 0 8px rgba(0, 196, 255, 0.6);
+    opacity: 0.9;
+    transition: color 0.3s ease;
+    line-height: 1;
+    text-align: center;
+    pointer-events: none;
+}
+
+/* ── Responsive — hide on tiny screens ──────────────────────────────────── */
+@media (max-width: 480px) {
+    #scroll-tracker {
+        display: none;
+    }
+}
+
 
 .whatsapp-float {
     position: fixed;
@@ -757,17 +858,7 @@ body.scrolled #scroll-tracker {
         justify-content: center;
     }
 
-    #scroll-tracker {
-        right: 15px;
-        height: 120px;
-        width: 6px;
-    }
 
-    #scroll-dot {
-        width: 10px;
-        height: 10px;
-        left: -2px;
-    }
 
     .whatsapp-float {
         width: 55px;

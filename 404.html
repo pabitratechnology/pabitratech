@@ -3,19 +3,322 @@
 <head>
     <!-- === ADVANCED SEO METADATA === -->
     <title>404 - Page Not Found | Pabitra Technology Bhubaneswar</title>
-    <meta name="description" content="Premium IT services, web development, and digital marketing services from Pabitra Technology in Bhubaneswar, Odisha. Certified experts driving global success.">
+    <meta name="description" content="Oops! The page you are looking for does not exist. Go back to Pabitra Technology homepage for IT services, web development, and digital marketing.">
     <meta name="keywords" content="404 - page not found, pabitra technology, IT solutions Bhubaneswar, web development company, digital transformation agency">
     <link rel="canonical" href="https://pabitratechnology.com/404.html">
-<meta charset="UTF-8">
-  
-  <style>
-    body { font-family: sans-serif; text-align: center; padding: 50px; }
-    h1 { font-size: 48px; color: #e74c3c; }
-    a { text-decoration: none; color: #3498db; }
-  </style>
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
+<!-- === ADVANCED SEO METADATA === -->
+    
+    
+    
+    
+    <!-- === ADVANCED SEO METADATA === -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print" onload="this.media='all'">
+
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/pabitra1.webp" type="image/png">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/CSS/globals.css">
     <link rel="stylesheet" href="/CSS/components.css">
+
+    <!-- Inline Style Overrides for Premium 404 Design -->
+    <style>
+        .error-page-wrapper {
+            background-color: #0A192F;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 160px 0 100px 0; /* Padding-top fixed to clear the absolute site header */
+        }
+        
+        /* Cosmic Glowing Background Particles */
+        .error-bg-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 196, 255, 0.08) 0%, rgba(156, 39, 176, 0.04) 50%, rgba(0,0,0,0) 100%);
+            top: -100px;
+            right: -100px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .error-bg-glow-2 {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(156, 39, 176, 0.06) 0%, rgba(0, 196, 255, 0.03) 60%, rgba(0,0,0,0) 100%);
+            bottom: -150px;
+            left: -150px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Animated background particles */
+        .error-particle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float-particle 15s linear infinite;
+            z-index: 1;
+        }
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) translateX(0) scale(1);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-10vh) translateX(80px) scale(0.5);
+                opacity: 0;
+            }
+        }
+
+        .error-image-container {
+            position: relative;
+            z-index: 2;
+            animation: float-y 6s ease-in-out infinite;
+        }
+
+        @keyframes float-y {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(12px);
+        }
+
+        .circle-1 {
+            width: 140px;
+            height: 140px;
+            top: -10px;
+            left: -10px;
+            background: radial-gradient(circle, rgba(0, 196, 255, 0.25) 0%, rgba(0,0,0,0) 70%);
+        }
+
+        .circle-2 {
+            width: 180px;
+            height: 180px;
+            bottom: -20px;
+            right: 0px;
+            background: radial-gradient(circle, rgba(156, 39, 176, 0.2) 0%, rgba(0,0,0,0) 70%);
+        }
+
+        .error-text-card {
+            background: rgba(10, 25, 47, 0.65);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 196, 255, 0.2) !important;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-primary-gradient {
+            background: linear-gradient(135deg, #00C4FF 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 7.5rem;
+            line-height: 1;
+        }
+
+        .text-muted-light {
+            color: #A0AEC0;
+        }
+
+        /* Search input bar styling */
+        .bg-dark-blue {
+            background-color: rgba(5, 12, 28, 0.8) !important;
+        }
+        .border-info {
+            border-color: rgba(0, 196, 255, 0.3) !important;
+        }
+        .error-search-container .form-control {
+            border-left: none;
+            transition: all 0.3s ease;
+        }
+        .error-search-container .form-control:focus {
+            background-color: rgba(5, 12, 28, 0.95) !important;
+            border-color: #00C4FF !important;
+            box-shadow: 0 0 15px rgba(0, 196, 255, 0.3) !important;
+            color: #fff !important;
+        }
+        .error-search-container .input-group-text {
+            border-right: none;
+        }
+
+        /* Search Results Dropdown */
+        .search-results-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(8, 20, 38, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 196, 255, 0.4);
+            z-index: 1000;
+            max-height: 260px;
+            overflow-y: auto;
+            text-align: left;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        
+        /* Custom scrollbar for search dropdown */
+        .search-results-dropdown::-webkit-scrollbar {
+            width: 6px;
+        }
+        .search-results-dropdown::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+        }
+        .search-results-dropdown::-webkit-scrollbar-thumb {
+            background: rgba(0, 196, 255, 0.4);
+            border-radius: 3px;
+        }
+        .search-results-dropdown::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 196, 255, 0.6);
+        }
+
+        .search-result-item {
+            display: block;
+            padding: 10px 14px;
+            color: #A0AEC0;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+        .search-result-item:hover {
+            background: rgba(0, 196, 255, 0.15);
+            color: #fff;
+            padding-left: 20px;
+        }
+        .search-result-category {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #00C4FF;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        .search-result-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #ffffff;
+        }
+        .search-result-desc {
+            font-size: 0.8rem;
+            color: #8b9bb4;
+        }
+
+        .btn-outline-info {
+            color: #00C4FF;
+            border-color: rgba(0, 196, 255, 0.4);
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-info:hover {
+            color: #0A192F;
+            background-color: #00C4FF;
+            border-color: #00C4FF;
+            box-shadow: 0 0 15px rgba(0, 196, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, #FFC107 0%, #FF9800 100%);
+            border: none;
+            color: #0A192F;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-warning:hover {
+            background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+            box-shadow: 0 0 15px rgba(255, 193, 7, 0.4);
+            transform: translateY(-2px);
+            color: #0A192F;
+        }
+
+        .text-info-gradient {
+            color: #00C4FF;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .text-info-gradient:hover {
+            color: #9C27B0;
+            text-shadow: 0 0 8px rgba(156, 39, 176, 0.3);
+        }
+
+        .error-img {
+            border: 2px solid rgba(0, 196, 255, 0.15);
+            transition: all 0.5s ease;
+        }
+
+        .error-img:hover {
+            border-color: rgba(0, 196, 255, 0.4);
+            box-shadow: 0 0 30px rgba(0, 196, 255, 0.25) !important;
+        }
+
+        @media (max-width: 991.98px) {
+            .text-primary-gradient {
+                font-size: 5.5rem;
+            }
+            .error-page-wrapper {
+                padding: 130px 0 60px 0;
+            }
+        }
+    </style>
     </head>
 <body>
+
 <!-- START_HEADER_COMPONENT -->
 <!-- ============================================================
      PABITRA TECHNOLOGY — ADVANCED HEADER COMPONENT v2
@@ -41,20 +344,20 @@
             <input type="hidden" name="subject" value="New Free Website Audit Request - Pabitra Technology">
             <input type="hidden" name="from_name" value="Pabitra Audit Portal">
             <div class="audit-form-group">
-                <label><i class="fas fa-globe me-2"></i>Your Website URL</label>
-                <input type="url" name="website_url" placeholder="https://yourwebsite.com" required>
+                <label for="auditWebsiteUrl"><i class="fas fa-globe me-2"></i>Your Website URL</label>
+                <input type="url" id="auditWebsiteUrl" name="website_url" placeholder="https://yourwebsite.com" required>
             </div>
             <div class="audit-form-group">
-                <label><i class="fas fa-envelope me-2"></i>Email Address</label>
-                <input type="email" name="email" placeholder="you@company.com" required>
+                <label for="auditEmail"><i class="fas fa-envelope me-2"></i>Email Address</label>
+                <input type="email" id="auditEmail" name="email" placeholder="you@company.com" required>
             </div>
             <div class="audit-form-group">
-                <label><i class="fas fa-phone me-2"></i>Phone Number</label>
-                <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                <label for="auditPhone"><i class="fas fa-phone me-2"></i>Phone Number</label>
+                <input type="tel" id="auditPhone" name="phone" placeholder="+91 XXXXX XXXXX" required>
             </div>
             <div class="audit-form-group">
-                <label><i class="fas fa-tasks me-2"></i>What do you need?</label>
-                <select name="audit_type">
+                <label for="auditType"><i class="fas fa-tasks me-2"></i>What do you need?</label>
+                <select id="auditType" name="audit_type">
                     <option value="seo">SEO Audit</option>
                     <option value="performance">Performance Audit</option>
                     <option value="security">Security Audit</option>
@@ -112,7 +415,7 @@
 
                     <!-- Country Selector -->
                     <div class="country-selector" id="countrySel">
-                        <button class="country-btn" id="countryBtn" type="button">
+                        <button class="country-btn" id="countryBtn" type="button" aria-label="Select Country">
                             <span class="flag-icon">🇮🇳</span>
                             <span class="country-code d-none d-md-inline">IN</span>
                             <i class="fas fa-chevron-down caret ms-1"></i>
@@ -138,7 +441,7 @@
                     </div>
 
                     <!-- Free Audit CTA -->
-                    <button class="tb-audit-btn" id="openAuditModal" type="button">
+                    <button class="tb-audit-btn" id="openAuditModal" type="button" aria-label="Request Free Website Audit">
                         <i class="fas fa-search-plus me-1"></i>
                         <span class="d-none d-lg-inline">Free Website Audit</span>
                         <span class="d-inline d-lg-none">Audit</span>
@@ -154,13 +457,11 @@
         <div class="container-xl">
 
             <!-- Brand Logo -->
-            <a class="navbar-brand brand-logo" href="/">
-                <img src="/images/pabitra250.png" alt="Pabitra Technology" class="logo-img">
-            </a>
+            <a  class="navbar-brand brand-logo" href="/" aria-label="Learn more details"><img src="/images/pabitra250.webp" alt="Pabitra Technology" class="logo-img" width="237" height="97" loading="eager"></a>
 
             <!-- Mobile: Audit + Hamburger -->
             <div class="d-flex d-xl-none align-items-center gap-2 ms-auto">
-                <button class="tb-audit-btn mobile-audit" id="openAuditModalMobile" type="button">
+                <button class="tb-audit-btn mobile-audit" id="openAuditModalMobile" type="button" aria-label="Request Free Website Audit">
                     <i class="fas fa-chart-bar"></i>
                 </button>
                 <button class="hamburger-btn" type="button" id="hamburgerBtn"
@@ -374,9 +675,7 @@
 
                     <!-- More Pages -->
                     <li class="nav-item dropdown simple-dropdown" id="moreDropdown">
-                        <a class="nav-link-custom" href="#" id="moreBtn">
-                            More <i class="fas fa-chevron-down chevron-icon ms-1"></i>
-                        </a>
+                        <a  class="nav-link-custom" href="#" id="moreBtn" aria-label="Read more about our more">More <i class="fas fa-chevron-down chevron-icon ms-1"></i></a>
                         <div class="simple-menu">
                             <a href="/case-studies/" class="simple-item">
                                 <i class="fas fa-file-alt"></i>
@@ -408,9 +707,9 @@
                     
                     <!-- Mobile Country Selector (visible only on mobile/tablet) -->
                     <div class="mobile-country-selector d-xl-none mb-3">
-                        <label class="mobile-country-label"><i class="fas fa-globe me-2"></i>Select Region</label>
+                        <label class="mobile-country-label" for="mobileCountryBtn"><i class="fas fa-globe me-2"></i>Select Region</label>
                         <div class="mobile-country-wrapper">
-                            <button class="mobile-country-btn" id="mobileCountryBtn" type="button">
+                            <button class="mobile-country-btn" id="mobileCountryBtn" type="button" aria-label="Select Country Region">
                                 <span class="flag-icon">🇮🇳</span>
                                 <span class="country-name-selected">India (+91)</span>
                                 <i class="fas fa-chevron-down caret ms-auto"></i>
@@ -442,7 +741,7 @@
                             <span class="dynamic-phone-text ms-1">+91 6370584682</span>
                         </a>
 
-                        <button type="button" class="btn-get-quote" id="navAuditBtn">
+                        <button type="button" class="btn-get-quote" id="navAuditBtn" aria-label="Request Free Website Audit">
                             <i class="fas fa-search-plus me-1"></i>Free Audit
                         </button>
                         
@@ -458,18 +757,77 @@
 </header>
 
 <!-- END_HEADER_COMPONENT -->
-  
-  <!-- Breadcrumb Navigation -->
-  <nav aria-label="breadcrumb" class="page-breadcrumb-nav" data-aos="fade-down">
-      <ol class="page-breadcrumb">
-    <li><a href="/"><i class="fas fa-home me-1" style="font-size:0.7rem;"></i>Home</a></li>
-      <li><i class="fas fa-chevron-right"></i></li>
-    <li class="active" aria-current="page">404 — Page Not Found</li>
-      </ol>
-  </nav>
-<h1>404</h1>
-  <p>Oops! The page you're looking for doesn't exist.</p>
-  <a href="https://pabitratechnology.com/">Go back to homepage</a>
+
+<main class="error-page-wrapper position-relative">
+    <div class="error-bg-glow"></div>
+    <div class="error-bg-glow-2"></div>
+    
+    <div class="container py-3 position-relative" style="z-index: 10;">
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="breadcrumb" class="page-breadcrumb-nav mb-5" data-aos="fade-down">
+            <ol class="page-breadcrumb">
+                <li><a href="/"><i class="fas fa-home me-1" style="font-size:0.7rem;"></i>Home</a></li>
+                <li><i class="fas fa-chevron-right mx-2 text-muted" style="font-size:0.7rem;"></i></li>
+                <li class="active text-info" aria-current="page">404 — Page Not Found</li>
+            </ol>
+        </nav>
+
+        <div class="row justify-content-center align-items-center">
+            <!-- Left Column: Premium WebP Illustration of a Person Looking Back -->
+            <div class="col-lg-6 mb-5 mb-lg-0 text-center" data-aos="zoom-in">
+                <div class="error-image-container d-inline-block">
+                    <img src="/images/404_look_back.webp" alt="Lost In Digital Space — Person Looking Back" class="img-fluid rounded-4 shadow-lg error-img" width="550" height="550" loading="eager">
+                    <div class="floating-circle circle-1"></div>
+                    <div class="floating-circle circle-2"></div>
+                </div>
+            </div>
+            
+            <!-- Right Column: Error Message, Search Bar & Actions -->
+            <div class="col-lg-6" data-aos="fade-up">
+                <div class="error-text-card p-4 p-md-5 rounded-4 border border-info-glow">
+                    <span class="error-code text-primary-gradient display-1 fw-bold mb-2 d-block">404</span>
+                    <h1 class="h2 fw-bold text-white mb-3">You've Taken Aback...</h1>
+                    <p class="lead text-muted-light mb-4">
+                        The resource you requested is lost in cyberspace. Try searching our services or return to safety below.
+                    </p>
+                    
+                    <!-- Advanced Interactive Search Bar -->
+                    <div class="error-search-container mb-4 position-relative">
+                        <div class="input-group">
+                            <span class="input-group-text bg-dark-blue border-info text-info"><i class="fas fa-search"></i></span>
+                            <input type="text" id="errorSearchInput" class="form-control bg-dark-blue border-info text-white" placeholder="Search for services (e.g. SEO, Web Dev)..." aria-label="Search site">
+                        </div>
+                        <!-- Dynamic search results dropdown -->
+                        <div id="errorSearchResults" class="search-results-dropdown d-none rounded-3 mt-1 shadow-lg border border-info p-2">
+                            <!-- Search items injected via JS -->
+                        </div>
+                    </div>
+                    
+                    <div class="error-actions d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <!-- Go Back to previous page -->
+                        <button onclick="window.history.back()" class="btn btn-outline-info btn-lg px-4 py-3 d-inline-flex align-items-center gap-2">
+                            <i class="fas fa-arrow-left"></i>
+                            <span>Go Back</span>
+                        </button>
+                        
+                        <!-- Return to Homepage -->
+                        <a href="/" class="btn btn-warning btn-lg px-4 py-3 d-inline-flex align-items-center gap-2">
+                            <i class="fas fa-home"></i>
+                            <span>Return Home</span>
+                        </a>
+                        
+                        <!-- Contact support / contact page -->
+                        <a href="/contact/" class="btn btn-link text-info-gradient btn-lg d-inline-flex align-items-center gap-2">
+                            <span>Get Support</span>
+                            <i class="fas fa-chevron-right" style="font-size:0.8rem;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
 <!-- START_FOOTER_COMPONENT -->
 <!-- ============================================================
      PABITRA TECHNOLOGY — REUSABLE FOOTER COMPONENT
@@ -492,7 +850,7 @@
                 <div class="col-lg-7">
                     <form class="newsletter-form" id="newsletterForm" novalidate>
                         <div class="newsletter-input-wrap">
-                            <input type="email" class="newsletter-input" placeholder="Enter your email address..." required>
+                            <input type="email" class="newsletter-input" placeholder="Enter your email address..." aria-label="Email Address" required>
                             <button type="submit" class="newsletter-btn">
                                 Subscribe <i class="fas fa-arrow-right ms-2"></i>
                             </button>
@@ -511,9 +869,7 @@
 
                 <!-- Col 1: About & Logo -->
                 <div class="col-lg-4 col-md-6">
-                    <a href="/" class="footer-logo-wrap">
-                        <img src="/images/pabitra250.png" alt="Pabitra Technology White Logo" class="footer-logo-img">
-                    </a>
+                    <a  href="/" class="footer-logo-wrap" aria-label="Learn more details"><img src="/images/pabitra250.webp" alt="Pabitra Technology White Logo" class="footer-logo-img" width="237" height="97" loading="eager"></a>
                     <p class="footer-about-text">
                         Your dedicated digital partner in Bhubaneswar, Odisha. We craft innovative digital marketing, web &amp; app development, and tech solutions that drive real business growth.
                     </p>
@@ -545,7 +901,7 @@
                         <a href="https://www.linkedin.com/company/pabitra-technology/" class="footer-social-icon linkedin" target="_blank" aria-label="LinkedIn" title="LinkedIn">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="footer-social-icon" target="_blank" aria-label="Twitter/X" title="Twitter">
+                        <a href="https://x.com/PabitraTech2025" class="footer-social-icon twitter" target="_blank" aria-label="Twitter/X" title="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
                         <a href="https://wa.me/916370584682" class="footer-social-icon whatsapp" target="_blank" aria-label="WhatsApp" title="WhatsApp">
@@ -670,8 +1026,7 @@
 
 </footer>
 
-<!-- Scroll Progress Indicator -->
-<div id="scroll-tracker"><div id="scroll-dot"></div></div>
+
 
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/916370584682?text=Hello%20Pabitra%20Technology,%20I'm%20interested%20in%20your%20services."
@@ -715,7 +1070,134 @@
 </script>
 
 <!-- END_FOOTER_COMPONENT -->
-    <script src="/JS/components.js"></script>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- AOS (Animate On Scroll) JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    // Initialize AOS animations
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof AOS !== 'undefined') {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 50
+            });
+        }
+        
+        // Generate floating stardust background particles
+        const wrapper = document.querySelector('.error-page-wrapper');
+        if (wrapper) {
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('error-particle');
+                
+                const size = Math.random() * 5 + 2; // 2px to 7px
+                const left = Math.random() * 100; // 0% to 100%
+                const delay = Math.random() * 10; // 0s to 10s delay
+                const duration = Math.random() * 10 + 10; // 10s to 20s duration
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${left}%`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+                
+                if (Math.random() > 0.5) {
+                    particle.style.backgroundColor = 'rgba(156, 39, 176, 0.4)';
+                    particle.style.boxShadow = '0 0 8px rgba(156, 39, 176, 0.7)';
+                } else {
+                    particle.style.backgroundColor = 'rgba(0, 196, 255, 0.4)';
+                    particle.style.boxShadow = '0 0 8px rgba(0, 196, 255, 0.7)';
+                }
+                
+                wrapper.appendChild(particle);
+            }
+        }
+
+        // Search Database Index
+        const searchIndex = [
+            { title: "Home Page", url: "/", category: "Pages", desc: "Pabitra Technology homepage" },
+            { title: "About Us", url: "/about/story/", category: "Pages", desc: "Our company story, mission and vision" },
+            { title: "Our Team", url: "/about/team/", category: "Pages", desc: "Meet our certified IT and SEO experts" },
+            { title: "Portfolio", url: "/portfolio/", category: "Pages", desc: "Explore our web development and marketing case studies" },
+            { title: "Careers", url: "/careers/", category: "Pages", desc: "Join our team in Bhubaneswar (Hiring)" },
+            { title: "Contact Us", url: "/contact/", category: "Pages", desc: "Get in touch for free consultation" },
+            { title: "SEO Services", url: "/services/seo/", category: "Services", desc: "Rank #1 on Google and boost traffic" },
+            { title: "Website Development", url: "/services/web-dev/", category: "Services", desc: "Fast, modern, responsive websites" },
+            { title: "Mobile App Development", url: "/services/app-dev/", category: "Services", desc: "iOS and Android custom app development" },
+            { title: "Digital Marketing 360", url: "/services/digital-marketing-360/", category: "Services", desc: "Full-funnel custom marketing campaigns" },
+            { title: "PPC & Google Ads", url: "/services/ppc/", category: "Services", desc: "Instant qualified leads and high ROI" },
+            { title: "Social Media Marketing", url: "/services/smm/", category: "Services", desc: "Engage and build your online brand community" },
+            { title: "E-commerce Development", url: "/services/ecommerce/", category: "Services", desc: "Sell online with custom shopping carts" },
+            { title: "UI/UX & Graphic Design", url: "/services/graphics-uiux/", category: "Services", desc: "Stunning user-centered visual designs" },
+            { title: "Cyber Security", url: "/services/security/", category: "Services", desc: "Vulnerability audits and enterprise shielding" },
+            { title: "Cloud Solutions", url: "/services/cloud/", category: "Services", desc: "AWS, Azure and GCP architecture scaling" },
+            { title: "AI & Automation", url: "/services/automation/", category: "Services", desc: "Intelligent robotic process automation" },
+            { title: "Data Analytics & BI", url: "/services/data-analytics/", category: "Services", desc: "Dashboards and insights for decisions" },
+            { title: "SaaS Development", url: "/services/saas/", category: "Services", desc: "Scalable cloud-based web products" }
+        ];
+
+        const searchInput = document.getElementById('errorSearchInput');
+        const searchResults = document.getElementById('errorSearchResults');
+
+        if (searchInput && searchResults) {
+            searchInput.addEventListener('input', function() {
+                const query = this.value.trim().toLowerCase();
+                
+                if (query.length === 0) {
+                    searchResults.innerHTML = '';
+                    searchResults.classList.add('d-none');
+                    return;
+                }
+
+                // Filter search items
+                const matches = searchIndex.filter(item => 
+                    item.title.toLowerCase().includes(query) || 
+                    item.category.toLowerCase().includes(query) || 
+                    item.desc.toLowerCase().includes(query)
+                );
+
+                if (matches.length > 0) {
+                    searchResults.innerHTML = matches.map(item => `
+                        <a href="${item.url}" class="search-result-item">
+                            <div class="search-result-category">${item.category}</div>
+                            <div class="search-result-title">${item.title}</div>
+                            <div class="search-result-desc">${item.desc}</div>
+                        </a>
+                    `).join('');
+                    searchResults.classList.remove('d-none');
+                } else {
+                    searchResults.innerHTML = `
+                        <div class="p-3 text-center text-muted">
+                            <i class="fas fa-exclamation-circle me-1"></i> No direct matches found.<br>
+                            <small>Try searching for "SEO", "Web", or "Team"</small>
+                        </div>
+                    `;
+                    searchResults.classList.remove('d-none');
+                }
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+                    searchResults.classList.add('d-none');
+                }
+            });
+            
+            // Re-open dropdown on focus if not empty
+            searchInput.addEventListener('focus', function() {
+                if (this.value.trim().length > 0) {
+                    searchResults.classList.remove('d-none');
+                }
+            });
+        }
+    });
+</script>
+
+    <script src="../JS/components.js"></script>
 </body>
 </html>
-

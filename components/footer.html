@@ -19,7 +19,7 @@
                 <div class="col-lg-7">
                     <form class="newsletter-form" id="newsletterForm" novalidate>
                         <div class="newsletter-input-wrap">
-                            <input type="email" class="newsletter-input" placeholder="Enter your email address..." required>
+                            <input type="email" class="newsletter-input" placeholder="Enter your email address..." aria-label="Email Address" required>
                             <button type="submit" class="newsletter-btn">
                                 Subscribe <i class="fas fa-arrow-right ms-2"></i>
                             </button>
@@ -38,9 +38,7 @@
 
                 <!-- Col 1: About & Logo -->
                 <div class="col-lg-4 col-md-6">
-                    <a href="/" class="footer-logo-wrap">
-                        <img src="/images/pabitra250.png" alt="Pabitra Technology White Logo" class="footer-logo-img">
-                    </a>
+                    <a  href="/" class="footer-logo-wrap" aria-label="Learn more details"><img src="/images/pabitra250.webp" alt="Pabitra Technology White Logo" class="footer-logo-img" width="237" height="97" loading="eager"></a>
                     <p class="footer-about-text">
                         Your dedicated digital partner in Bhubaneswar, Odisha. We craft innovative digital marketing, web &amp; app development, and tech solutions that drive real business growth.
                     </p>
@@ -197,8 +195,18 @@
 
 </footer>
 
-<!-- Scroll Progress Indicator -->
-<div id="scroll-tracker"><div id="scroll-dot"></div></div>
+<!-- ═══ Advanced Scroll Progress Tracker ═══ -->
+<div id="scroll-tracker" aria-hidden="true">
+    <!-- Track fill bar -->
+    <div id="scroll-fill"></div>
+    <!-- Glowing thumb dot -->
+    <div id="scroll-dot">
+        <div id="scroll-dot-inner"></div>
+    </div>
+    <!-- Live percentage label -->
+    <div id="scroll-pct">0%</div>
+</div>
+
 
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/916370584682?text=Hello%20Pabitra%20Technology,%20I'm%20interested%20in%20your%20services."
